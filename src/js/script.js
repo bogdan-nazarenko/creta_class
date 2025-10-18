@@ -66,27 +66,31 @@ supAll.forEach((elem, index) => {
 });
 
 const media = document.querySelector('.media');
-const play = document.querySelector('.media__play');
 const video = document.querySelector('.video');
+const play = document.querySelector('.media__play');
 
 function startVideo() {
 	play.style.display = 'none';
+	video.setAttribute('controls', '');
 	video.play();
-	setTimeout(() => {
-		video.setAttribute('controls', '');
-	}, 1);
-	video.addEventListener('fullscreenchange', () => {
-		if (document.fullscreenElement) {
-			media.style.borderRadius = 'initial';
-			video.style.objectFit = 'contain';
-		} else {
-			media.removeAttribute('style');
-			video.removeAttribute('style');
-		}
-	});
 }
 
-media.addEventListener('click', startVideo);
+play.addEventListener('click', startVideo);
+
+video.addEventListener('ended', () => {
+	play.removeAttribute('style');
+	video.removeAttribute('controls');
+});
+
+video.addEventListener('fullscreenchange', () => {
+	if (document.fullscreenElement) {
+		media.style.borderRadius = 'initial';
+		video.style.objectFit = 'contain';
+	} else {
+		media.removeAttribute('style');
+		video.removeAttribute('style');
+	}
+});
 
 const accrSup = document.querySelectorAll('.accr__sup');
 const accrBtnAll = document.querySelectorAll('.accr__btn');

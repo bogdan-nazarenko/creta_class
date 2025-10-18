@@ -87,34 +87,28 @@
 
 	.media__play {
 		position: absolute;
-		transform: translate(-50%, -50%);
-		top: 50%;
-		left: 50%;
-		content: '';
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 		background-image: url(../imgs/icons/play.svg);
-		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: center;
-		transition: height 0.2s;
+		transition: background-size 0.2s;
 		cursor: pointer;
 
 		@include bp($point_2, min) {
-			width: 16.5rem;
-			height: 16.5rem;
+			background-size: 16.5rem 16.5rem;
+
+			&:active {
+				background-size: 12rem 12rem;
+			}
 		}
 		@include bp($point_3) {
-			width: 35%;
-			height: 35%;
-		}
-	}
+			background-size: 35% 35%;
 
-	&:active {
-		.media__play {
-			@include bp($point_2, min) {
-				height: 12rem;
-			}
-			@include bp($point_3) {
-				height: 20%;
+			&:active {
+				background-size: 20% 20%;
 			}
 		}
 	}
