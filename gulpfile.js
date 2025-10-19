@@ -4,7 +4,7 @@ const sass = require('gulp-dart-sass');
 const plumber = require('gulp-plumber');
 const notify = require('gulp-notify');
 const { existsSync } = require('fs');
-(fileinclude = require('gulp-file-include')),
+((fileinclude = require('gulp-file-include')),
 	(del = require('del')),
 	(htmlmin = require('gulp-htmlmin')),
 	(cfg = require('./package.json').config),
@@ -13,10 +13,12 @@ const { existsSync } = require('fs');
 	(autoprefixer = require('gulp-autoprefixer')),
 	(browserSync = require('browser-sync').create()),
 	(terser = require('gulp-terser')),
-	(browserslist = ['> 1%, last 3 versions, not dead']);
+	(browserslist = ['> 1%, last 3 versions, not dead']));
 const plumberHandler = cfg.notify
 	? notify.onError('Error: <%= error.message %>')
-	: function (err) { console.error(err.message); };
+	: function (err) {
+			console.error(err.message);
+		};
 
 function html() {
 	return src([cfg.srcDir + '/*.html'])
@@ -68,14 +70,16 @@ async function fonts() {
 	}
 	// Copy the original fonts
 	await new Promise(resolve => {
-		src(cfg.srcDir + '/fonts/**/*', { encoding: false }).pipe(dest(cfg.outputDir+ '/fonts')).on('end', resolve);
+		src(cfg.srcDir + '/fonts/**/*', { encoding: false })
+			.pipe(dest(cfg.outputDir + '/fonts'))
+			.on('end', resolve);
 	});
 
 	// Convert only .ttf to .woff2
 	return src(cfg.srcDir + '/fonts/**/*.ttf', { encoding: false })
 		.pipe(plumber({ errorHandler: plumberHandler }))
 		.pipe(ttf2woff2())
-		.pipe(dest(cfg.outputDir+ '/fonts'));
+		.pipe(dest(cfg.outputDir + '/fonts'));
 }
 
 function styles() {
@@ -130,12 +134,12 @@ function imageSync() {
 		return Promise.resolve();
 	}
 	return src(cfg.srcDir + '/imgs/**/*', { encoding: false })
-    	.pipe(dest(cfg.outputDir + '/imgs'))
+		.pipe(dest(cfg.outputDir + '/imgs'))
 		.pipe(browserSync.stream({ once: true }));
 }
 
 async function imageSyncMin() {
-		if (!existsSync(cfg.srcDir + '/imgs')) {
+	if (!existsSync(cfg.srcDir + '/imgs')) {
 		return Promise.resolve();
 	}
 	const imagemin = (await import('gulp-imagemin')).default;
@@ -143,7 +147,7 @@ async function imageSyncMin() {
 	const imageminMozjpeg = (await import('imagemin-mozjpeg')).default;
 	const imageminSvgo = (await import('imagemin-svgo')).default;
 
-	return src(cfg.srcDir +'/imgs/**/*', { encoding: false })
+	return src(cfg.srcDir + '/imgs/**/*', { encoding: false })
 		.pipe(
 			imagemin([
 				imageminPngquant({ quality: [0.6, 0.8], speed: 1 }),
@@ -182,13 +186,9 @@ async function loadPrettier() {
 
 async function pretty() {
 	const prettier = await loadPrettier();
-	return src([
-		cfg.srcDir + '/**/*',
-		'!' + cfg.srcDir + '/imgs/**/*',
-		'!' + cfg.srcDir + '/*.html'
-	])
-	.pipe(prettier())
-	.pipe(dest(cfg.srcDir));
+	return src([cfg.srcDir + '/**/*', '!' + cfg.srcDir + '/imgs/**/*', '!' + cfg.srcDir + '/*.html'])
+		.pipe(prettier())
+		.pipe(dest(cfg.srcDir));
 }
 
 exports.build = series(
