@@ -117,10 +117,6 @@
 		padding: 1.5rem;
 	}
 
-	&.auto--height {
-		height: auto;
-	}
-
 	@include bp($point_3) {
 		border-top-left-radius: 2.64rem;
 		flex-direction: column;
