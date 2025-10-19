@@ -186,7 +186,12 @@ async function loadPrettier() {
 
 async function pretty() {
 	const prettier = await loadPrettier();
-	return src([cfg.srcDir + '/**/*', '!' + cfg.srcDir + '/imgs/**/*', '!' + cfg.srcDir + '/*.html'])
+	return src([
+		cfg.srcDir + '/**/*',
+		'!' + cfg.srcDir + '/imgs/**/*',
+		'!' + cfg.srcDir + '/*.html',
+		'!' + cfg.srcDir + '/fonts/**/*',
+	])
 		.pipe(prettier())
 		.pipe(dest(cfg.srcDir));
 }
