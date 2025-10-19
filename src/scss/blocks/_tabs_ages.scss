@@ -53,6 +53,7 @@
 		left: 25%;
 		width: 2rem;
 		height: 2rem;
+		transition: left 0.5s;
 	}
 
 	&.sup--active {
@@ -62,7 +63,6 @@
 
 		&::after {
 			left: 50%;
-			transition: left 0.5s;
 		}
 	}
 }
