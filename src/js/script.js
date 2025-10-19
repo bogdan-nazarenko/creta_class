@@ -63,18 +63,18 @@ supAll.forEach((elem, index) => {
 
 const media = document.querySelector('.media');
 const video = document.querySelector('.video');
-const play = document.querySelector('.media__play');
+const playButton = document.querySelector('.media__play__button');
 
 function startVideo() {
-	play.style.display = 'none';
+	playButton.style.display = 'none';
 	video.setAttribute('controls', '');
 	video.play();
 }
 
-play.addEventListener('click', startVideo);
+playButton.addEventListener('click', startVideo);
 
 video.addEventListener('ended', () => {
-	play.removeAttribute('style');
+	playButton.removeAttribute('style');
 	video.removeAttribute('controls');
 });
 
