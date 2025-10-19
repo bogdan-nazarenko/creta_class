@@ -101,12 +101,12 @@
 	border-bottom: 0.5rem solid #00000026;
 	border-radius: 0.8rem;
 	user-select: none;
+	transition: all 0.2s;
 	cursor: pointer;
 
 	&:has(.hero__radio:checked) {
 		color: white;
 		background-color: $color_lime;
-		transition: all 0.2s;
 	}
 
 	@include bp($point_2, min) {
