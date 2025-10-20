@@ -124,10 +124,11 @@
 }
 
 .tab__image {
+	overflow: hidden;
+	height: auto;
 	max-width: 50.5rem;
 
 	@include bp($point_2, min) {
-		height: 47.5rem;
 		width: 100%;
 	}
 	@include bp($point_3) {
