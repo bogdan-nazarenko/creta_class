@@ -69,11 +69,11 @@ async function fonts() {
 		return;
 	}
 	// Copy the original fonts
-	await new Promise(resolve => {
-		src(cfg.srcDir + '/fonts/**/*', { encoding: false })
-			.pipe(dest(cfg.outputDir + '/fonts'))
-			.on('end', resolve);
-	});
+	// await new Promise(resolve => {
+	// 	src(cfg.srcDir + '/fonts/**/*', { encoding: false })
+	// 		.pipe(dest(cfg.outputDir + '/fonts'))
+	// 		.on('end', resolve);
+	// });
 
 	// Convert only .ttf to .woff2
 	return src(cfg.srcDir + '/fonts/**/*.ttf', { encoding: false })
