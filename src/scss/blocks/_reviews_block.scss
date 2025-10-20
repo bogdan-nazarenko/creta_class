@@ -9,16 +9,16 @@
 	font-family: $font_inter;
 	font-weight: 700;
 
-	@include bp($point_0, min) {
+	@include bp($point_2, min) {
 		min-height: 76rem;
 	}
-	@media (min-width: $point_4) and (max-width: $point_0) {
+	@media (min-width: $point_4) and (max-width: $point_3) {
 		min-height: 108rem;
 	}
-	@media (min-width: $point_7) and (max-width: $point_4) {
+	@media (min-width: $point_7) and (max-width: $point_5) {
 		min-height: 112rem;
 	}
-	@include bp($point_7) {
+	@include bp($point_8) {
 		min-height: 115rem;
 	}
 
