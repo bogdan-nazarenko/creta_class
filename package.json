@@ -7,7 +7,8 @@
 	"main": "gulpfile.js",
 	"scripts": {
 		"start": "gulp",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"deploy": "gulp build && gh-pages -d app"
 	},
 	"config": {
 		"srcDir": "src",
@@ -19,6 +20,7 @@
 		"browser-sync": "^3.0.2",
 		"del": "^8.0.0",
 		"fs": "^0.0.1-security",
+		"gh-pages": "^6.3.0",
 		"gulp": "^5.0.0",
 		"gulp-autoprefixer": "^8.0.0",
 		"gulp-changed": "^5.0.2",
