@@ -65,28 +65,42 @@ const media = document.querySelector('.media');
 const video = document.querySelector('.video');
 const playButton = document.querySelector('.media__play__button');
 
-function startVideo() {
-	playButton.style.display = 'none';
-	video.setAttribute('controls', '');
-	video.play();
+if (video && playButton) {
+	function startVideo() {
+		playButton.style.display = 'none';
+		video.setAttribute('controls', '');
+		video.play();
+	}
+
+	playButton.addEventListener('click', startVideo);
+
+	video.addEventListener('ended', () => {
+		playButton.removeAttribute('style');
+		video.removeAttribute('controls');
+	});
+
+	video.addEventListener('fullscreenchange', () => {
+		if (document.fullscreenElement) {
+			media.style.borderRadius = 'initial';
+			video.style.objectFit = 'contain';
+		} else {
+			media.removeAttribute('style');
+			video.removeAttribute('style');
+		}
+	});
 }
 
-playButton.addEventListener('click', startVideo);
+const ytVideo = document.querySelector('.yt-video');
 
-video.addEventListener('ended', () => {
-	playButton.removeAttribute('style');
-	video.removeAttribute('controls');
-});
-
-video.addEventListener('fullscreenchange', () => {
-	if (document.fullscreenElement) {
-		media.style.borderRadius = 'initial';
-		video.style.objectFit = 'contain';
-	} else {
-		media.removeAttribute('style');
-		video.removeAttribute('style');
-	}
-});
+if (ytVideo) {
+	ytVideo.addEventListener('fullscreenchange', () => {
+		if (document.fullscreenElement) {
+			media.style.borderRadius = 'initial';
+		} else {
+			media.removeAttribute('style');
+		}
+	});
+}
 
 const accrSup = document.querySelectorAll('.accr__sup');
 const accrBtnAll = document.querySelectorAll('.accr__btn');
