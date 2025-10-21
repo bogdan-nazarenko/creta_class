@@ -113,10 +113,10 @@
 			}
 		}
 		@include bp($point_3) {
-			background-size: 35% 35%;
+			background-size: auto 35%;
 
 			&:active {
-				background-size: 20% 20%;
+				background-size: auto 20%;
 			}
 		}
 	}
