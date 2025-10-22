@@ -18,9 +18,15 @@
 .ages_sups {
 	display: flex;
 	width: 100%;
-	height: 7.6rem;
 	color: $color_orange;
 	user-select: none;
+
+	@include bp($point_4, min) {
+		height: 7.6rem;
+	}
+	@include bp($point_5) {
+		height: 5rem;
+	}
 }
 
 .tab__sup {
@@ -35,12 +41,24 @@
 
 	&:first-child {
 		border-right: unset;
-		border-radius: 2.55rem 0 0 2.55rem;
+
+		@include bp($point_4, min) {
+			border-radius: 2.55rem 0 0 2.55rem;
+		}
+		@include bp($point_5) {
+			border-radius: 2rem 0 0 2rem;
+		}
 	}
 
 	&:last-child {
 		border-left: unset;
-		border-radius: 0 2.55rem 2.55rem 0;
+
+		@include bp($point_4, min) {
+			border-radius: 0 2.55rem 2.55rem 0;
+		}
+		@include bp($point_5) {
+			border-radius: 0 2rem 2rem 0;
+		}
 	}
 
 	&::after {
@@ -49,11 +67,19 @@
 		transform: scale(1, 1.4) translateX(-50%) translateY(100%) rotateZ(45deg);
 		content: '';
 		background-color: inherit;
-		top: 3.2rem;
 		left: 25%;
-		width: 2rem;
-		height: 2rem;
 		transition: left 0.5s;
+
+		@include bp($point_4, min) {
+			top: 3.2rem;
+			width: 2rem;
+			height: 2rem;
+		}
+		@include bp($point_5) {
+			top: 1.9rem;
+			width: 1.5rem;
+			height: 1.5rem;
+		}
 	}
 
 	&.sup--active {
@@ -69,13 +95,25 @@
 
 .title__s-num {
 	font-weight: 700;
-	font-size: 1.7rem;
 	text-transform: uppercase;
+
+	@include bp($point_4, min) {
+		font-size: 1.7rem;
+	}
+	@include bp($point_5) {
+		font-size: 1.4rem;
+	}
 }
 
 .descr__age {
-	font-size: 1.2rem;
 	text-transform: capitalize;
+
+	@include bp($point_4, min) {
+		font-size: 1.2rem;
+	}
+	@include bp($point_5) {
+		font-size: 1rem;
+	}
 }
 
 .tab_contents {
