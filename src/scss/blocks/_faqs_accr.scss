@@ -8,8 +8,11 @@
 	@include bp($point_2, min) {
 		font-size: 2.7rem;
 	}
-	@include bp($point_3) {
+	@media (min-width: $point_4) and (max-width: $point_3) {
 		font-size: 1.8rem;
+	}
+	@include bp($point_5) {
+		font-size: 1.4rem;
 	}
 }
 
@@ -17,7 +20,16 @@
 	background-color: #f7f7fa;
 	border: 0.4rem solid #e2e4eb;
 	border-bottom: 0.82rem solid #e2e4eb;
-	border-radius: 3rem;
+
+	@include bp($point_2, min) {
+		border-radius: 3rem;
+	}
+	@media (min-width: $point_4) and (max-width: $point_3) {
+		border-radius: 2rem;
+	}
+	@include bp($point_5) {
+		border-radius: 1.6rem;
+	}
 
 	&:not(:last-of-type) {
 		@include bp($point_2, min) {
@@ -45,8 +57,11 @@
 	@include bp($point_2, min) {
 		padding: 4rem 5rem;
 	}
-	@include bp($point_3) {
+	@media (min-width: $point_4) and (max-width: $point_3) {
 		padding: 2rem 3rem;
+	}
+	@include bp($point_5) {
+		padding: 1.5rem 2rem;
 	}
 }
 
@@ -58,16 +73,15 @@
 		font-size: 3.3rem;
 	}
 	@media (min-width: $point_4) and (max-width: $point_3) {
-		font-size: 2.5rem;
+		font-size: 2.2rem;
 	}
 	@include bp($point_5) {
-		font-size: 1.8rem;
+		max-width: 90%;
+		font-size: 1.6rem;
 	}
 }
 
 .accr__btn {
-	width: 3.4rem;
-	height: 1.66rem;
 	background-color: #00000099;
 	mask-image: url(../imgs/icons/accr-btn.svg);
 	mask-size: contain;
@@ -76,48 +90,55 @@
 	transform: rotate(0deg);
 	transition: transform 0.5s;
 
+	@include bp($point_2, min) {
+		width: 3.4rem;
+		height: 1.66rem;
+	}
+	@media (min-width: $point_4) and (max-width: $point_3) {
+		width: 2.4rem;
+		height: 1.17rem;
+	}
+	@include bp($point_5) {
+		width: 1.8rem;
+		height: 0.88rem;
+	}
+
 	&.btn--open {
 		transform: rotate(180deg);
 	}
 }
 
 .accr__text {
-	position: relative;
-	top: -4rem;
 	visibility: hidden;
 	overflow: hidden;
-	min-height: 0;
 	max-height: 0;
 	transition:
 		visibility 0.5s,
-		min-height 0.5s,
 		max-height 0.5s,
-		padding-top 0.5s;
+		padding-top 0.5s,
+		padding-bottom 0.5s;
 
 	@include bp($point_2, min) {
+		position: relative;
+		top: -4rem;
 		padding: 0 5rem;
 	}
-	@include bp($point_3) {
+	@media (min-width: $point_4) and (max-width: $point_3) {
 		padding: 0 3rem;
+	}
+	@include bp($point_5) {
+		padding: 0 2rem;
 	}
 
 	&.accr--show {
 		visibility: visible;
-		padding-top: 3.6rem;
+		max-height: 20rem;
 
 		@include bp($point_2, min) {
-			min-height: 14.3rem;
-			max-height: 24.3rem;
+			padding-top: 3.6rem;
 		}
-
-		@media (min-width: $point_6) and (max-width: $point_3) {
-			min-height: 10.3rem;
-			max-height: 20.3rem;
-		}
-
-		@include bp($point_6) {
-			min-height: 14.3rem;
-			max-height: 30.3rem;
+		@include bp($point_3) {
+			padding-bottom: 2rem;
 		}
 	}
 }
