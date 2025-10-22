@@ -65,10 +65,7 @@
 			height: 12.2rem;
 		}
 		@include bp($point_3) {
-			top: -17.5rem;
-			right: -2rem;
-			width: 12rem;
-			height: 8rem;
+			display: none;
 		}
 	}
 
