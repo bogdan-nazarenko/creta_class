@@ -28,7 +28,13 @@ body {
 	flex-direction: column;
 	min-height: 100%;
 	overflow: hidden;
-	padding-top: 12rem;
+
+	@include bp($point_4, min) {
+		padding-top: 12rem;
+	}
+	@include bp($point_5) {
+		padding-top: 8rem;
+	}
 }
 
 .main {
@@ -38,10 +44,10 @@ body {
 .section {
 	width: 100%;
 
-	@include bp($point_4, min) {
+	@include bp($point_2, min) {
 		padding: 8rem 0;
 	}
-	@include bp($point_5) {
+	@include bp($point_3) {
 		padding: 4rem 0;
 	}
 }
