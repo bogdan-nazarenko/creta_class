@@ -67,6 +67,10 @@ body {
 		max-width: 192rem;
 		padding: 11rem 0 10rem;
 		background-color: #f6f6f6;
+
+		@include bp($point_3) {
+			padding-top: 4rem;
+		}
 	}
 }
 
