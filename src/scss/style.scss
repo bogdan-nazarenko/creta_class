@@ -1,12 +1,12 @@
 @use './helpers/reset';
 @use './fonts';
-@use './blocks/header';
-@use './blocks/hero_block';
 @use './base';
+@use './header';
+@use './blocks/hero_block';
 @use './blocks/lrn_slider';
 @use './blocks/tabs_ages';
 @use './blocks/media_block';
 @use './blocks/reviews_block';
 @use './blocks/faqs_accr';
 @use './blocks/map';
-@use './blocks/footer';
+@use './footer';
