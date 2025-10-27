@@ -30,32 +30,34 @@ const swiper = new Swiper('.swiper', {
 });
 
 const header = document.querySelector('.header');
+const sizeOnScroll = 'size--on-scroll';
 
 window.addEventListener('scroll', () => {
-	if (window.pageYOffset > 50 && !header.classList.contains('size--on-scroll')) {
-		header.classList.add('size--on-scroll');
-	} else if (window.pageYOffset < 50 && header.classList.contains('size--on-scroll')) {
-		header.classList.remove('size--on-scroll');
+	if (window.pageYOffset > 50 && !header.classList.contains(sizeOnScroll)) {
+		header.classList.add(sizeOnScroll);
+	} else if (window.pageYOffset < 50 && header.classList.contains(sizeOnScroll)) {
+		header.classList.remove(sizeOnScroll);
 	}
 });
 
 const supAll = document.querySelectorAll('.tab__sup');
 const tabAll = document.querySelectorAll('.tab');
+const active = 'active';
 
 supAll.forEach((elem, index) => {
 	elem.addEventListener('click', function () {
-		if (!supAll[index].classList.contains('sup--active')) {
+		if (!supAll[index].classList.contains(active)) {
 			for (let oldIndex = 0; oldIndex < supAll.length; oldIndex++) {
-				const isOldSupActive = supAll[oldIndex].classList.contains('sup--active');
+				const isOldSupActive = supAll[oldIndex].classList.contains(active);
 
 				if (oldIndex !== index && isOldSupActive) {
-					supAll[oldIndex].classList.remove('sup--active');
-					tabAll[oldIndex].classList.remove('tab--show');
+					supAll[oldIndex].classList.remove(active);
+					tabAll[oldIndex].classList.remove(active);
 				}
 			}
 
-			supAll[index].classList.add('sup--active');
-			tabAll[index].classList.add('tab--show');
+			supAll[index].classList.add(active);
+			tabAll[index].classList.add(active);
 		}
 	});
 });
@@ -108,20 +110,20 @@ const accrAll = document.querySelectorAll('.accr__text');
 accrSup.forEach((elem, index) => {
 	elem.addEventListener('click', function () {
 		if (
-			document.querySelectorAll('.accr__text.accr--show').length >= 1 &&
-			!accrAll[index].classList.contains('accr--show')
+			document.querySelectorAll(`.accr__text.${active}`).length >= 1 &&
+			!accrAll[index].classList.contains(active)
 		) {
 			for (let oldIndex = 0; oldIndex < accrSup.length; oldIndex++) {
-				const isOldAccrTextOpen = accrAll[oldIndex].classList.contains('accr--show');
+				const isOldAccrTextOpen = accrAll[oldIndex].classList.contains(active);
 
 				if (oldIndex !== index && isOldAccrTextOpen) {
-					accrBtnAll[oldIndex].classList.remove('btn--open');
-					accrAll[oldIndex].classList.remove('accr--show');
+					accrBtnAll[oldIndex].classList.remove(active);
+					accrAll[oldIndex].classList.remove(active);
 				}
 			}
 		}
 
-		accrBtnAll[index].classList.toggle('btn--open');
-		accrAll[index].classList.toggle('accr--show');
+		accrBtnAll[index].classList.toggle(active);
+		accrAll[index].classList.toggle(active);
 	});
 });

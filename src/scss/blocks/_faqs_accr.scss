@@ -103,7 +103,7 @@
 		height: 0.88rem;
 	}
 
-	&.btn--open {
+	&#{$active} {
 		transform: rotate(180deg);
 	}
 }
@@ -130,7 +130,7 @@
 		padding: 0 2rem;
 	}
 
-	&.accr--show {
+	&#{$active} {
 		visibility: visible;
 		max-height: 20rem;
 

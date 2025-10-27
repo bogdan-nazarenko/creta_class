@@ -82,7 +82,7 @@
 		}
 	}
 
-	&.sup--active {
+	&#{$active} {
 		position: relative;
 		color: white;
 		background-color: $color_orange;
@@ -148,7 +148,7 @@
 	background: linear-gradient(-45deg, #ffdfdf, #fef5db);
 	transition: all 1s;
 
-	&.tab--show {
+	&#{$active} {
 		z-index: 1;
 		opacity: 1;
 		min-height: inherit;
