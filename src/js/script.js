@@ -30,14 +30,12 @@ const swiper = new Swiper('.swiper', {
 });
 
 const header = document.querySelector('.header');
-const toggleClass = 'size--on-scroll';
 
 window.addEventListener('scroll', () => {
-	const currentScroll = window.pageYOffset;
-	if (currentScroll > 50) {
-		header.classList.add(toggleClass);
-	} else {
-		header.classList.remove(toggleClass);
+	if (window.pageYOffset > 50 && !header.classList.contains('size--on-scroll')) {
+		header.classList.add('size--on-scroll');
+	} else if (window.pageYOffset < 50 && header.classList.contains('size--on-scroll')) {
+		header.classList.remove('size--on-scroll');
 	}
 });
 
@@ -47,17 +45,18 @@ const tabAll = document.querySelectorAll('.tab');
 supAll.forEach((elem, index) => {
 	elem.addEventListener('click', function () {
 		if (!supAll[index].classList.contains('sup--active')) {
-			supAll.forEach(elem => {
-				elem.classList.remove('sup--active');
-			});
+			for (let oldIndex = 0; oldIndex < supAll.length; oldIndex++) {
+				const isOldSupActive = supAll[oldIndex].classList.contains('sup--active');
+
+				if (oldIndex !== index && isOldSupActive) {
+					supAll[oldIndex].classList.remove('sup--active');
+					tabAll[oldIndex].classList.remove('tab--show');
+				}
+			}
+
+			supAll[index].classList.add('sup--active');
+			tabAll[index].classList.add('tab--show');
 		}
-		if (!tabAll[index].classList.contains('tab--show')) {
-			tabAll.forEach(elem => {
-				elem.classList.remove('tab--show');
-			});
-		}
-		supAll[index].classList.add('sup--active');
-		tabAll[index].classList.add('tab--show');
 	});
 });
 
@@ -108,14 +107,20 @@ const accrAll = document.querySelectorAll('.accr__text');
 
 accrSup.forEach((elem, index) => {
 	elem.addEventListener('click', function () {
-		if (!accrAll[index].classList.contains('accr--show')) {
-			accrBtnAll.forEach(elem => {
-				elem.classList.remove('btn--open');
-			});
-			accrAll.forEach(elem => {
-				elem.classList.remove('accr--show');
-			});
+		if (
+			document.querySelectorAll('.accr__text.accr--show').length >= 1 &&
+			!accrAll[index].classList.contains('accr--show')
+		) {
+			for (let oldIndex = 0; oldIndex < accrSup.length; oldIndex++) {
+				const isOldAccrTextOpen = accrAll[oldIndex].classList.contains('accr--show');
+
+				if (oldIndex !== index && isOldAccrTextOpen) {
+					accrBtnAll[oldIndex].classList.remove('btn--open');
+					accrAll[oldIndex].classList.remove('accr--show');
+				}
+			}
 		}
+
 		accrBtnAll[index].classList.toggle('btn--open');
 		accrAll[index].classList.toggle('accr--show');
 	});
