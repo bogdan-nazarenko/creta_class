@@ -79,8 +79,7 @@
 		color: #326a00;
 	}
 
-	&:hover,
-	&:active {
+	&:hover {
 		color: white;
 		background-color: $color_lime;
 	}
@@ -119,8 +118,7 @@
 		max-width: 3.5rem;
 	}
 
-	&:hover,
-	&:active {
+	&:hover {
 		color: currentColor;
 		background-color: transparent;
 	}
