@@ -1,18 +1,6 @@
 @use '../variables' as *;
 @use '../mixins/breakpoints' as *;
 
-@mixin st_btn {
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-
-	text-align: center;
-	white-space: nowrap;
-
-	cursor: pointer;
-	text-decoration: none;
-}
-
 %btn_submit {
 	display: flex;
 	align-items: center;
@@ -90,7 +78,6 @@
 	align-items: center;
 	justify-content: center;
 	overflow: hidden;
-	white-space: nowrap;
 	width: 100%;
 
 	margin-left: 1.5rem;
@@ -123,36 +110,3 @@
 		background-color: transparent;
 	}
 }
-
-//color extends
-// %transp_btn_1 {
-// 	@include st_btn;
-
-// 	font-weight: 700;
-// 	color: $color_white;
-// 	background-color: transparent;
-// 	transition: 0.3s ease;
-// 	border: 2px solid $color_white;
-
-// 	&:hover {
-// 		background-color: $color_white;
-// 		color: $color_black;
-// 	}
-// }
-
-//size extends
-// %btn_size_1 {
-// 	min-width: 23.2rem;
-// 	height: 5.4rem;
-// 	padding: 0 2rem;
-
-// 	line-height: 5.4rem;
-// 	font-size: 1.6rem;
-
-// 	border-radius: 2px;
-// }
-
-// .btn_white_1 {
-// 	@extend %white_btn_1;
-// 	@extend %btn_size_1;
-// }
