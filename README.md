@@ -46,7 +46,7 @@ npm install
 3. **Start development**:
 
 ```bash
-gulp
+npm start
 ```
 
 This will:
@@ -59,13 +59,13 @@ This will:
 4. **Format your source files**:
 
 ```bash
-gulp format
+npm run format
 ```
 
 5. **Build for production**:
 
 ```bash
-gulp build
+npm run build
 ```
 
 This creates a clean build in the `/app/` folder with:
