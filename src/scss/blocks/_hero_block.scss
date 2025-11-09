@@ -9,7 +9,7 @@
 	@include bp($point_2, min) {
 		column-gap: 15rem;
 	}
-	@media (min-width: $point_8) and (max-width: $point_3) {
+	@media (min-width: $point_4) and (max-width: $point_3) {
 		column-gap: 3rem;
 	}
 	@include bp($point_5) {

@@ -392,7 +392,7 @@
 		@media (min-width: $point_4) and (max-width: $point_3) {
 			margin-right: 7.5rem;
 		}
-		@media (min-width: $point_9) and (max-width: $point_3) {
+		@include bp($point_3) {
 			margin-top: 4rem;
 		}
 
