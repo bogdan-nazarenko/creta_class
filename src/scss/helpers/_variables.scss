@@ -1,10 +1,4 @@
-// :root {
-// 	--color_accent: #2947A9;
-// }
-
 // colors
-
-$color_white: #fff;
 $color_black: #000;
 $color_beige: #fff0cb;
 $color_light-pink: #fce4ec;
@@ -13,30 +7,24 @@ $color_lime: #2cc84d;
 $color_brown: #974e24;
 $color_light-blue: #ebf2ff;
 $color_text: #000000bf;
-// $color_accent: #2947a9;
-// $color_title: #292e3d;
 
-// $color_hover: #F9995D;
-
+// fonts
 $font_nunito: 'Nunito', sans-serif;
 $font_inter: 'Inter', sans-serif;
 $font_manrope: 'Manrope', sans-serif;
 $font_mukta: 'Mukta', sans-serif;
-$font_montserrat: 'Montserrat', sans-serif;
-// $font_2: "e-Ukraine", sans-serif;
-$transition_dur: 0.3s;
 
 // breakpoints
 $point_0: 1209px;
 $point_1: 1200px;
-$point_2: 1024px; /* ! */
-$point_3: 1023.98px;
-$point_4: 768px; /* ! */
-$point_5: 767.98px;
+$point_2: 1024px;
+$point_3: 1023px;
+$point_4: 768px;
+$point_5: 767px;
 $point_6: 480px;
-$point_7: 375px; /* ! */
-$point_8: 374.98px; /* ! */
-$point_9: 320px; /* ! */
+$point_7: 375px;
+$point_8: 374px;
+$point_9: 320px;
 
 // modifiers
 $active: '.active';
