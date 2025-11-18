@@ -37,11 +37,11 @@ body {
 	}
 }
 
-.main {
+main {
 	flex-grow: 1;
 }
 
-.section {
+section {
 	width: 100%;
 
 	@include bp($point1, min) {

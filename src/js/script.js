@@ -29,7 +29,7 @@ const swiper = new Swiper('.swiper', {
 	},
 });
 
-const header = document.querySelector('.header');
+const header = document.querySelector('header');
 const sizeOnScroll = 'size--on-scroll';
 
 window.addEventListener('scroll', () => {
