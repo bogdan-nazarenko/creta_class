@@ -21,12 +21,12 @@
 		background-color: $color_lime;
 	}
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		width: 100%;
 		height: 6.6rem;
 		font-size: 1.8rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		width: 75%;
 		height: 5rem;
 		font-size: 1.6rem;
@@ -46,13 +46,13 @@
 	font-weight: 900;
 	cursor: pointer;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		height: 5.4rem;
 		max-width: 16.2rem;
 		border-radius: 1.5rem;
 		font-size: 1.7rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		height: 3.5rem;
 		max-width: 8rem;
 		border-radius: 1rem;
@@ -96,11 +96,11 @@
 	font-size: 2.2rem;
 	cursor: pointer;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		height: 5rem;
 		max-width: 25.4rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		height: 3.5rem;
 		max-width: 3.5rem;
 	}

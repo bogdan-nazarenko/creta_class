@@ -7,10 +7,10 @@
 .slider_block_w {
 	position: relative;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		padding: 0 2rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		padding: 0;
 	}
 
@@ -32,7 +32,7 @@
 			background-color: $color_lime;
 		}
 
-		@include bp($point_5) {
+		@include bp($point4) {
 			display: none;
 		}
 	}
@@ -55,15 +55,15 @@
 	height: 2rem;
 	margin: 3.8rem auto 0;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		display: flex;
 		max-width: 11rem;
 	}
-	@media (min-width: $point_4) and (max-width: $point_3) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		display: flex;
 		max-width: 17rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		display: none;
 	}
 
@@ -83,10 +83,10 @@
 	width: 100%;
 	max-width: 118rem;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		padding: 0 2rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		padding: 0;
 	}
 }
@@ -106,10 +106,10 @@
 	user-select: none;
 	cursor: pointer;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		max-width: 35.2rem;
 	}
-	@include bp($point_3) {
+	@include bp($point2) {
 		max-width: unset;
 	}
 

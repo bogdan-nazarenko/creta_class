@@ -21,10 +21,10 @@
 	color: $color_orange;
 	user-select: none;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		height: 7.6rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		height: 5rem;
 	}
 }
@@ -42,10 +42,10 @@
 	&:first-child {
 		border-right: unset;
 
-		@include bp($point_4, min) {
+		@include bp($point3, min) {
 			border-radius: 2.55rem 0 0 2.55rem;
 		}
-		@include bp($point_5) {
+		@include bp($point4) {
 			border-radius: 2rem 0 0 2rem;
 		}
 	}
@@ -53,10 +53,10 @@
 	&:last-child {
 		border-left: unset;
 
-		@include bp($point_4, min) {
+		@include bp($point3, min) {
 			border-radius: 0 2.55rem 2.55rem 0;
 		}
-		@include bp($point_5) {
+		@include bp($point4) {
 			border-radius: 0 2rem 2rem 0;
 		}
 	}
@@ -70,12 +70,12 @@
 		left: 25%;
 		transition: left 0.5s;
 
-		@include bp($point_4, min) {
+		@include bp($point3, min) {
 			top: 3.2rem;
 			width: 2rem;
 			height: 2rem;
 		}
-		@include bp($point_5) {
+		@include bp($point4) {
 			top: 1.9rem;
 			width: 1.5rem;
 			height: 1.5rem;
@@ -97,10 +97,10 @@
 	font-weight: 700;
 	text-transform: uppercase;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		font-size: 1.7rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		font-size: 1.4rem;
 	}
 }
@@ -108,10 +108,10 @@
 .descr__age {
 	text-transform: capitalize;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		font-size: 1.2rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		font-size: 1rem;
 	}
 }
@@ -121,13 +121,13 @@
 	width: inherit;
 	overflow: hidden;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		min-height: 68.3rem;
 	}
-	@media (min-width: $point_6) and (max-width: $point_3) {
+	@media (min-width: $point5) and (max-width: $point2) {
 		min-height: 96rem;
 	}
-	@include bp($point_6) {
+	@include bp($point6) {
 		min-height: 76rem;
 	}
 }
@@ -155,7 +155,7 @@
 		padding: 1.5rem;
 	}
 
-	@include bp($point_3) {
+	@include bp($point2) {
 		border-top-left-radius: 2.64rem;
 		flex-direction: column;
 	}
@@ -166,10 +166,10 @@
 	height: auto;
 	max-width: 50.5rem;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		width: 100%;
 	}
-	@include bp($point_3) {
+	@include bp($point2) {
 		width: 75%;
 	}
 
@@ -196,10 +196,10 @@
 	height: auto;
 	margin-right: 3rem;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		max-width: 11.6rem;
 	}
-	@include bp($point_3) {
+	@include bp($point2) {
 		max-width: 5rem;
 	}
 
@@ -225,10 +225,10 @@
 .item__title {
 	margin-bottom: 0.85rem;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		font-size: 2rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		font-size: 1.4rem;
 	}
 }
@@ -237,10 +237,10 @@
 	line-height: 1.3;
 	color: #252525b2;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		font-size: 1.4rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		font-size: 1.2rem;
 	}
 }

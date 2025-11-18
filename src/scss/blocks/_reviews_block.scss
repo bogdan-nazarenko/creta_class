@@ -9,13 +9,13 @@
 	font-family: $font_inter;
 	font-weight: 700;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		min-height: 76rem;
 	}
-	@media (min-width: $point_4) and (max-width: $point_3) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		min-height: 108rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		min-height: 112rem;
 	}
 
@@ -57,11 +57,11 @@
 	color: #fe9611;
 	line-height: 1.3;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		width: 100%;
 		font-size: 2.5rem;
 	}
-	@include bp($point_3) {
+	@include bp($point2) {
 		width: 53%;
 		font-size: 2rem;
 	}
@@ -75,13 +75,13 @@
 	text-align: center;
 	text-transform: capitalize;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		font-size: 4.2rem;
 	}
-	@media (min-width: $point_6) and (max-width: $point_3) {
+	@media (min-width: $point5) and (max-width: $point2) {
 		font-size: 2.5rem;
 	}
-	@include bp($point_6) {
+	@include bp($point6) {
 		font-size: 2rem;
 	}
 }
@@ -93,10 +93,10 @@
 	position: relative;
 	width: 100%;
 
-	@include bp($point_1, min) {
+	@include bp($point1, min) {
 		gap: 2rem;
 	}
-	@include bp($point_1) {
+	@include bp($point2) {
 		gap: 4rem;
 	}
 
@@ -109,13 +109,13 @@
 		background-repeat: no-repeat;
 		background-position: center;
 
-		@include bp($point_2, min) {
+		@include bp($point1, min) {
 			top: -20.2rem;
 			right: 4.55rem;
 			width: 21.5rem;
 			height: 16rem;
 		}
-		@include bp($point_3) {
+		@include bp($point2) {
 			top: -16rem;
 			right: 2rem;
 			width: 11rem;
@@ -133,12 +133,12 @@
 		background-repeat: no-repeat;
 		background-position: center;
 
-		@include bp($point_2, min) {
+		@include bp($point1, min) {
 			bottom: -12.9rem;
 			width: 8.8rem;
 			height: 10.2rem;
 		}
-		@include bp($point_3) {
+		@include bp($point2) {
 			bottom: -11.5rem;
 			width: 7rem;
 			height: 8rem;
@@ -153,11 +153,11 @@
 	max-width: 57.5rem;
 	border-radius: 1rem;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		justify-content: flex-end;
 		width: 100%;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		justify-content: center;
 		width: 90%;
 	}
@@ -171,15 +171,15 @@
 		border: 2px dashed black;
 		border-radius: 1rem;
 
-		@media (min-width: $point_4) and (max-width: $point_3) {
+		@media (min-width: $point3) and (max-width: $point2) {
 			left: 1.5rem;
 			width: 100%;
 		}
-		@media (min-width: $point_6) and (max-width: $point_5) {
+		@media (min-width: $point5) and (max-width: $point4) {
 			left: 2.25rem;
 			width: 90%;
 		}
-		@include bp($point_6) {
+		@include bp($point6) {
 			left: 0;
 			width: 100%;
 		}
@@ -194,16 +194,16 @@
 		border-radius: 1rem;
 		background-color: $color_light-pink;
 
-		@media (min-width: $point_4) and (max-width: $point_3) {
+		@media (min-width: $point3) and (max-width: $point2) {
 			top: 1rem;
 			left: 1.5rem;
 			width: 100%;
 		}
-		@media (min-width: $point_6) and (max-width: $point_4) {
+		@media (min-width: $point5) and (max-width: $point4) {
 			left: 2.25rem;
 			width: 90%;
 		}
-		@include bp($point_6) {
+		@include bp($point6) {
 			left: 0;
 			width: 100%;
 		}
@@ -213,12 +213,12 @@
 		&::before {
 			transform: rotate(1.5deg);
 
-			@include bp($point_2, min) {
+			@include bp($point1, min) {
 				top: 1.5rem;
 				left: 5.6rem;
 				width: 100%;
 			}
-			@include bp($point_3) {
+			@include bp($point2) {
 				top: 2rem;
 			}
 		}
@@ -227,7 +227,7 @@
 			transform: rotate(-1.5deg);
 			top: 2rem;
 
-			@include bp($point_2, min) {
+			@include bp($point1, min) {
 				left: 8.2rem;
 				width: 100%;
 			}
@@ -235,7 +235,7 @@
 
 		.rev__col {
 			&:nth-child(1) {
-				@include bp($point_4, min) {
+				@include bp($point3, min) {
 					margin: 9.6rem 2rem 0 0;
 
 					&::before {
@@ -254,10 +254,10 @@
 			}
 
 			&:nth-child(2) {
-				@include bp($point_2, min) {
+				@include bp($point1, min) {
 					margin: 3.4rem 0 0 0;
 				}
-				@include bp($point_6, min) {
+				@include bp($point5, min) {
 					&::after {
 						top: -1.7rem;
 						right: -2.7rem;
@@ -277,7 +277,7 @@
 			top: 1.4rem;
 			transform: rotate(-3deg);
 
-			@include bp($point_2, min) {
+			@include bp($point1, min) {
 				left: 1.8rem;
 				width: 100%;
 			}
@@ -287,7 +287,7 @@
 			top: 1.9rem;
 			transform: rotate(1.1deg);
 
-			@include bp($point_2, min) {
+			@include bp($point1, min) {
 				left: 4.6rem;
 				width: 100%;
 			}
@@ -295,7 +295,7 @@
 
 		.rev__col {
 			&:nth-child(1) {
-				@include bp($point_4, min) {
+				@include bp($point3, min) {
 					margin: 9.6rem 2.2rem 0 0;
 
 					&::before {
@@ -314,10 +314,10 @@
 			}
 
 			&:nth-child(2) {
-				@include bp($point_2, min) {
+				@include bp($point1, min) {
 					margin: 3.8rem 3.3rem 0 0;
 				}
-				@include bp($point_6, min) {
+				@include bp($point5, min) {
 					&::after {
 						top: -1.1rem;
 						right: -3rem;
@@ -344,7 +344,7 @@
 		height: 19rem;
 		max-width: 30.8rem;
 
-		@include bp($point_5) {
+		@include bp($point4) {
 			width: 50%;
 			margin-top: 8rem;
 			margin-right: 1rem;
@@ -360,7 +360,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 
-			@include bp($point_5) {
+			@include bp($point4) {
 				top: -5.1rem;
 				left: 1.5rem;
 			}
@@ -376,7 +376,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 
-			@include bp($point_5) {
+			@include bp($point4) {
 				left: 1.5rem;
 				bottom: -5.2rem;
 				rotate: -20deg;
@@ -389,10 +389,10 @@
 		flex-direction: column;
 		align-items: flex-end;
 
-		@media (min-width: $point_4) and (max-width: $point_3) {
+		@media (min-width: $point3) and (max-width: $point2) {
 			margin-right: 7.5rem;
 		}
-		@media (min-width: $point_9) and (max-width: $point_3) {
+		@include bp($point2) {
 			margin-top: 4rem;
 		}
 
@@ -417,7 +417,7 @@
 			background-repeat: no-repeat;
 			background-position: center;
 
-			@include bp($point_6) {
+			@include bp($point6) {
 				top: -2.8rem;
 				right: -2rem;
 				rotate: -45deg;
@@ -430,10 +430,10 @@
 	font-weight: 500;
 	color: $color_text;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		font-size: 2rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		font-size: 1.5rem;
 	}
 }
@@ -450,10 +450,10 @@
 }
 
 .rev__kid-name {
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		font-size: 1.9rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		font-size: 1.4rem;
 	}
 }

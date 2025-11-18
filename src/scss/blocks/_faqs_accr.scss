@@ -5,13 +5,13 @@
 	font-weight: 500;
 	color: #00000099;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		font-size: 2.7rem;
 	}
-	@media (min-width: $point_4) and (max-width: $point_3) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		font-size: 1.8rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		font-size: 1.4rem;
 	}
 }
@@ -21,24 +21,24 @@
 	border: 0.4rem solid #e2e4eb;
 	border-bottom: 0.82rem solid #e2e4eb;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		border-radius: 3rem;
 	}
-	@media (min-width: $point_4) and (max-width: $point_3) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		border-radius: 2rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		border-radius: 1.6rem;
 	}
 
 	&:not(:last-of-type) {
-		@include bp($point_2, min) {
+		@include bp($point1, min) {
 			margin-bottom: 5rem;
 		}
-		@media (min-width: $point_4) and (max-width: $point_3) {
+		@media (min-width: $point3) and (max-width: $point2) {
 			margin-bottom: 3rem;
 		}
-		@include bp($point_5) {
+		@include bp($point4) {
 			margin-bottom: 2rem;
 		}
 	}
@@ -54,13 +54,13 @@
 	border-radius: inherit;
 	cursor: pointer;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		padding: 4rem 5rem;
 	}
-	@media (min-width: $point_4) and (max-width: $point_3) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		padding: 2rem 3rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		padding: 1.5rem 2rem;
 	}
 }
@@ -69,13 +69,13 @@
 	font-weight: 700;
 	color: black;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		font-size: 3.3rem;
 	}
-	@media (min-width: $point_4) and (max-width: $point_3) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		font-size: 2.2rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		max-width: 90%;
 		font-size: 1.6rem;
 	}
@@ -90,15 +90,15 @@
 	transform: rotate(0deg);
 	transition: transform 0.5s;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		width: 3.4rem;
 		height: 1.66rem;
 	}
-	@media (min-width: $point_4) and (max-width: $point_3) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		width: 2.4rem;
 		height: 1.17rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		width: 1.8rem;
 		height: 0.88rem;
 	}
@@ -118,15 +118,15 @@
 		padding-top 0.5s,
 		padding-bottom 0.5s;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		position: relative;
 		top: -4rem;
 		padding: 0 5rem;
 	}
-	@media (min-width: $point_4) and (max-width: $point_3) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		padding: 0 3rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		padding: 0 2rem;
 	}
 
@@ -134,10 +134,10 @@
 		visibility: visible;
 		max-height: 20rem;
 
-		@include bp($point_2, min) {
+		@include bp($point1, min) {
 			padding-top: 3.6rem;
 		}
-		@include bp($point_3) {
+		@include bp($point2) {
 			padding-bottom: 2rem;
 		}
 	}

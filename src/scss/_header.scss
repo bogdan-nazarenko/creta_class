@@ -14,18 +14,18 @@
 	box-shadow: 0 1rem 5rem 0 #0000000d;
 	transition: height 0.3s;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		height: 12rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		height: 8rem;
 	}
 
 	&.size--on-scroll {
-		@include bp($point_4, min) {
+		@include bp($point3, min) {
 			height: 8rem;
 		}
-		@include bp($point_5) {
+		@include bp($point4) {
 			height: 6rem;
 		}
 	}
@@ -64,11 +64,11 @@
 	max-width: 35rem;
 	column-gap: 1.5rem;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		justify-content: space-between;
 		width: 100%;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		justify-content: flex-end;
 		width: 60%;
 	}
@@ -87,7 +87,7 @@
 			mask-repeat: no-repeat;
 			mask-position: center;
 
-			@include bp($point_5) {
+			@include bp($point4) {
 				display: none;
 			}
 		}
@@ -108,7 +108,7 @@
 		mask-repeat: no-repeat;
 		mask-position: center;
 
-		@include bp($point_4, min) {
+		@include bp($point3, min) {
 			margin-right: 1.2rem;
 		}
 	}
@@ -116,7 +116,7 @@
 	.btn__text {
 		line-height: 100%;
 
-		@include bp($point_5) {
+		@include bp($point4) {
 			display: none;
 		}
 

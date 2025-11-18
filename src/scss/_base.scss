@@ -4,10 +4,10 @@ html {
 	@include bp(1920px, min) {
 		font-size: 10px;
 	}
-	@media (min-width: $point_2) and (max-width: 1919px) {
+	@media (min-width: $point1) and (max-width: 1919px) {
 		font-size: calc(100dvw / 1920 * 10);
 	}
-	@include bp($point_3) {
+	@include bp($point2) {
 		font-size: 10px;
 	}
 }
@@ -29,10 +29,10 @@ body {
 	min-height: 100%;
 	overflow: hidden;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		padding-top: 12rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		padding-top: 8rem;
 	}
 }
@@ -44,10 +44,10 @@ body {
 .section {
 	width: 100%;
 
-	@include bp($point_2, min) {
+	@include bp($point1, min) {
 		padding: 8rem 0;
 	}
-	@include bp($point_3) {
+	@include bp($point2) {
 		padding: 4rem 0;
 	}
 }
@@ -68,7 +68,7 @@ body {
 		padding: 11rem 0 10rem;
 		background-color: #f6f6f6;
 
-		@include bp($point_3) {
+		@include bp($point2) {
 			padding-top: 4rem;
 		}
 	}
@@ -84,10 +84,10 @@ body {
 	text-align: center;
 	margin-bottom: 12px;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		font-size: 4.8rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		font-size: 3rem;
 	}
 
@@ -107,10 +107,10 @@ body {
 	color: #7b7b7b;
 	text-align: center;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		line-height: 4rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		line-height: 1.5;
 	}
 
@@ -120,10 +120,10 @@ body {
 		line-height: normal;
 		color: currentColor;
 
-		@include bp($point_4, min) {
+		@include bp($point3, min) {
 			font-size: 2rem;
 		}
-		@include bp($point_5) {
+		@include bp($point4) {
 			font-size: 1.6rem;
 		}
 	}

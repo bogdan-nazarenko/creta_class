@@ -18,10 +18,10 @@
 	height: 100%;
 	max-width: 151.6rem;
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		align-items: center;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		flex-direction: column;
 		row-gap: 3rem;
 	}
@@ -41,7 +41,7 @@
 	margin-bottom: unset;
 	text-decoration: none;
 
-	@media (min-width: $point_4) and (max-width: $point_3) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		width: 80%;
 		height: 5rem;
 		font-size: 1.3rem;
@@ -69,10 +69,10 @@
 			}
 		}
 
-		@include bp($point_4, min) {
+		@include bp($point3, min) {
 			margin-bottom: 2rem;
 		}
-		@include bp($point_5) {
+		@include bp($point4) {
 			margin-bottom: 1rem;
 		}
 	}
@@ -83,10 +83,10 @@
 		line-height: 1.7;
 	}
 
-	@include bp($point_4, min) {
+	@include bp($point3, min) {
 		font-size: 2.2rem;
 	}
-	@include bp($point_5) {
+	@include bp($point4) {
 		font-size: 1.5rem;
 	}
 }

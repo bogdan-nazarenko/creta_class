@@ -3,10 +3,10 @@
 .google__map {
 	width: 100%;
 
-	@include bp($point_6, min) {
+	@include bp($point5, min) {
 		height: 70rem;
 	}
-	@include bp($point_6) {
+	@include bp($point6) {
 		height: 45rem;
 	}
 }
