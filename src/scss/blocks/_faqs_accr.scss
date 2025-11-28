@@ -103,7 +103,7 @@
 		height: 0.88rem;
 	}
 
-	&#{$active} {
+	&#{$open} {
 		transform: rotate(180deg);
 	}
 }
@@ -130,7 +130,7 @@
 		padding: 0 2rem;
 	}
 
-	&#{$active} {
+	&#{$open} {
 		visibility: visible;
 		max-height: 20rem;
 

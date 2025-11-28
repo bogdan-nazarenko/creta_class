@@ -106,24 +106,25 @@ if (ytVideo) {
 const accrSup = document.querySelectorAll('.accr__sup');
 const accrBtnAll = document.querySelectorAll('.accr__btn');
 const accrAll = document.querySelectorAll('.accr__text');
+const openMod = 'open';
 
 accrSup.forEach((elem, index) => {
 	elem.addEventListener('click', function () {
 		if (
-			document.querySelectorAll(`.accr__text.${active}`).length >= 1 &&
-			!accrAll[index].classList.contains(active)
+			document.querySelectorAll(`.accr__text.${openMod}`).length >= 1 &&
+			!accrAll[index].classList.contains(openMod)
 		) {
 			for (let oldIndex = 0; oldIndex < accrSup.length; oldIndex++) {
-				const isOldAccrTextOpen = accrAll[oldIndex].classList.contains(active);
+				const isOldAccrTextOpen = accrAll[oldIndex].classList.contains(openMod);
 
 				if (oldIndex !== index && isOldAccrTextOpen) {
-					accrBtnAll[oldIndex].classList.remove(active);
-					accrAll[oldIndex].classList.remove(active);
+					accrBtnAll[oldIndex].classList.remove(openMod);
+					accrAll[oldIndex].classList.remove(openMod);
 				}
 			}
 		}
 
-		accrBtnAll[index].classList.toggle(active);
-		accrAll[index].classList.toggle(active);
+		accrBtnAll[index].classList.toggle(openMod);
+		accrAll[index].classList.toggle(openMod);
 	});
 });
