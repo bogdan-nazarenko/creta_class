@@ -63,9 +63,6 @@
 		display: flex;
 		max-width: 17rem;
 	}
-	@include bp($point4) {
-		display: none;
-	}
 
 	.swiper-pagination-bullet {
 		width: 2rem;
@@ -73,9 +70,10 @@
 		background-color: transparent;
 		border: 0.2rem solid $color_brown;
 		opacity: unset;
-	}
-	.swiper-pagination-bullet-active {
-		background-color: $color_brown;
+
+		&.swiper-pagination-bullet-active {
+			background-color: $color_brown;
+		}
 	}
 }
 
