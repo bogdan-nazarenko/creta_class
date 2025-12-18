@@ -104,7 +104,6 @@ if (ytVideo) {
 }
 
 const accrSup = document.querySelectorAll('.accr__sup');
-const accrBtnAll = document.querySelectorAll('.accr__btn');
 const accrAll = document.querySelectorAll('.accr__text');
 const openMod = 'open';
 
@@ -118,13 +117,11 @@ accrSup.forEach((elem, index) => {
 				const isOldAccrTextOpen = accrAll[oldIndex].classList.contains(openMod);
 
 				if (oldIndex !== index && isOldAccrTextOpen) {
-					accrBtnAll[oldIndex].classList.remove(openMod);
 					accrAll[oldIndex].classList.remove(openMod);
 				}
 			}
 		}
 
-		accrBtnAll[index].classList.toggle(openMod);
 		accrAll[index].classList.toggle(openMod);
 	});
 });

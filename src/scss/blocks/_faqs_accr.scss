@@ -42,6 +42,10 @@
 			margin-bottom: 2rem;
 		}
 	}
+
+	&:has(.accr__text#{$open}) .accr__btn {
+		transform: rotate(180deg);
+	}
 }
 
 .accr__sup {
@@ -101,10 +105,6 @@
 	@include bp($point4) {
 		width: 1.8rem;
 		height: 0.88rem;
-	}
-
-	&#{$open} {
-		transform: rotate(180deg);
 	}
 }
 
