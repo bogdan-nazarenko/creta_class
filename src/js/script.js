@@ -104,24 +104,24 @@ if (ytVideo) {
 }
 
 const accrSup = document.querySelectorAll('.accr__sup');
-const accrAll = document.querySelectorAll('.accr__text');
+const accrText = document.querySelectorAll('.accr__text');
 const openMod = 'open';
 
 accrSup.forEach((elem, index) => {
 	elem.addEventListener('click', function () {
 		if (
 			document.querySelectorAll(`.accr__text.${openMod}`).length >= 1 &&
-			!accrAll[index].classList.contains(openMod)
+			!accrText[index].classList.contains(openMod)
 		) {
 			for (let oldIndex = 0; oldIndex < accrSup.length; oldIndex++) {
-				const isOldAccrTextOpen = accrAll[oldIndex].classList.contains(openMod);
+				const isOldAccrTextOpen = accrText[oldIndex].classList.contains(openMod);
 
 				if (oldIndex !== index && isOldAccrTextOpen) {
-					accrAll[oldIndex].classList.remove(openMod);
+					accrText[oldIndex].classList.remove(openMod);
 				}
 			}
 		}
 
-		accrAll[index].classList.toggle(openMod);
+		accrText[index].classList.toggle(openMod);
 	});
 });
