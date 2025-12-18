@@ -46,7 +46,7 @@ const active = 'active';
 
 supAll.forEach((elem, index) => {
 	elem.addEventListener('click', function () {
-		if (!supAll[index].classList.contains(active)) {
+		if (!elem.classList.contains(active)) {
 			for (let oldIndex = 0; oldIndex < supAll.length; oldIndex++) {
 				const isOldSupActive = supAll[oldIndex].classList.contains(active);
 
@@ -56,7 +56,7 @@ supAll.forEach((elem, index) => {
 				}
 			}
 
-			supAll[index].classList.add(active);
+			elem.classList.add(active);
 			tabAll[index].classList.add(active);
 		}
 	});
