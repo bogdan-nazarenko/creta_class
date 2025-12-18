@@ -33,14 +33,10 @@ const swiper = new Swiper('.swiper', {
 });
 
 const header = document.querySelector('header');
-const sizeOnScroll = 'size--on-scroll';
 
 window.addEventListener('scroll', () => {
-	if (window.pageYOffset > 50 && !header.classList.contains(sizeOnScroll)) {
-		header.classList.add(sizeOnScroll);
-	} else if (window.pageYOffset < 50 && header.classList.contains(sizeOnScroll)) {
-		header.classList.remove(sizeOnScroll);
-	}
+	header.classList.toggle('size--on-scroll', window.pageYOffset > 50);
+	header.classList.length === 0 && header.removeAttribute('class');
 });
 
 const supAll = document.querySelectorAll('.tab__sup');
