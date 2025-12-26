@@ -22,12 +22,18 @@ const swiper = new Swiper('.swiper', {
 			spaceBetween: 40,
 			slidesPerView: 2,
 			slidesPerGroup: 2,
+			pagination: {
+				dynamicBullets: false,
+			},
 		},
 		1024: {
 			loop: true,
 			spaceBetween: 40,
 			slidesPerView: 3,
 			slidesPerGroup: 3,
+			pagination: {
+				dynamicBullets: false,
+			},
 		},
 	},
 });
@@ -37,6 +43,22 @@ const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
 	header.classList.toggle('size--on-scroll', window.pageYOffset > 50);
 	header.classList.length === 0 && header.removeAttribute('class');
+});
+
+const sliderPag = document.querySelector('.slider__pag');
+const pagMod = 'swiper-pagination-bullets-dynamic';
+
+window.addEventListener('resize', () => {
+	setTimeout(() => {
+		swiper.pagination.destroy();
+		swiper.pagination.init();
+		swiper.pagination.update();
+
+		if (window.innerWidth >= 768) {
+			sliderPag.classList.contains(pagMod) && sliderPag.classList.remove(pagMod);
+			sliderPag.hasAttribute('style') && sliderPag.removeAttribute('style');
+		}
+	}, 100);
 });
 
 const supAll = document.querySelectorAll('.tab__sup');
