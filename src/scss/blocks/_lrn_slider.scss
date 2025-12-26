@@ -64,14 +64,14 @@
 		max-width: 17rem;
 	}
 
-	.swiper-pagination-bullet {
+	.slider__bullet {
 		width: 2rem;
 		height: 2rem;
 		background-color: transparent;
 		border: 0.2rem solid $color_brown;
 		opacity: unset;
 
-		&.swiper-pagination-bullet-active {
+		&#{$active} {
 			background-color: $color_brown;
 		}
 	}

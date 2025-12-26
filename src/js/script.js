@@ -6,6 +6,8 @@ const swiper = new Swiper('.swiper', {
 	pagination: {
 		el: '.slider__pag',
 		clickable: true,
+		bulletClass: 'slider__bullet',
+		bulletActiveClass: 'active',
 	},
 	breakpoints: {
 		1: {
