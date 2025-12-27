@@ -194,7 +194,6 @@
 		height: 68.4rem;
 	}
 	@include bp($point4) {
-		height: unset;
 		order: -1;
 	}
 

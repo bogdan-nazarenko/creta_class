@@ -45,9 +45,6 @@
 	@include bp($point1, min) {
 		max-width: 35.2rem;
 	}
-	@include bp($point2) {
-		max-width: unset;
-	}
 
 	&.slider--pink {
 		background-color: $color_light-pink;
