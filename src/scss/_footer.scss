@@ -38,7 +38,7 @@ footer {
 }
 
 .footer__btn {
-	margin-bottom: unset;
+	margin-bottom: initial;
 	text-decoration: none;
 
 	@media (min-width: $point3) and (max-width: $point2) {

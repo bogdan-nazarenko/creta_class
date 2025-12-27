@@ -40,7 +40,7 @@
 	cursor: pointer;
 
 	&:first-child {
-		border-right: unset;
+		border-right: initial;
 
 		@include bp($point3, min) {
 			border-radius: 2.55rem 0 0 2.55rem;
@@ -51,7 +51,7 @@
 	}
 
 	&:last-child {
-		border-left: unset;
+		border-left: initial;
 
 		@include bp($point3, min) {
 			border-radius: 0 2.55rem 2.55rem 0;
