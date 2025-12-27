@@ -13,39 +13,6 @@
 	@include bp($point4) {
 		padding: 0;
 	}
-
-	.btn__slider--prev,
-	.btn__slider--next {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		width: 3.53rem;
-		height: 2rem;
-		background-color: $color_brown;
-		mask-size: contain;
-		mask-repeat: no-repeat;
-		mask-position: center;
-		mask-image: url(../imgs/icons/slider-arrow.svg);
-		cursor: pointer;
-
-		&:hover {
-			background-color: $color_lime;
-		}
-
-		@include bp($point4) {
-			display: none;
-		}
-	}
-
-	.btn__slider--prev {
-		left: -1rem;
-	}
-
-	.btn__slider--next {
-		rotate: 180deg;
-		transform-origin: top;
-		right: -1rem;
-	}
 }
 
 .lrn_slider {
@@ -168,6 +135,39 @@
 			}
 		}
 	}
+}
+
+.btn__slider--prev,
+.btn__slider--next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 3.53rem;
+	height: 2rem;
+	background-color: $color_brown;
+	mask-size: contain;
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-image: url(../imgs/icons/slider-arrow.svg);
+	cursor: pointer;
+
+	&:hover {
+		background-color: $color_lime;
+	}
+
+	@include bp($point4) {
+		display: none;
+	}
+}
+
+.btn__slider--prev {
+	left: -1rem;
+}
+
+.btn__slider--next {
+	rotate: 180deg;
+	transform-origin: top;
+	right: -1rem;
 }
 
 .slider__pag {
