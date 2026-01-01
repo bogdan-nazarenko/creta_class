@@ -31,7 +31,7 @@
 		border-radius: 1.6rem;
 	}
 
-	&:not(:last-of-type) {
+	&:not(:last-child) {
 		@include bp($point1, min) {
 			margin-bottom: 5rem;
 		}
