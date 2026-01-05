@@ -160,6 +160,7 @@
 	.media_pic {
 		position: absolute;
 		z-index: 1;
-		@extend %contain_img;
+		width: 100%;
+		height: 100%;
 	}
 }
