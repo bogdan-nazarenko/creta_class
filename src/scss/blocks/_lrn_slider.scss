@@ -171,7 +171,7 @@
 	margin: 3.8rem auto 0;
 
 	@include bp($point1, min) {
-		max-width: 10.2rem;
+		max-width: 11rem;
 	}
 	@media (min-width: $point3) and (max-width: $point2) {
 		max-width: 17rem;
