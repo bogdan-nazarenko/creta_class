@@ -89,6 +89,22 @@ const media = document.querySelector('.media');
 const video = document.querySelector('.video');
 const playButton = document.querySelector('.media__play__button');
 
+function manageMediaStyles(block, content = null) {
+	if (document.fullscreenElement) {
+		block.style.borderRadius = 'initial';
+
+		if (content) {
+			content.style.objectFit = 'contain';
+		}
+	} else {
+		block.removeAttribute('style');
+
+		if (content) {
+			content.removeAttribute('style');
+		}
+	}
+}
+
 if (video && playButton) {
 	playButton.addEventListener('click', () => {
 		playButton.style.display = 'none';
@@ -101,27 +117,13 @@ if (video && playButton) {
 		video.removeAttribute('controls');
 	});
 
-	video.addEventListener('fullscreenchange', () => {
-		if (document.fullscreenElement) {
-			media.style.borderRadius = 'initial';
-			video.style.objectFit = 'contain';
-		} else {
-			media.removeAttribute('style');
-			video.removeAttribute('style');
-		}
-	});
+	video.addEventListener('fullscreenchange', () => manageMediaStyles(media, video));
 }
 
 const ytVideo = document.querySelector('.yt-video');
 
 if (ytVideo) {
-	ytVideo.addEventListener('fullscreenchange', () => {
-		if (document.fullscreenElement) {
-			media.style.borderRadius = 'initial';
-		} else {
-			media.removeAttribute('style');
-		}
-	});
+	ytVideo.addEventListener('fullscreenchange', () => manageMediaStyles(media));
 }
 
 const accrSup = document.querySelectorAll('.accr__sup');
