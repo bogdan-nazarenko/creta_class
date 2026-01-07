@@ -90,13 +90,11 @@ const video = document.querySelector('.video');
 const playButton = document.querySelector('.media__play__button');
 
 if (video && playButton) {
-	function startVideo() {
+	playButton.addEventListener('click', () => {
 		playButton.style.display = 'none';
 		video.setAttribute('controls', '');
 		video.play();
-	}
-
-	playButton.addEventListener('click', startVideo);
+	});
 
 	video.addEventListener('ended', () => {
 		playButton.removeAttribute('style');
