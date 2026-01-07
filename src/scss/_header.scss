@@ -35,6 +35,7 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	column-gap: 1.5rem;
 	width: 100%;
 	max-width: 151.6rem;
 }
@@ -42,6 +43,7 @@ header {
 .header_elems {
 	display: flex;
 	justify-content: space-between;
+	column-gap: 1.5rem;
 	width: 100%;
 	max-width: 65.2rem;
 }
@@ -50,7 +52,6 @@ header {
 	width: 100%;
 	height: 5.2rem;
 	max-width: 25.6rem;
-	margin-right: 1.5rem;
 
 	.creta__logo {
 		@extend %contain_img;
