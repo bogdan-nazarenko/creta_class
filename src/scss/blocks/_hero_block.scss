@@ -132,6 +132,7 @@
 
 .hero__form-discount,
 .hero__form-descr {
+	width: fit-content;
 	text-transform: capitalize;
 	font-weight: 500;
 
@@ -144,7 +145,6 @@
 }
 
 .hero__form-discount {
-	max-width: fit-content;
 	margin-bottom: 0.7rem;
 	color: $color_text;
 
