@@ -8,7 +8,6 @@ A fast and simple Gulp 5+ starter template for frontend development.
 - SCSS compilation with dart-sass
 - JS concatenation and minification
 - HTML file includes
-- Autoprefixer (browserslist: `> 1%, last 3 versions, not dead`)
 - Image optimization (JPEG, PNG, SVG)
 - Convert fonts .ttf to woff2
 - LiveReload via BrowserSync
