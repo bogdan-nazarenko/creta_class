@@ -7,7 +7,6 @@ footer {
 	min-height: 17.4rem;
 	background-color: $color_beige;
 	padding: 4.5rem 2rem 5.2rem;
-	font-family: $font_inter;
 }
 
 .footer_block {
@@ -48,7 +47,6 @@ footer {
 
 .footer_navs {
 	max-width: 58rem;
-	font-weight: 400;
 
 	.nav__email,
 	.nav__phone {

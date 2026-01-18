@@ -3,7 +3,6 @@
 .hero_block {
 	display: flex;
 	align-items: center;
-	font-family: $font_inter;
 	font-weight: 700;
 
 	@include bp($point1, min) {
