@@ -6,8 +6,6 @@
 	align-items: center;
 	position: relative;
 	overflow: hidden;
-	font-family: $font_inter;
-	font-weight: 700;
 
 	@include bp($point1, min) {
 		min-height: 76rem;
@@ -72,6 +70,7 @@
 	max-width: 62rem;
 	margin-bottom: 4.4rem;
 	font-family: $font_manrope;
+	font-weight: 700;
 	text-align: center;
 	text-transform: capitalize;
 
@@ -450,6 +449,8 @@
 }
 
 .rev__kid-name {
+	font-weight: 700;
+
 	@include bp($point3, min) {
 		font-size: 1.9rem;
 	}
