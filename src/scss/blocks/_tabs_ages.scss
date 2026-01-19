@@ -221,6 +221,7 @@
 
 .item__title {
 	margin-bottom: 0.85rem;
+	font-weight: 700;
 
 	@include bp($point3, min) {
 		font-size: 2rem;

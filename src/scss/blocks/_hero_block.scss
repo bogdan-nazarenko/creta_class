@@ -38,6 +38,7 @@
 .hero__title {
 	width: 100%;
 	max-width: 67.9rem;
+	font-weight: 700;
 
 	@include bp($point3, min) {
 		font-size: 6.4rem;
@@ -79,6 +80,7 @@
 
 .hero__form-title {
 	font-size: 1.6rem;
+	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 3.2rem;
 }
