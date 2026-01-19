@@ -3,7 +3,6 @@
 .hero_block {
 	display: flex;
 	align-items: center;
-	font-weight: 700;
 
 	@include bp($point1, min) {
 		column-gap: 15rem;
@@ -101,6 +100,7 @@
 	border: 0.2rem solid #00000026;
 	border-bottom: 0.5rem solid #00000026;
 	border-radius: 0.8rem;
+	font-weight: 700;
 	user-select: none;
 	transition: all 0.2s;
 	cursor: pointer;
