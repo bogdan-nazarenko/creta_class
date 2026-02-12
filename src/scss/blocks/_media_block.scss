@@ -7,11 +7,11 @@
 		position: absolute;
 		top: -19rem;
 		right: -9rem;
-		content: '';
+		border: 3rem solid #e6e5fa;
+		border-radius: 50%;
 		width: 18rem;
 		height: 18rem;
-		border-radius: 50%;
-		border: 3rem solid #e6e5fa;
+		content: '';
 
 		@include bp($point2) {
 			display: none;
@@ -21,12 +21,12 @@
 
 .media {
 	z-index: 2;
-	max-width: 84.3rem;
-	border-radius: 2.5rem;
+	cursor: pointer;
 	border: 0.1rem solid #0000001a;
 	border-bottom: 0.8rem solid #0000001a;
+	border-radius: 2.5rem;
 	background: linear-gradient(60deg, #feeadd, #fff3dccc, #ffbfbf 85%);
-	cursor: pointer;
+	max-width: 84.3rem;
 
 	@include bp($point1, min) {
 		position: absolute;
@@ -52,15 +52,15 @@
 
 	&::before {
 		position: absolute;
-		content: '';
 		background-image: url(../imgs/media-plane.svg);
+		background-position: right;
 		background-size: cover;
 		background-repeat: no-repeat;
-		background-position: right;
+		content: '';
 
 		@include bp($point1, min) {
-			bottom: 4.4rem;
 			right: -16.45rem;
+			bottom: 4.4rem;
 			width: 15.3rem;
 			height: 12.2rem;
 		}
@@ -73,20 +73,20 @@
 		position: absolute;
 		bottom: -17.7rem;
 		left: -0.8rem;
+		background-image: url(../imgs/dots.svg);
+		background-position: top;
+		background-size: contain;
+		background-repeat: no-repeat;
 		width: 22.7rem;
 		height: 12.2rem;
 		content: '';
-		background-image: url(../imgs/dots.svg);
-		background-size: contain;
-		background-repeat: no-repeat;
-		background-position: top;
 	}
 
 	.video,
 	.yt-video {
+		border-radius: inherit;
 		width: 100%;
 		height: 100%;
-		border-radius: inherit;
 		object-fit: cover;
 	}
 
@@ -94,13 +94,13 @@
 		position: absolute;
 		top: 0;
 		left: 0;
-		width: 100%;
-		height: 100%;
-		background-image: url(../imgs/icons/play.svg);
-		background-repeat: no-repeat;
-		background-position: center;
 		transition: background-size 0.2s;
 		cursor: pointer;
+		background-image: url(../imgs/icons/play.svg);
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
 
 		@include bp($point1, min) {
 			background-size: 16.5rem 16.5rem;
@@ -122,10 +122,10 @@
 .media__image {
 	position: relative;
 	bottom: -10.3rem;
-	width: 100%;
-	height: 66.5rem;
-	max-width: 66.5rem;
 	margin-left: 7.6rem;
+	width: 100%;
+	max-width: 66.5rem;
+	height: 66.5rem;
 
 	@include bp($point2) {
 		display: none;
@@ -135,26 +135,26 @@
 		position: absolute;
 		top: -32.5rem;
 		left: -15rem;
-		height: 98.5rem;
-		width: 60rem;
-		content: '';
 		background-image: url(../imgs/bg-1.svg);
+		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: center;
+		width: 60rem;
+		height: 98.5rem;
+		content: '';
 	}
 
 	&::after {
 		position: absolute;
 		top: -31rem;
 		left: -10rem;
-		height: 98.5rem;
-		width: 59rem;
-		content: '';
 		background-image: url(../imgs/bg-2.svg);
+		background-position: center;
 		background-size: contain;
 		background-repeat: no-repeat;
-		background-position: center;
+		width: 59rem;
+		height: 98.5rem;
+		content: '';
 	}
 
 	.media_pic {

@@ -16,8 +16,8 @@ html,
 body {
 	height: 100%;
 	scroll-behavior: smooth;
-	font-family: $font_inter;
 	font-weight: 400;
+	font-family: $font_inter;
 }
 
 .wrapper {
@@ -49,20 +49,20 @@ section {
 }
 
 .container {
-	max-width: 156rem;
-	width: 100%;
 	margin: 0 auto;
 	padding: 0 2rem;
+	width: 100%;
+	max-width: 156rem;
 
 	&.container--v2 {
 		max-width: 135rem;
 	}
 
 	&.container--v3 {
-		overflow: hidden;
-		max-width: 192rem;
-		padding: 11rem 0 10rem;
 		background-color: #f6f6f6;
+		padding: 11rem 0 10rem;
+		max-width: 192rem;
+		overflow: hidden;
 
 		@include bp($point2) {
 			padding-top: 4rem;
@@ -75,10 +75,10 @@ section {
 }
 
 .sctn__title {
-	font-family: $font_manrope;
-	font-weight: 800;
-	text-align: center;
 	margin-bottom: 12px;
+	font-weight: 800;
+	font-family: $font_manrope;
+	text-align: center;
 
 	@include bp($point3, min) {
 		font-size: 4.8rem;
@@ -97,10 +97,10 @@ section {
 }
 
 .sctn__descr {
-	font-family: $font_manrope;
+	color: #7b7b7b;
 	font-weight: 500;
 	font-size: 1.6rem;
-	color: #7b7b7b;
+	font-family: $font_manrope;
 	text-align: center;
 
 	@include bp($point3, min) {
@@ -111,10 +111,10 @@ section {
 	}
 
 	&.descr--v2 {
-		font-family: $font_inter;
+		color: currentColor;
 		font-weight: 400;
 		line-height: normal;
-		color: currentColor;
+		font-family: $font_inter;
 
 		@include bp($point3, min) {
 			font-size: 2rem;

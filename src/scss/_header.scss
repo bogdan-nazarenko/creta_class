@@ -1,18 +1,18 @@
 @use './helpers/abstracts' as *;
 
 header {
+	display: flex;
 	position: fixed;
-	z-index: 1000;
 	top: 0;
 	left: 0;
-	display: flex;
-	align-items: center;
 	justify-content: center;
-	width: 100%;
-	padding: 0 2rem;
-	background-color: white;
-	box-shadow: 0 1rem 5rem 0 #0000000d;
+	align-items: center;
+	z-index: 1000;
 	transition: height 0.3s;
+	box-shadow: 0 1rem 5rem 0 #0000000d;
+	background-color: white;
+	padding: 0 2rem;
+	width: 100%;
 
 	@include bp($point3, min) {
 		height: 12rem;
@@ -33,25 +33,25 @@ header {
 
 .header_block {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	column-gap: 1.5rem;
+	justify-content: space-between;
+	align-items: center;
 	width: 100%;
 	max-width: 151.6rem;
 }
 
 .header_elems {
 	display: flex;
-	justify-content: space-between;
 	column-gap: 1.5rem;
+	justify-content: space-between;
 	width: 100%;
 	max-width: 65.2rem;
 }
 
 .creta__img {
 	width: 100%;
-	height: 5.2rem;
 	max-width: 25.6rem;
+	height: 5.2rem;
 
 	.creta__logo {
 		@extend %contain_img;
@@ -60,10 +60,10 @@ header {
 
 .cookie_btns {
 	display: flex;
-	align-items: center;
-	height: auto;
-	max-width: 35rem;
 	column-gap: 1.5rem;
+	align-items: center;
+	max-width: 35rem;
+	height: auto;
 
 	@include bp($point3, min) {
 		justify-content: space-between;
@@ -79,14 +79,14 @@ header {
 
 		.cookie__pic {
 			display: block;
-			margin-left: 0.8rem;
-			width: 1.8rem;
-			height: 1.8rem;
-			background-color: currentColor;
 			mask-image: url(../imgs/icons/cookie.svg);
+			mask-position: center;
 			mask-size: contain;
 			mask-repeat: no-repeat;
-			mask-position: center;
+			margin-left: 0.8rem;
+			background-color: currentColor;
+			width: 1.8rem;
+			height: 1.8rem;
 
 			@include bp($point4) {
 				display: none;
@@ -100,13 +100,13 @@ header {
 
 	.btn__star {
 		display: block;
-		width: 1.8rem;
-		height: 1.8rem;
-		background-color: currentColor;
 		mask-image: url(../imgs/icons/star.svg);
+		mask-position: center;
 		mask-size: contain;
 		mask-repeat: no-repeat;
-		mask-position: center;
+		background-color: currentColor;
+		width: 1.8rem;
+		height: 1.8rem;
 
 		@include bp($point3, min) {
 			margin-right: 1.2rem;

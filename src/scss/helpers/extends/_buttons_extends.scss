@@ -3,19 +3,19 @@
 
 %btn_submit {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	max-width: 32.8rem;
-	border-radius: 0.9rem;
-	font-family: $font_inter;
-	font-weight: 700;
-	text-transform: uppercase;
-	text-align: center;
-	line-height: 100%;
-	color: white;
-	background: linear-gradient(110deg, $color_orange 70%, #ff7b3a96 80%, $color_orange 95%);
-	margin-bottom: 2rem;
+	align-items: center;
 	cursor: pointer;
+	margin-bottom: 2rem;
+	border-radius: 0.9rem;
+	background: linear-gradient(110deg, $color_orange 70%, #ff7b3a96 80%, $color_orange 95%);
+	max-width: 32.8rem;
+	color: white;
+	font-weight: 700;
+	line-height: 100%;
+	font-family: $font_inter;
+	text-align: center;
+	text-transform: uppercase;
 
 	&:hover {
 		background: linear-gradient(110deg, $color_lime 70%, #dfdfdf 80%, $color_lime 95%);
@@ -36,28 +36,28 @@
 
 %btn_cookie {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	width: 100%;
+	align-items: center;
+	cursor: pointer;
 	border: 0.2rem solid $color_lime;
+	width: 100%;
+	font-weight: 900;
 	line-height: 100%;
+	font-family: $font_nunito;
 	text-decoration: none;
 	text-transform: uppercase;
-	font-family: $font_nunito;
-	font-weight: 900;
-	cursor: pointer;
 
 	@include bp($point3, min) {
-		height: 5.4rem;
-		max-width: 16.2rem;
 		border-radius: 1.5rem;
+		max-width: 16.2rem;
+		height: 5.4rem;
 		font-size: 1.7rem;
 	}
 	@include bp($point4) {
-		height: 3.5rem;
-		max-width: 8rem;
 		border-radius: 1rem;
 		padding: 0 0.5rem;
+		max-width: 8rem;
+		height: 3.5rem;
 		font-size: 1rem;
 	}
 
@@ -69,43 +69,43 @@
 	}
 
 	&:hover {
-		color: white;
 		background-color: $color_lime;
+		color: white;
 	}
 }
 
 %btn_green {
 	display: flex;
-	align-items: center;
 	justify-content: center;
-	overflow: hidden;
-	width: 100%;
-	color: white;
-	background-color: $color_lime;
-	border-radius: 0.6rem;
+	align-items: center;
+	cursor: pointer;
 	box-shadow:
 		0 0.3rem 0.75rem 0 #9cffb180,
 		0 0 0 0.15rem $color_lime,
 		0 0.15rem 0.15rem 0 #00000024,
 		0 0.15rem 0 0 #9cffb1 inset;
-	line-height: 100%;
-	text-decoration: none;
-	font-family: $font_inter;
+	border-radius: 0.6rem;
+	background-color: $color_lime;
+	width: 100%;
+	overflow: hidden;
+	color: white;
 	font-weight: 500;
 	font-size: 2.2rem;
-	cursor: pointer;
+	line-height: 100%;
+	font-family: $font_inter;
+	text-decoration: none;
 
 	@include bp($point3, min) {
-		height: 5rem;
 		max-width: 25.4rem;
+		height: 5rem;
 	}
 	@include bp($point4) {
-		height: 3.5rem;
 		max-width: 3.5rem;
+		height: 3.5rem;
 	}
 
 	&:hover {
-		color: currentColor;
 		background-color: transparent;
+		color: currentColor;
 	}
 }

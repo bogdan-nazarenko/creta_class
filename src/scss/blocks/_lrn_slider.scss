@@ -30,15 +30,15 @@
 .slider__item {
 	display: flex;
 	flex-direction: column;
-	overflow: hidden;
-	height: auto;
-	border-radius: 4rem;
-	padding: 2.8rem 3.2rem 4.6rem 1.4rem;
-	background-color: #ddffbb;
-	font-family: $font_mukta;
-	font-weight: 700;
-	user-select: none;
 	cursor: pointer;
+	border-radius: 4rem;
+	background-color: #ddffbb;
+	padding: 2.8rem 3.2rem 4.6rem 1.4rem;
+	height: auto;
+	overflow: hidden;
+	font-weight: 700;
+	font-family: $font_mukta;
+	user-select: none;
 
 	&.slider--pink {
 		background-color: $color_light-pink;
@@ -60,8 +60,8 @@
 
 .slider__img {
 	width: 100%;
-	height: 9.4rem;
 	max-width: 8.8rem;
+	height: 9.4rem;
 
 	.slider__pic {
 		@extend %contain_img;
@@ -69,8 +69,8 @@
 }
 
 .slider__title {
-	font-size: 2rem;
 	font-weight: 700;
+	font-size: 2rem;
 
 	&.title--center {
 		margin: 0 auto;
@@ -79,27 +79,27 @@
 
 .slider__list {
 	display: flex;
-	flex-direction: column;
 	position: relative;
+	row-gap: 1rem;
+	flex-direction: column;
 	padding-left: 3.2rem;
 	width: 100%;
 	max-width: 26.7rem;
-	row-gap: 1rem;
+	color: green;
 	font-size: 1.6rem;
 	line-height: 2rem;
-	color: green;
 
 	.list__itm {
 		position: relative;
 
 		&::before {
 			position: absolute;
-			content: '';
 			top: 0.4rem;
 			left: -2rem;
-			height: 1rem;
-			width: 1rem;
 			background-color: green;
+			width: 1rem;
+			height: 1rem;
+			content: '';
 		}
 	}
 
@@ -137,14 +137,14 @@
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 3.53rem;
-	height: 2rem;
-	background-color: $color_brown;
+	mask-image: url(../imgs/icons/slider-arrow.svg);
+	mask-position: center;
 	mask-size: contain;
 	mask-repeat: no-repeat;
-	mask-position: center;
-	mask-image: url(../imgs/icons/slider-arrow.svg);
 	cursor: pointer;
+	background-color: $color_brown;
+	width: 3.53rem;
+	height: 2rem;
 
 	&:hover {
 		background-color: $color_lime;
@@ -160,16 +160,16 @@
 }
 
 .btn__slider--next {
-	rotate: 180deg;
-	transform-origin: top;
 	right: -1rem;
+	transform-origin: top;
+	rotate: 180deg;
 }
 
 .slider__pag {
 	display: flex;
 	justify-content: space-between;
-	height: 2rem;
 	margin: 3.8rem auto 0;
+	height: 2rem;
 
 	@include bp($point1, min) {
 		max-width: 11rem;
@@ -183,18 +183,18 @@
 }
 
 .slider__bullet {
-	width: 2rem;
-	height: 2rem;
+	cursor: pointer;
+	border: 0.2rem solid $color_brown;
 	border-radius: 50%;
 	background-color: transparent;
-	border: 0.2rem solid $color_brown;
-	cursor: pointer;
+	width: 2rem;
+	height: 2rem;
 
 	@include bp($point4) {
 		position: relative;
-		min-width: 2rem;
-		margin: 0 0.5rem;
 		transition: all 0.3s;
+		margin: 0 0.5rem;
+		min-width: 2rem;
 
 		&:has(+ #{$active}),
 		&#{$active} + & {
