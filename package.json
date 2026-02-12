@@ -38,6 +38,7 @@
 		"gulp-ttf2woff2": "^5.0.0",
 		"imagemin-mozjpeg": "^10.0.0",
 		"imagemin-pngquant": "^10.0.0",
-		"imagemin-svgo": "^11.0.1"
+		"imagemin-svgo": "^11.0.1",
+		"prettier-plugin-css-order": "^2.2.0"
 	}
 }

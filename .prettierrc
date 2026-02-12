@@ -15,5 +15,6 @@
 				"printWidth": 1000
 			}
 		}
-	]
+	],
+	"plugins": ["prettier-plugin-css-order"]
 }
