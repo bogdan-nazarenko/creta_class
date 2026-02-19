@@ -106,28 +106,22 @@
 	&.list--pink {
 		color: #bd6e89;
 
-		.list__itm {
-			&::before {
-				background-color: #ff96b9;
-			}
+		.list__itm::before {
+			background-color: #ff96b9;
 		}
 	}
 	&.list--beige {
 		color: #a58639;
 
-		.list__itm {
-			&::before {
-				background-color: #d8af4a;
-			}
+		.list__itm::before {
+			background-color: #d8af4a;
 		}
 	}
 	&.list--blue {
 		color: #28529fe5;
 
-		.list__itm {
-			&::before {
-				background-color: #789bdc;
-			}
+		.list__itm::before {
+			background-color: #789bdc;
 		}
 	}
 }
