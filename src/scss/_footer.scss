@@ -45,11 +45,18 @@ footer {
 	}
 }
 
-.footer_navs {
+.footer_contacts {
 	max-width: 58rem;
 
-	.nav__email,
-	.nav__phone {
+	@include bp($point3, min) {
+		font-size: 2.2rem;
+	}
+	@include bp($point4) {
+		font-size: 1.5rem;
+	}
+
+	.footer__email,
+	.footer__phone {
 		margin-bottom: 1.23rem;
 		width: 100%;
 		line-height: 1.3;
@@ -64,16 +71,9 @@ footer {
 		}
 	}
 
-	.nav__location {
+	.footer__location {
 		display: flex;
 		align-items: center;
 		line-height: 1.7;
-	}
-
-	@include bp($point3, min) {
-		font-size: 2.2rem;
-	}
-	@include bp($point4) {
-		font-size: 1.5rem;
 	}
 }
