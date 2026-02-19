@@ -105,11 +105,6 @@
 	font-weight: 700;
 	user-select: none;
 
-	&:has(.hero__radio:checked) {
-		background-color: $color_lime;
-		color: white;
-	}
-
 	@include bp($point1, min) {
 		width: 13.1rem;
 		height: 6rem;
@@ -119,6 +114,11 @@
 		width: 10rem;
 		height: 4rem;
 		font-size: 1.8rem;
+	}
+
+	&:has(.hero__radio:checked) {
+		background-color: $color_lime;
+		color: white;
 	}
 
 	.hero__radio {
