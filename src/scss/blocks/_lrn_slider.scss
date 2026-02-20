@@ -1,18 +1,7 @@
 @use './helpers/abstracts' as *;
 
-.slider_block {
+.slider_w {
 	position: relative;
-}
-
-.slider_block_w {
-	position: relative;
-
-	@include bp($point3, min) {
-		padding: 0 2rem;
-	}
-	@include bp($point4) {
-		padding: 0;
-	}
 }
 
 .lrn_slider {
@@ -21,9 +10,6 @@
 
 	@include bp($point3, min) {
 		padding: 0 2rem;
-	}
-	@include bp($point4) {
-		padding: 0;
 	}
 }
 
