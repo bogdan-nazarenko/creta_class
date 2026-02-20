@@ -73,24 +73,24 @@ header {
 		justify-content: flex-end;
 		width: 60%;
 	}
+}
 
-	.cookie__button {
-		@extend %btn_cookie;
+.cookie__button {
+	@extend %btn_cookie;
 
-		.cookie__pic {
-			display: block;
-			mask-image: url(../imgs/icons/cookie.svg);
-			mask-position: center;
-			mask-size: contain;
-			mask-repeat: no-repeat;
-			margin-left: 0.8rem;
-			background-color: currentColor;
-			width: 1.8rem;
-			height: 1.8rem;
+	.cookie__pic {
+		display: block;
+		mask-image: url(../imgs/icons/cookie.svg);
+		mask-position: center;
+		mask-size: contain;
+		mask-repeat: no-repeat;
+		margin-left: 0.8rem;
+		background-color: currentColor;
+		width: 1.8rem;
+		height: 1.8rem;
 
-			@include bp($point4) {
-				display: none;
-			}
+		@include bp($point4) {
+			display: none;
 		}
 	}
 }
