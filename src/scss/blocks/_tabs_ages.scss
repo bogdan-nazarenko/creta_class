@@ -146,15 +146,15 @@
 	min-height: 0;
 	overflow: hidden;
 
+	@include bp($point2) {
+		flex-direction: column;
+		border-top-left-radius: 2.64rem;
+	}
+
 	&#{$active} {
 		opacity: 1;
 		padding: 1.5rem;
 		min-height: inherit;
-	}
-
-	@include bp($point2) {
-		flex-direction: column;
-		border-top-left-radius: 2.64rem;
 	}
 }
 

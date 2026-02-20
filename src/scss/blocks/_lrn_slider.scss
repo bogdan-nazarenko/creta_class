@@ -140,12 +140,12 @@
 	width: 3.53rem;
 	height: 2rem;
 
-	&:hover {
-		background-color: $color_lime;
-	}
-
 	@include bp($point4) {
 		display: none;
+	}
+
+	&:hover {
+		background-color: $color_lime;
 	}
 }
 
