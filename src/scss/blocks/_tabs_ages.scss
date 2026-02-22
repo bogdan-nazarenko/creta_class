@@ -115,8 +115,9 @@
 	}
 }
 
-.tab_contents {
+.tab__elems {
 	position: relative;
+	border-radius: 17.6rem 2.64rem 2.64rem;
 	width: inherit;
 	overflow: hidden;
 
@@ -125,6 +126,9 @@
 	}
 	@media (min-width: $point5) and (max-width: $point2) {
 		min-height: 96rem;
+	}
+	@include bp($point2) {
+		border-top-left-radius: 2.64rem;
 	}
 	@include bp($point6) {
 		min-height: 76rem;
@@ -136,11 +140,10 @@
 	position: absolute;
 	justify-content: space-evenly;
 	align-items: center;
-	opacity: 0;
 	transition: all 1s;
-	border-radius: 17.6rem 2.64rem 2.64rem;
+	border-radius: inherit;
 	background: linear-gradient(-45deg, #ffdfdf, #fef5db);
-	padding: 0;
+	padding: 0 1.5rem;
 	width: inherit;
 	height: 0;
 	min-height: 0;
@@ -148,19 +151,33 @@
 
 	@include bp($point2) {
 		flex-direction: column;
-		border-top-left-radius: 2.64rem;
+		border-top-left-radius: inherit;
 	}
 
 	&#{$active} {
-		opacity: 1;
-		padding: 1.5rem;
+		z-index: 1;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
 		min-height: inherit;
+	}
+}
+
+.tab__content {
+	display: inherit;
+	align-items: inherit;
+	gap: 3rem;
+
+	@include bp($point1, min) {
+		justify-content: space-between;
+		width: 85%;
+	}
+	@include bp($point2) {
+		flex-direction: column;
 	}
 }
 
 .tab__image {
 	max-width: 50.5rem;
-	height: auto;
 	overflow: hidden;
 
 	@include bp($point1, min) {
@@ -191,7 +208,6 @@
 .item__img {
 	margin-right: 3rem;
 	width: 100%;
-	height: auto;
 
 	@include bp($point1, min) {
 		max-width: 11.6rem;
