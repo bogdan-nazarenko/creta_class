@@ -71,19 +71,19 @@
 	}
 }
 
-.hero_form {
+.hero__form {
 	width: 100%;
 	max-width: 60rem;
 }
 
-.hero__form-title {
+.hero__form__title {
 	margin-bottom: 3.2rem;
 	font-weight: 700;
 	font-size: 1.6rem;
 	text-transform: uppercase;
 }
 
-.hero_form_w {
+.hero__form_w {
 	display: flex;
 	flex-wrap: wrap;
 	gap: 2.45rem;
@@ -130,8 +130,8 @@
 	@extend %btn_submit;
 }
 
-.hero__form-discount,
-.hero__form-descr {
+.hero__form__discount,
+.hero__form__descr {
 	width: fit-content;
 	font-weight: 500;
 	text-transform: capitalize;
@@ -144,7 +144,7 @@
 	}
 }
 
-.hero__form-discount {
+.hero__form__discount {
 	margin-bottom: 0.7rem;
 	color: $color_text;
 
@@ -171,7 +171,7 @@
 	}
 }
 
-.hero__form-descr {
+.hero__form__descr {
 	color: #00000080;
 
 	.hero__link {

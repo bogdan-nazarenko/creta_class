@@ -25,7 +25,7 @@ footer {
 	}
 }
 
-.footer_part {
+.footer__links {
 	width: 32.8rem;
 
 	.creta__img {
@@ -45,7 +45,7 @@ footer {
 	}
 }
 
-.footer_contacts {
+.footer__contacts {
 	max-width: 58rem;
 
 	@include bp($point3, min) {

@@ -40,7 +40,7 @@ header {
 	max-width: 151.6rem;
 }
 
-.header_elems {
+.header__elems {
 	display: flex;
 	column-gap: 1.5rem;
 	justify-content: space-between;
@@ -58,7 +58,7 @@ header {
 	}
 }
 
-.cookie_btns {
+.cookie__btns {
 	display: flex;
 	column-gap: 1.5rem;
 	align-items: center;
@@ -95,7 +95,7 @@ header {
 	}
 }
 
-.header_button {
+.header__button {
 	@extend %btn_green;
 
 	.btn__star {
