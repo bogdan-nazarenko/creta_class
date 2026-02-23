@@ -152,6 +152,7 @@
 		vertical-align: middle;
 		color: black;
 		font-weight: 700;
+		text-decoration: line-through;
 
 		@include bp($point3, min) {
 			font-size: 3rem;
