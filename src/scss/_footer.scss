@@ -62,7 +62,15 @@ footer {
 	margin-bottom: 1.23rem;
 	width: 100%;
 	line-height: 1.3;
+}
 
+.footer__location {
+	line-height: 1.7;
+}
+
+.footer__email,
+.footer__phone,
+.footer__location {
 	a {
 		color: currentColor;
 		text-decoration: none;
@@ -71,10 +79,4 @@ footer {
 			color: $color_orange;
 		}
 	}
-}
-
-.footer__location {
-	display: flex;
-	align-items: center;
-	line-height: 1.7;
 }
