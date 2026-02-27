@@ -2,9 +2,6 @@
 @use '../mixins/breakpoints' as *;
 
 %btn_submit {
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	cursor: pointer;
 	margin-bottom: 2rem;
 	border-radius: 0.9rem;
@@ -12,7 +9,6 @@
 	max-width: 32.8rem;
 	color: white;
 	font-weight: 700;
-	line-height: 100%;
 	font-family: $font_inter;
 	text-align: center;
 	text-transform: uppercase;
@@ -21,11 +17,13 @@
 		width: 100%;
 		height: 6.6rem;
 		font-size: 1.8rem;
+		line-height: 6.6rem;
 	}
 	@include bp($point4) {
 		width: 75%;
 		height: 5rem;
 		font-size: 1.6rem;
+		line-height: 5rem;
 	}
 
 	&:hover {
@@ -36,13 +34,13 @@
 
 %btn_cookie {
 	display: flex;
+	column-gap: 0.8rem;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
 	border: 0.2rem solid $color_lime;
 	width: 100%;
 	font-weight: 900;
-	line-height: 100%;
 	font-family: $font_nunito;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -77,6 +75,7 @@
 
 %btn_green {
 	display: flex;
+	column-gap: 1.2rem;
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
@@ -92,7 +91,6 @@
 	color: white;
 	font-weight: 500;
 	font-size: 2.2rem;
-	line-height: 100%;
 	font-family: $font_inter;
 	text-decoration: none;
 

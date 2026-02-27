@@ -84,7 +84,6 @@ header {
 		mask-position: center;
 		mask-size: contain;
 		mask-repeat: no-repeat;
-		margin-left: 0.8rem;
 		background-color: currentColor;
 		width: 1.8rem;
 		height: 1.8rem;
@@ -107,15 +106,9 @@ header {
 		background-color: currentColor;
 		width: 1.8rem;
 		height: 1.8rem;
-
-		@include bp($point3, min) {
-			margin-right: 1.2rem;
-		}
 	}
 
 	.btn__text {
-		line-height: 100%;
-
 		@include bp($point4) {
 			display: none;
 		}
