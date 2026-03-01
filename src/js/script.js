@@ -70,12 +70,12 @@ const active = 'active';
 supAll.forEach((elem, index) => {
 	elem.addEventListener('click', function () {
 		if (!elem.classList.contains(active)) {
-			for (let oldIndex = 0; oldIndex < supAll.length; oldIndex++) {
-				const isOldSupActive = supAll[oldIndex].classList.contains(active);
+			for (let prevIndex = 0; prevIndex < supAll.length; prevIndex++) {
+				const isPrevSupActive = supAll[prevIndex].classList.contains(active);
 
-				if (oldIndex !== index && isOldSupActive) {
-					supAll[oldIndex].classList.remove(active);
-					tabAll[oldIndex].classList.remove(active);
+				if (prevIndex !== index && isPrevSupActive) {
+					supAll[prevIndex].classList.remove(active);
+					tabAll[prevIndex].classList.remove(active);
 				}
 			}
 
@@ -136,11 +136,11 @@ accrSup.forEach((elem, index) => {
 			document.querySelectorAll(`.accr__text.${openMod}`).length >= 1 &&
 			!accrText[index].classList.contains(openMod)
 		) {
-			for (let oldIndex = 0; oldIndex < accrSup.length; oldIndex++) {
-				const isOldAccrTextOpen = accrText[oldIndex].classList.contains(openMod);
+			for (let prevIndex = 0; prevIndex < accrSup.length; prevIndex++) {
+				const isPrevTextOpen = accrText[prevIndex].classList.contains(openMod);
 
-				if (oldIndex !== index && isOldAccrTextOpen) {
-					accrText[oldIndex].classList.remove(openMod);
+				if (prevIndex !== index && isPrevTextOpen) {
+					accrText[prevIndex].classList.remove(openMod);
 				}
 			}
 		}
