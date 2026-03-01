@@ -124,11 +124,14 @@
 	@include bp($point1, min) {
 		min-height: 68.3rem;
 	}
-	@media (min-width: $point5) and (max-width: $point2) {
+	@media (min-width: $point3) and (max-width: $point2) {
 		min-height: 96rem;
 	}
 	@include bp($point2) {
 		border-top-left-radius: 2.64rem;
+	}
+	@media (min-width: $point5) and (max-width: $point4) {
+		min-height: 86rem;
 	}
 	@include bp($point6) {
 		min-height: 76rem;
@@ -165,14 +168,28 @@
 .tab__content {
 	display: inherit;
 	align-items: inherit;
-	gap: 3rem;
 
-	@include bp($point1, min) {
-		justify-content: space-between;
-		width: 85%;
+	@media (min-width: $point3) and (max-width: $point2) {
+		min-height: 93rem;
 	}
-	@include bp($point2) {
-		flex-direction: column;
+	@media (min-width: $point5) and (max-width: $point4) {
+		min-height: 83rem;
+	}
+	@include bp($point6) {
+		min-height: 73rem;
+	}
+
+	.tab:nth-child(2) & {
+		gap: 2rem;
+
+		@include bp($point1, min) {
+			justify-content: space-between;
+			width: 85%;
+		}
+		@include bp($point2) {
+			flex-direction: column;
+			justify-content: space-evenly;
+		}
 	}
 }
 
