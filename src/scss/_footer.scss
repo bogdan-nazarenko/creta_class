@@ -39,12 +39,6 @@ footer {
 	display: block;
 	margin-bottom: initial;
 	text-decoration: none;
-
-	@media (min-width: $point3) and (max-width: $point2) {
-		width: 80%;
-		height: 5rem;
-		font-size: 1.3rem;
-	}
 }
 
 .footer__contacts {
