@@ -2,15 +2,15 @@
 
 .slider {
 	position: relative;
+
+	@include bp($point3, min) {
+		padding: 0 3rem;
+	}
 }
 
 .lrn_slider {
 	width: 100%;
 	max-width: 118rem;
-
-	@include bp($point3, min) {
-		padding: 0 2rem;
-	}
 }
 
 .slider__item {
