@@ -1,5 +1,14 @@
 @use './helpers/abstracts' as *;
 
+$tabMinHeight1: 96rem;
+$tabMinHeight2: 86rem;
+$tabMinHeight3: 76rem;
+$tabPadd: 1.5rem;
+
+@mixin min_height($value) {
+	min-height: $value - $tabPadd * 2;
+}
+
 .tabs_ages {
 	display: flex;
 	flex-direction: column;
@@ -125,16 +134,16 @@
 		min-height: 68.3rem;
 	}
 	@media (min-width: $point3) and (max-width: $point2) {
-		min-height: 96rem;
+		min-height: $tabMinHeight1;
 	}
 	@include bp($point2) {
 		border-top-left-radius: 2.64rem;
 	}
 	@media (min-width: $point5) and (max-width: $point4) {
-		min-height: 86rem;
+		min-height: $tabMinHeight2;
 	}
 	@include bp($point6) {
-		min-height: 76rem;
+		min-height: $tabMinHeight3;
 	}
 }
 
@@ -146,7 +155,7 @@
 	transition: all 1s;
 	border-radius: inherit;
 	background: linear-gradient(-45deg, #ffdfdf, #fef5db);
-	padding: 0 1.5rem;
+	padding: 0 $tabPadd;
 	width: inherit;
 	height: 0;
 	min-height: 0;
@@ -159,8 +168,8 @@
 
 	&#{$active} {
 		z-index: 1;
-		padding-top: 1.5rem;
-		padding-bottom: 1.5rem;
+		padding-top: $tabPadd;
+		padding-bottom: $tabPadd;
 		min-height: inherit;
 	}
 }
@@ -170,13 +179,13 @@
 	align-items: inherit;
 
 	@media (min-width: $point3) and (max-width: $point2) {
-		min-height: 93rem;
+		@include min_height($tabMinHeight1);
 	}
 	@media (min-width: $point5) and (max-width: $point4) {
-		min-height: 83rem;
+		@include min_height($tabMinHeight2);
 	}
 	@include bp($point6) {
-		min-height: 73rem;
+		@include min_height($tabMinHeight3);
 	}
 
 	.tab:nth-child(2) & {
