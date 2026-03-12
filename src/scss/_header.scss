@@ -82,7 +82,10 @@ header {
 	display: flex;
 	align-items: center;
 
-	@include bp($point3, min) {
+	@include bp($point1, min) {
+		column-gap: 2.7rem;
+	}
+	@media (min-width: $point3) and (max-width: $point2) {
 		column-gap: 1.5rem;
 	}
 	@include bp($point4) {
