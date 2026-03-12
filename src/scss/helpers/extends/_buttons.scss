@@ -1,31 +1,6 @@
 @use '../variables' as *;
 @use '../mixins/breakpoints' as *;
 
-%btn_submit {
-	cursor: pointer;
-	border-radius: 0.9rem;
-	background: linear-gradient(110deg, $color_orange 70%, #ff7b3a96 80%, $color_orange 95%);
-	color: white;
-	font-weight: 700;
-	font-family: $font_inter;
-	text-align: center;
-	text-transform: uppercase;
-
-	@include bp($point1, min) {
-		padding: 2.25rem 5.12rem;
-		font-size: 1.8rem;
-	}
-	@include bp($point2) {
-		padding: 1.5rem 2.5rem;
-		font-size: 1.6rem;
-	}
-
-	&:hover {
-		background: linear-gradient(110deg, $color_lime 70%, #dfdfdf 80%, $color_lime 95%);
-		background-color: $color_lime;
-	}
-}
-
 %btn_cookie {
 	border: 0.2rem solid $color_lime;
 	font-weight: 900;
@@ -99,5 +74,30 @@
 	&:hover {
 		background-color: transparent;
 		color: currentColor;
+	}
+}
+
+%btn_submit {
+	cursor: pointer;
+	border-radius: 0.9rem;
+	background: linear-gradient(110deg, $color_orange 70%, #ff7b3a96 80%, $color_orange 95%);
+	color: white;
+	font-weight: 700;
+	font-family: $font_inter;
+	text-align: center;
+	text-transform: uppercase;
+
+	@include bp($point1, min) {
+		padding: 2.25rem 5.12rem;
+		font-size: 1.8rem;
+	}
+	@include bp($point2) {
+		padding: 1.5rem 2.5rem;
+		font-size: 1.6rem;
+	}
+
+	&:hover {
+		background: linear-gradient(110deg, $color_lime 70%, #dfdfdf 80%, $color_lime 95%);
+		background-color: $color_lime;
 	}
 }
