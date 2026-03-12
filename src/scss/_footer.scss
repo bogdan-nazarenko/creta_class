@@ -26,8 +26,12 @@ footer {
 }
 
 .footer__links {
-	width: 100%;
-	max-width: 32.8rem;
+	@include bp($point3, min) {
+		min-width: fit-content;
+	}
+	@include bp($point4) {
+		width: fit-content;
+	}
 
 	.creta__img {
 		display: block;
@@ -36,16 +40,19 @@ footer {
 }
 
 .footer__btn {
-	display: block;
-	margin-bottom: initial;
+	display: inline-block;
 	text-decoration: none;
+	@extend %btn_submit;
 }
 
 .footer__contacts {
 	max-width: 58rem;
 
-	@include bp($point3, min) {
+	@include bp($point1, min) {
 		font-size: 2.2rem;
+	}
+	@media (min-width: $point3) and (max-width: $point2) {
+		font-size: 1.8rem;
 	}
 	@include bp($point4) {
 		font-size: 1.5rem;
