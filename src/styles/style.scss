@@ -1,0 +1,16 @@
+@use "helpers/reset";
+@use "helpers/variables";
+@use "fonts";
+@use "base";
+
+@use "elements/feature";
+
+@use "header";
+@use "blocks/hero";
+@use "blocks/learning";
+@use "blocks/skills";
+@use "blocks/guide";
+@use "blocks/reviews";
+@use "blocks/faq";
+@use "blocks/location";
+@use "footer";

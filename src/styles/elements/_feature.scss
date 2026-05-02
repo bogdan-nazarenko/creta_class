@@ -1,0 +1,143 @@
+@use "../helpers/abstracts" as *;
+
+%icon-sizes {
+    width: 100%;
+    max-width: 8.5rem;
+    height: 7.3rem;
+}
+
+.feature {
+    border-radius: 4rem;
+    background-color: #ddffbb;
+    padding: 3.3rem 3rem;
+    height: auto;
+    user-select: none;
+
+    @media (max-width: $point2) {
+        font-size: 1.5rem;
+    }
+
+    &.feature--pink {
+        background-color: var(--light-pink-color);
+
+        .feature__heading {
+            margin-bottom: 2.3rem;
+        }
+
+        .feature__icon-wrapper {
+            left: -0.3rem;
+            margin: 0.6rem 0.6rem 0 0;
+            width: 100%;
+            max-width: 7.3rem;
+            height: 6.2rem;
+        }
+
+        .feature__title {
+            padding-top: 1.3rem;
+        }
+
+        .feature__list {
+            color: #bd6e89;
+        }
+
+        .feature__list-item::before {
+            background-color: #ff96b9;
+        }
+    }
+
+    &.feature--beige {
+        background-color: var(--beige-color);
+
+        .feature__icon-wrapper {
+            left: -0.6rem;
+            margin: 0 0.6rem 0 0;
+            @extend %icon-sizes;
+        }
+        .feature__title {
+            padding-top: 1.2rem;
+        }
+
+        .feature__list {
+            color: #a58639;
+        }
+
+        .feature__list-item::before {
+            background-color: #d8af4a;
+        }
+    }
+
+    &.feature--blue {
+        background-color: #ebf2ff;
+
+        .feature__icon-wrapper {
+            left: -0.4rem;
+            margin: 0 1.3rem 0 0;
+            @extend %icon-sizes;
+        }
+
+        .feature__title {
+            padding-top: 0.6rem;
+        }
+
+        .feature__list {
+            color: #28529fe5;
+        }
+
+        .feature__list-item::before {
+            background-color: #789bdc;
+        }
+    }
+}
+
+.feature__heading {
+    margin-bottom: 3rem;
+
+    &.feature__heading--flex {
+        display: flex;
+
+        @media (max-width: $point2) {
+            align-items: center;
+        }
+    }
+}
+
+.feature__icon-wrapper {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.feature__icon {
+    @extend %contain-media;
+}
+
+.feature__title {
+    font-weight: 700;
+    line-height: 1.28;
+}
+
+.feature__list {
+    padding-left: 2rem;
+    color: var(--green-color);
+
+    @media (min-width: $point1) {
+        font-size: 1.6rem;
+    }
+}
+
+.feature__list-item {
+    position: relative;
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0.4rem;
+        left: -2rem;
+        width: 1rem;
+        height: 1rem;
+        content: "";
+        @include contain-background(null, var(--green-color));
+    }
+}

@@ -1,0 +1,174 @@
+@use "../helpers/abstracts" as *;
+
+$accordion-tb-padding1: 4rem;
+$accordion-lr-padding1: 5.2rem;
+
+$accordion-tb-padding2: 2rem;
+$accordion-lr-padding2: 2.5rem;
+
+$accordion-padding3: 1.5rem;
+
+.faq {
+    @media (min-width: $point1) {
+        padding: 7.7rem 0;
+    }
+}
+
+.faq__title {
+    margin-bottom: 2rem;
+}
+
+.faq__accordion-item {
+    transition: var(--duration);
+    border: 0.41rem solid #e2e4eb;
+    border-bottom-width: 0.83rem;
+    background-color: #f7f7fa;
+
+    @media (min-width: $point1) {
+        border-radius: 3.1rem;
+    }
+    @media (max-width: $point2) {
+        border-radius: 2rem;
+    }
+
+    &#{$open} {
+        .faq__accordion-heading::after {
+            transform: rotate(180deg);
+        }
+
+        .faq__accordion-content-wrapper {
+            grid-template-rows: 1fr;
+            visibility: visible;
+
+            @media (min-width: $point1) {
+                padding-bottom: $accordion-tb-padding1;
+            }
+            @media (min-width: $point3) and (max-width: $point2) {
+                padding-bottom: $accordion-tb-padding2;
+            }
+            @media (max-width: $point4) {
+                padding-bottom: $accordion-padding3;
+            }
+        }
+    }
+
+    &:not(:last-child) {
+        @media (min-width: $point1) {
+            margin-bottom: 5.4rem;
+        }
+        @media (min-width: $point3) and (max-width: $point2) {
+            margin-bottom: 2.7rem;
+        }
+        @media (max-width: $point4) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    &:first-child .faq__accordion-text {
+        margin-bottom: 1rem;
+        color: var(--translucent-black-color);
+    }
+}
+
+.faq__accordion-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+
+    @media (min-width: $point1) {
+        padding: $accordion-tb-padding1 $accordion-lr-padding1;
+    }
+    @media (min-width: $point3) and (max-width: $point2) {
+        padding: $accordion-tb-padding2 $accordion-lr-padding2;
+    }
+    @media (max-width: $point4) {
+        padding: $accordion-padding3;
+    }
+
+    &::after {
+        flex-shrink: 0;
+        transition: var(--duration);
+        content: "";
+        @include contain-background(
+            "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAzNiAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIuNTk4MjcgMi41OTgxNEwxNy41Njk3IDE2LjUxMTJMMzIuNTQxMSAyLjU5ODE0IiBzdHJva2U9ImJsYWNrIiBzdHJva2Utb3BhY2l0eT0iMC42IiBzdHJva2Utd2lkdGg9IjUuMTk2NDMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K"
+        );
+
+        @media (min-width: $point1) {
+            position: relative;
+            right: -1.2rem;
+            width: 3.6rem;
+            height: 2rem;
+        }
+        @media (min-width: $point3) and (max-width: $point2) {
+            width: 2.6rem;
+            height: 1.4rem;
+        }
+        @media (max-width: $point4) {
+            width: 1.8rem;
+            height: 1rem;
+        }
+    }
+}
+
+.faq__accordion-title {
+    font-weight: 700;
+
+    @media (min-width: $point1) {
+        font-size: 3.32rem;
+    }
+    @media (min-width: $point3) and (max-width: $point2) {
+        font-size: 2.3rem;
+    }
+}
+
+.faq__accordion-content-wrapper {
+    display: grid;
+    grid-template-rows: 0fr;
+    visibility: hidden;
+    transition: var(--duration);
+    overflow: hidden;
+
+    @media (min-width: $point1) {
+        padding: 0 $accordion-lr-padding1;
+    }
+    @media (min-width: $point3) and (max-width: $point2) {
+        padding: 0 $accordion-lr-padding2;
+    }
+
+    @media (max-width: $point4) {
+        padding: 0 $accordion-padding3;
+    }
+}
+
+.faq__accordion-content {
+    min-height: 0;
+    color: #00000099;
+    font-weight: 500;
+
+    @media (min-width: $point1) {
+        font-size: 2.7rem;
+    }
+}
+
+.faq__accordion-text {
+    word-spacing: 0.1rem;
+}
+
+.faq__accordion-list {
+    @media (min-width: $point1) {
+        padding-left: 4rem;
+    }
+    @media (min-width: $point3) and (max-width: $point2) {
+        padding-left: 3rem;
+    }
+    @media (max-width: $point4) {
+        padding-left: 2.5rem;
+    }
+}
+
+.faq__accordion-list-item {
+    list-style: decimal;
+    word-spacing: 0.1rem;
+}

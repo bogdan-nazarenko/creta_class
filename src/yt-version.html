@@ -1,28 +1,31 @@
+---
+permalink: ./yt-version.html
+---
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Creta Class</title>
-		<link rel="icon" type="image/x-icon" href="./imgs/icons/creta-icon.png" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper.min.css" />
-		<link rel="stylesheet" href="css/style.css" />
-	</head>
-	<body>
-		<div class="wrapper">
-			@@include('./html/header.html')
-			<main>
-				@@include('./html/blocks/hero_block.html')
-				@@include('./html/blocks/lrn_slider.html')
-				@@include('./html/blocks/tabs_ages.html')
-				@@include('./html/blocks/media_block_yt.html')
-				@@include('./html/blocks/reviews_block.html')
-				@@include('./html/blocks/faqs_accr.html')
-				@@include('./html/blocks/map.html')
-			</main>
-			@@include('./html/footer.html')
-		</div>
-		<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-		<script src="js/script.min.js"></script>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Creta Class</title>
+        <link rel="icon" href="favicon.png" type="image/png" />
+        <link rel="stylesheet" href="libs/swiper/swiper.min.css">
+        <link rel="stylesheet" href="styles/style.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            {% include "header.html" %}
+            <main>
+                {% include "blocks/hero.html" %}
+                {% include "blocks/learning.html" %}
+                {% include "blocks/skills.html" %}
+                {% include "blocks/yt-guide.html" %}
+                {% include "blocks/reviews.html" %}
+                {% include "blocks/faq.html" %}
+                {% include "blocks/location.html" %}
+            </main>
+            {% include "footer.html" %}
+        </div>
+        <script src="libs/swiper/swiper-bundle.min.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
 </html>

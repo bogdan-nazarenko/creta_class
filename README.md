@@ -1,83 +1,29 @@
-# 📦 eveligora_gulp_5_template
+# 11ty + SCSS
 
-A fast and simple Gulp 5+ starter template for frontend development.
-
-## 🚀 Features
-
-- Gulp 5+ with ESModules and async/await
-- SCSS compilation with dart-sass
-- JS concatenation and minification
-- HTML file includes
-- Image optimization (JPEG, PNG, SVG)
-- Convert fonts .ttf to woff2
-- LiveReload via BrowserSync
-- HTML/SCSS/JS prettifying (Prettier)
-- Production build with minified HTML/CSS/JS/images
-- Error handling with plumber
-
----
-
-## 📁 Folder Structure
-
-```
-├── app/            # Compiled files
-├── src/            # Source files
-│   ├── scss/       # SCSS files
-│   ├── js/         # JS files
-│   ├── imgs/       # Images
-│   ├── fonts/      # Fonts
-│   └── *.html      # HTML files
-└── gulpfile.js     # Gulp config
-```
-
----
-
-## 🛠️ Setup & Usage
+## Template (custom)
 
 1. **Install Node.js** if not already installed: [https://nodejs.org/](https://nodejs.org/)
 
-2. **Install dependencies**:
+2. **Install dependencies:**
 
-```bash
-npm install
-```
+    ```bash
+    npm install
+    ```
 
-3. **Start development**:
+3. **Start development:**
 
-```bash
-npm start
-```
+    ```bash
+    npm start
+    ```
 
-This will:
+4. **Format your source files:**
 
-- Compile SCSS
-- Concatenate and minify JS
-- Watch for changes
-- Launch a local dev server
+    ```bash
+    npm run format
+    ```
 
-4. **Format your source files**:
+5. **Build for production (dist):**
 
-```bash
-npm run format
-```
-
-5. **Build for production**:
-
-```bash
-npm run build
-```
-
-This creates a clean build in the `/app/` folder with:
-
-- Minified HTML
-- Minified CSS and JS
-- Optimized images
-- Converted fonts
-
----
-
-## 💻 Author
-
-Evgeniy Veligora
-
-GitHub: [@eveligora](https://github.com/eveligora)
+    ```bash
+    npm run build
+    ```

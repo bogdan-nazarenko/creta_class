@@ -1,20 +1,7 @@
 {
-	"trailingComma": "all",
-	"tabWidth": 4,
-	"useTabs": true,
-	"semi": true,
-	"singleQuote": true,
-	"endOfLine": "auto",
-	"bracketSpacing": true,
-	"printWidth": 120,
-	"arrowParens": "avoid",
-	"overrides": [
-		{
-			"files": "*.html",
-			"options": {
-				"printWidth": 1000
-			}
-		}
-	],
-	"plugins": ["prettier-plugin-css-order"]
+    "trailingComma": "es5",
+    "tabWidth": 4,
+    "semi": true,
+    "singleQuote": false,
+    "plugins": ["prettier-plugin-css-order"]
 }

@@ -1,0 +1,98 @@
+@use "../helpers/abstracts" as *;
+
+.learning {
+    @media (min-width: $point1) {
+        padding: 9.55rem 0 7.65rem;
+    }
+}
+
+.learning__heading {
+    @media (min-width: $point3) {
+        margin-bottom: 6.2rem;
+    }
+}
+
+.learning__carousel-wrapper {
+    position: relative;
+
+    @media (min-width: $point3) {
+        padding: 0 4.5rem;
+    }
+}
+
+.learning__carousel {
+    max-width: 113.8rem;
+}
+
+.learning__prev-arrow,
+.learning__next-arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    width: 3.7rem;
+    height: 2rem;
+    @include contain-mask("../media/icons/arrow.svg", var(--brown-color));
+
+    @media (max-width: $point4) {
+        display: none;
+    }
+
+    &:hover {
+        background-color: var(--lime-color);
+    }
+}
+
+.learning__prev-arrow {
+    left: -0.1rem;
+    transform: translateY(-50%);
+}
+
+.learning__next-arrow {
+    right: -0.1rem;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+.learning__pagination {
+    display: flex;
+    margin: 3.7rem auto 0;
+    overflow: hidden;
+
+    @media (min-width: $point1) {
+        width: 11rem;
+    }
+    @media (min-width: $point3) and (max-width: $point2) {
+        width: 17rem;
+    }
+    @media (min-width: $point3) {
+        justify-content: space-between;
+    }
+}
+
+.learning__bullet {
+    display: inline-block;
+    transition: var(--duration);
+    cursor: pointer;
+    border: 0.2rem solid var(--brown-color);
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+
+    @media (max-width: $point4) {
+        position: relative;
+        flex-shrink: 0;
+        margin: 0 0.5rem;
+
+        &:has(+ #{$active}),
+        &#{$active} + & {
+            transform: scale(0.66);
+        }
+
+        &:not(#{$active}, :has(+ #{$active})) {
+            transform: scale(0.33);
+        }
+    }
+
+    &#{$active} {
+        background-color: var(--brown-color);
+    }
+}

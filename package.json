@@ -1,44 +1,24 @@
 {
-	"name": "eveligora_gulp_5_template",
-	"version": "1.0.0",
-	"author": "Evgeniy Veligora",
-	"license": "ISC",
-	"description": "Simple Gulp 5 start template",
-	"main": "gulpfile.js",
-	"scripts": {
-		"start": "gulp",
-		"format": "gulp format",
-		"build": "gulp build",
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"deploy": "gulp build && gh-pages -d app"
-	},
-	"config": {
-		"srcDir": "src",
-		"outputDir": "app",
-		"buildDir": "build",
-		"notify": false
-	},
-	"devDependencies": {
-		"browser-sync": "^3.0.2",
-		"del": "^8.0.0",
-		"fs": "^0.0.1-security",
-		"gh-pages": "^6.3.0",
-		"gulp": "^5.0.0",
-		"gulp-changed": "^5.0.2",
-		"gulp-concat": "^2.6.1",
-		"gulp-csso": "^4.0.1",
-		"gulp-dart-sass": "^1.1.0",
-		"gulp-file-include": "^2.3.0",
-		"gulp-htmlmin": "^5.0.1",
-		"gulp-imagemin": "^9.1.0",
-		"gulp-notify": "^5.0.0",
-		"gulp-plumber": "^1.2.1",
-		"gulp-prettier": "^6.0.0",
-		"gulp-terser": "^2.1.0",
-		"gulp-ttf2woff2": "^5.0.0",
-		"imagemin-mozjpeg": "^10.0.0",
-		"imagemin-pngquant": "^10.0.0",
-		"imagemin-svgo": "^11.0.1",
-		"prettier-plugin-css-order": "^2.2.0"
-	}
+    "name": "11ty-template",
+    "version": "1.0.0",
+    "description": "Eleventy is a simpler static site generator",
+    "license": "ISC",
+    "author": "Bogdan Nazarenko",
+    "type": "module",
+    "main": "eleventy.config.js",
+    "scripts": {
+        "start": "npx @11ty/eleventy --serve",
+        "format": "prettier . --write",
+        "build": "npx @11ty/eleventy",
+        "deploy": "npx @11ty/eleventy && gh-pages -d dist"
+    },
+    "devDependencies": {
+        "@11ty/eleventy": "^3.1.5",
+        "gh-pages": "^6.3.0",
+        "html-minifier-terser": "^7.2.0",
+        "prettier": "^3.8.1",
+        "prettier-plugin-css-order": "^2.2.0",
+        "sass": "^1.98.0",
+        "terser": "^5.46.1"
+    }
 }

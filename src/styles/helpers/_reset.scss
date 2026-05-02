@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: initial;
+    outline: initial;
+    border: initial;
+    border-radius: initial;
+    background-color: initial;
+    padding: initial;
+    font-size: 100%;
+    overflow-wrap: break-word;
+}
+
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: initial;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+textarea {
+    resize: none;
+}
