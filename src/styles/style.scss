@@ -1,0 +1,14 @@
+@use "helpers/reset";
+@use "helpers/variables";
+@use "fonts";
+@use "base";
+
+@use "header";
+@use "sections/hero";
+@use "sections/learning";
+@use "sections/skills";
+@use "sections/guide";
+@use "sections/reviews";
+@use "sections/faq";
+@use "sections/location";
+@use "footer";

@@ -1,0 +1,185 @@
+@use "../helpers/abstracts" as *;
+
+.hero {
+    @media (min-width: $point1) {
+        padding: 4.6rem 0 9.55rem;
+    }
+}
+
+.hero__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+
+    @media (min-width: $point3) and (max-width: $point2) {
+        align-items: center;
+    }
+    @media (max-width: $point4) {
+        flex-direction: column;
+    }
+}
+
+.hero__title {
+    position: relative;
+    max-width: 67.9rem;
+    line-height: 1.15;
+    word-spacing: 0.3rem;
+
+    @media (min-width: $point1) {
+        margin-bottom: 10.8rem;
+        padding-top: 11rem;
+        font-size: 6.4rem;
+
+        &::before {
+            position: absolute;
+            top: 4.1rem;
+            left: -19.6rem;
+            z-index: -1;
+            background-image: url(../media/images/paper-plane.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 34rem;
+            height: 23rem;
+            content: "";
+        }
+    }
+    @media (min-width: $point3) and (max-width: $point2) {
+        margin-bottom: 5.6rem;
+        font-size: 4rem;
+    }
+    @media (max-width: $point4) {
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+}
+
+.hero__form {
+    max-width: 59.8rem;
+}
+
+.hero__legend {
+    margin-bottom: 3.2rem;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
+.hero__option-set {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+
+    @media (min-width: $point3) {
+        gap: 2.46rem;
+    }
+    @media (max-width: $point4) {
+        gap: 2rem;
+    }
+}
+
+.hero__label {
+    position: relative;
+    transition: var(--duration);
+    border: 0.2rem solid #00000026;
+    border-bottom-width: 0.5rem;
+    border-radius: 0.8rem;
+    user-select: none;
+
+    @media (min-width: $point1) {
+        cursor: pointer;
+        padding: 1.45rem 2.96rem;
+    }
+    @media (max-width: $point2) {
+        padding: 0.6rem 1.78rem;
+        font-size: 1.6rem;
+    }
+
+    &:has(.hero__radio-button:checked) {
+        background-color: var(--lime-color);
+        color: var(--white-color);
+    }
+}
+
+.hero__radio-button {
+    position: absolute;
+    opacity: 0;
+}
+
+.hero__button {
+    @extend %submit-button;
+    margin-bottom: 2rem;
+}
+
+.hero__discount,
+.hero__description {
+    @media (min-width: $point3) {
+        font-size: 1.83rem;
+    }
+}
+
+.hero__discount {
+    margin-bottom: 0.6rem;
+    width: fit-content;
+
+    strong {
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        font-weight: 500;
+        text-decoration: line-through;
+
+        @media (min-width: $point1) {
+            font-size: 3.2rem;
+        }
+        @media (min-width: $point3) and (max-width: $point2) {
+            font-size: 2.8rem;
+        }
+        @media (max-width: $point4) {
+            font-size: 2.2rem;
+        }
+    }
+
+    span:nth-of-type(1) {
+        margin-right: 0.2rem;
+        color: var(--translucent-black-color);
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    span:nth-of-type(2) {
+        color: var(--lime-color);
+    }
+}
+
+.hero__description {
+    width: fit-content;
+
+    span {
+        color: #00000080;
+        font-weight: 500;
+        letter-spacing: 0.03rem;
+        text-transform: capitalize;
+    }
+}
+
+.hero__link {
+    color: var(--orange-color);
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover {
+        color: var(--lime-color);
+    }
+}
+
+.hero__image-wrapper {
+    width: 100%;
+    max-width: 74rem;
+
+    @media (min-width: $point1) {
+        height: 68.4rem;
+    }
+}
+
+.hero__image {
+    @extend %contain-media;
+}

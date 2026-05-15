@@ -1,0 +1,41 @@
+@use "../variables" as *;
+
+%submit-button {
+    display: inline-block;
+    cursor: pointer;
+    border-radius: 0.9rem;
+    background: linear-gradient(
+        110deg,
+        var(--orange-color) 70%,
+        #ff7b3a96 80%,
+        var(--orange-color) 95%
+    );
+    color: var(--white-color);
+    font-weight: 700;
+    font-family: var(--inter-font);
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @media (min-width: $point1) {
+        padding: 2.25rem 5.12rem;
+        font-size: 1.8rem;
+    }
+    @media (min-width: $point3) and (max-width: $point2) {
+        padding: 1.5rem 2.5rem;
+        font-size: 1.6rem;
+    }
+    @media (max-width: $point4) {
+        padding: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    &:hover {
+        background: linear-gradient(
+            110deg,
+            var(--lime-color) 70%,
+            #dfdfdf 80%,
+            var(--lime-color) 95%
+        );
+    }
+}

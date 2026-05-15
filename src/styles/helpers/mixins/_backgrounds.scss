@@ -1,0 +1,23 @@
+@mixin background($url, $size: null, $color: null) {
+    background-image: url($url);
+    background-position: center;
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-color: $color;
+}
+
+@mixin contain-background($url, $color: null) {
+    background-image: url($url);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: $color;
+}
+
+@mixin cover-background($url, $color: null) {
+    background-image: url($url);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $color;
+}
