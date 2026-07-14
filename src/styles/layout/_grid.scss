@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+.wrapper {
+    --wrapper-padding-top: 12rem;
+
+    display: flex;
+    flex-direction: column;
+    padding-top: var(--wrapper-padding-top);
+    min-height: inherit;
+
+    @media (width < $desktop) {
+        --wrapper-padding-top: 9.9rem;
+    }
+
+    @media (width < $tablet) {
+        --wrapper-padding-top: 8rem;
+    }
+}
+
+.footer,
+.section {
+    --grid-padding-block: 8rem;
+    --grid-padding: var(--grid-padding-block) 0;
+
+    padding: var(--grid-padding);
+    overflow: hidden;
+
+    @media (width < $desktop) {
+        padding: 4rem 0;
+    }
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.section:where(:last-child) {
+    @media (width >= $desktop) {
+        padding-bottom: calc(var(--grid-padding-block) * 2);
+    }
+}
+
+.container {
+    --container-padding-inline: 2rem;
+
+    margin: 0 auto;
+    padding: 0 var(--container-padding-inline);
+    width: 100%;
+    max-width: 135rem;
+}

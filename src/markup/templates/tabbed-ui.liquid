@@ -1,0 +1,32 @@
+<div class="{% if className %}{{ className }} {% endif %}tabbed-ui">
+    <div class="tabbed-ui__tab-bar" role="tablist">
+        {%- for prop in props %}
+            <button
+                class="tabbed-ui__tab"
+                id="{{ prop.tabId }}"
+                role="tab"
+                aria-controls="{{ prop.panelId }}"
+                aria-selected="false"
+                tabindex="-1"
+            >
+                <span class="tabbed-ui__title">{{ prop.title }}</span>
+                <span class="tabbed-ui__description">{{ prop.description }}</span>
+            </button>
+        {%- endfor %}
+    </div>
+    <div
+        class="tabbed-ui__content"
+    >
+        {%- for prop in props %}
+            <div
+                class="tabbed-ui__panel"
+                id="{{ prop.panelId }}"
+                role="tabpanel"
+                aria-labelledby="{{ prop.tabId }}"
+                tabindex="0"
+            >
+                {% render prop.content -%}
+            </div>
+        {%- endfor %}
+    </div>
+</div>

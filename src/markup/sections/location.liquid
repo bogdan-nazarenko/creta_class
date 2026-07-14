@@ -1,0 +1,12 @@
+<section class="location section" id="where">
+    <div class="container">
+        {% render 'templates/base-header',
+            title: 'Where?',
+            text: 'Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry.'
+        -%}
+        <div class="location__map-wrapper">
+            {% render 'templates/embedded-map', className: 'location__embedded-map', props: props -%}
+        </div>
+    </div>
+</section>

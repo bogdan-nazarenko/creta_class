@@ -1,0 +1,26 @@
+---
+layout: page
+title: "Creta Class"
+
+styles:
+ - "libs/swiper/swiper.min.css"
+ - "styles/style.css"
+
+scripts:
+ - src: "libs/swiper/swiper-bundle.min.js"
+ - src: "scripts/script.js"
+   type: "module"
+---
+<div class="wrapper">
+    {% render 'layout/header' -%}
+    <main class="main">
+        {% render 'sections/hero' %}
+        {%- render 'sections/learning', props: feature-card.learning %}
+        {%- render 'sections/skills', props: tabbed-ui.skills %}
+        {%- render 'sections/guide', props: video-player.guide %}
+        {%- render 'sections/reviews' %}
+        {%- render 'sections/faq', props: accordion.faq %}
+        {%- render 'sections/location', props: embedded-map.location -%}
+    </main>
+    {% render 'layout/footer' -%}
+</div>

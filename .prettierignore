@@ -1,1 +1,3 @@
-src/*.html
+dist
+node_modules
+src/libs

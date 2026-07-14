@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+
+.creta-link {
+    display: block;
+    width: 100%;
+    max-width: 25.6rem;
+    height: 5.2rem;
+
+    @media (width < $desktop) {
+        width: fit-content;
+        height: 4rem;
+    }
+
+    @media (width < $tablet) {
+        height: 3rem;
+    }
+}
+
+.creta-logo {
+    @extend %contain-media;
+}

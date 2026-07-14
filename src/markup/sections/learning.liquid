@@ -1,0 +1,20 @@
+<section class="learning section">
+    <div class="container">
+        {% render 'templates/base-header',
+            title: 'Adaptive learning path + best teachers = Math mastery',
+            titleClass: 'learning__title',
+            text: 'The
+        guaranteed formula to be a Math wizard'
+        -%}
+        <div class="learning__carousel-wrapper">
+            <div class="learning__carousel swiper">
+                <div class="learning__feature-group swiper-wrapper">
+                    {% render 'templates/feature-card' for props as prop -%}
+                </div>
+            </div>
+            <span class="learning__prev-arrow"></span>
+            <span class="learning__next-arrow"></span>
+        </div>
+        <div class="learning__pagination"></div>
+    </div>
+</section>

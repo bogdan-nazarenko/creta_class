@@ -1,0 +1,23 @@
+:root {
+    --black-color: black;
+    --translucent-black-color: #000000bf;
+    --white-color: white;
+    --lime-color: #2cc84d;
+    --translucent-lime-color: #2cc84e9d;
+    --green-color: #326a00;
+    --orange-color: #ff6d25;
+    --light-pink-color: #fce4ec;
+    --beige-color: #fff0cb;
+    --brown-color: #974e24;
+
+    --inter-font: "Inter", sans-serif;
+    --manrope-font: "Manrope", sans-serif;
+
+    --duration: 0.3s;
+}
+
+// breakpoints
+$desktop: 1024px;
+$tablet: 768px;
+$phablet: 480px;
+$mobile: 360px;

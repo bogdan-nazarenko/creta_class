@@ -1,0 +1,117 @@
+@use "../abstracts" as *;
+
+.learning {
+    --grid-padding: 9.6rem 0 7.7rem;
+}
+
+.learning__title {
+    line-height: inherit;
+}
+
+.learning__carousel-wrapper {
+    position: relative;
+
+    @media (width >= $tablet) {
+        padding: 0 4.5rem;
+    }
+}
+
+.learning__carousel {
+    max-width: 113.8rem;
+}
+
+.learning__prev-arrow,
+.learning__next-arrow {
+    --arrow-horizontal-offset: -0.1rem;
+    --arrow-vertical-alignment: translateY(-50%);
+
+    position: absolute;
+    top: 50%;
+    width: 3.7rem;
+    height: 2rem;
+    @extend %cursor-pointer;
+
+    @media (width < $tablet) {
+        display: none;
+    }
+
+    &::before {
+        display: block;
+        height: 100%;
+        content: "";
+        @include mask("../media/icons/arrow.svg", $color: var(--brown-color));
+    }
+
+    &:hover::before {
+        background-color: var(--lime-color);
+    }
+}
+
+.learning__prev-arrow {
+    left: var(--arrow-horizontal-offset);
+    transform: var(--arrow-vertical-alignment);
+}
+
+.learning__next-arrow {
+    right: var(--arrow-horizontal-offset);
+    transform: var(--arrow-vertical-alignment) rotate(180deg);
+}
+
+.learning__pagination {
+    display: flex;
+    margin: 3.7rem auto 0;
+    padding: 0.1rem;
+    width: fit-content;
+    overflow: hidden;
+
+    @media (width >= $desktop) {
+        gap: 2.5rem;
+    }
+
+    @media ($desktop > width >= $tablet) {
+        gap: 2rem;
+    }
+}
+
+.learning__bullet {
+    transition: left var(--duration);
+    width: 2rem;
+    height: 2rem;
+    @extend %cursor-pointer;
+
+    @media (width < $tablet) {
+        position: relative;
+        flex-shrink: 0;
+        margin-inline: 0.5rem;
+    }
+
+    &::before {
+        display: block;
+        transition: var(--duration);
+        border: 0.2rem solid var(--brown-color);
+        border-radius: 50%;
+        height: 100%;
+        content: "";
+
+        @media (width < $tablet) {
+            transform: scale(0.33);
+        }
+    }
+}
+
+.learning__bullet_active::before {
+    background-color: var(--brown-color);
+}
+
+.learning__bullet_active-prev::before,
+.learning__bullet_active-next::before {
+    @media (width < $tablet) {
+        transform: scale(0.66);
+    }
+}
+
+.learning__bullet_active-main::before {
+    @media (width < $tablet) {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,22 @@
+<div
+    class="feature-card{% if prop.className %} {{ prop.className }}{% endif %}"
+>
+    <header class="feature-card__header">
+        {%- if prop.icon %}
+            <div class="feature-card__icon-wrapper">
+                <img
+                    loading="lazy"
+                    class="feature-card__icon"
+                    src="media/icons/{{ prop.icon }}"
+                    alt=""
+                >
+            </div>
+        {%- endif %}
+        <h3 class="feature-card__title">{{ prop.title }}</h3>
+    </header>
+    <ul class="feature-card__list">
+        {%- for value in prop.list %}
+            <li class="feature-card__list-item">{{ value }}</li>
+        {%- endfor %}
+    </ul>
+</div>

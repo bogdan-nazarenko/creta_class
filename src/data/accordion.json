@@ -1,0 +1,33 @@
+{
+    "faq": [
+        {
+            "buttonId": "faq-button-1",
+            "title": "Where can I purchase courses?",
+            "contentId": "faq-content-1",
+            "text": "Here are three ways to purchase your courses:",
+            "list": [
+                "Click the \"Try it now\" button above to purchase your Trial Lessons;",
+                "Purchase courses on the official website;",
+                "Download the \"Creta Class\" app and purchase your desired courses in the app."
+            ]
+        },
+        {
+            "buttonId": "faq-button-2",
+            "title": "Can I get a refund at any time?",
+            "contentId": "faq-content-2",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facilis nemo est aut illo ab modi quod reprehenderit ratione sed minus nihil culpa, velit doloremque molestiae inventore optio nam nostrum. Exercitationem, debitis odit esse fugiat quam iste qui sunt, recusandae, ipsum perspiciatis explicabo veniam."
+        },
+        {
+            "buttonId": "faq-button-3",
+            "title": "Where can I find my purchased courses?",
+            "contentId": "faq-content-3",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facilis nemo est aut illo ab modi quod reprehenderit ratione sed minus nihil culpa, velit doloremque molestiae inventore optio nam nostrum. Exercitationem, debitis odit esse fugiat quam iste qui sunt, recusandae, ipsum perspiciatis explicabo veniam."
+        },
+        {
+            "buttonId": "faq-button-4",
+            "title": "After a completed purchase, when will the course start?",
+            "contentId": "faq-content-4",
+            "text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facilis nemo est aut illo ab modi quod reprehenderit ratione sed minus nihil culpa, velit doloremque molestiae inventore optio nam nostrum. Exercitationem, debitis odit esse fugiat quam iste qui sunt, recusandae, ipsum perspiciatis explicabo veniam."
+        }
+    ]
+}

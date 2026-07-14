@@ -1,0 +1,23 @@
+<div
+    class="{% if className %}{{ className }} {% endif %}{% if props.ytVideo %}yt{% else %}video{% endif %}-player"
+>
+    {%- if props.video %}
+        <video
+            class="video-player__video"
+            src="{{ props.video }}"
+            poster="{{ props.poster | default: 'media/images/poster.png' }}"
+        ></video>
+        <button class="video-player__button" aria-label="play video"></button>
+    {%- elsif props.ytVideo %}
+        <!-- prettier-ignore-attribute allow -->
+        <iframe
+            loading="lazy"
+        class="yt-player__video"
+        src="{{ props.ytVideo }}"
+        title="{{ props.name | default: 'video' }}"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+        ></iframe>
+    {%- endif %}
+</div>

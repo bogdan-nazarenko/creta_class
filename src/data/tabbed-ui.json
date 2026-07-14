@@ -1,0 +1,25 @@
+{
+    "skills": [
+        {
+            "tabId": "skills-tab-s2",
+            "title": "S2",
+            "description": "3-4 years old",
+            "panelId": "skills-panel-s2",
+            "content": "components/syllabus-s2"
+        },
+        {
+            "tabId": "skills-tab-s3",
+            "title": "S3",
+            "description": "5 years old",
+            "panelId": "skills-panel-s3",
+            "content": "components/syllabus-s3"
+        },
+        {
+            "tabId": "skills-tab-s4",
+            "title": "S4",
+            "description": "6 years old",
+            "panelId": "skills-panel-s4",
+            "content": "components/syllabus-s4"
+        }
+    ]
+}

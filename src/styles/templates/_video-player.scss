@@ -1,0 +1,91 @@
+@use "../abstracts" as *;
+
+.video-player,
+.yt-player {
+    border: 0.1rem solid #0000001a;
+    border-bottom-width: 0.8rem;
+    border-radius: 2.5rem;
+    background: linear-gradient(60deg, #feeadd, #fff3dccc, #ffbfbf 80%);
+    width: 100%;
+    max-width: 84rem;
+    height: 57.4rem;
+    overflow: hidden;
+    @extend %cursor-pointer;
+
+    @media (width < $desktop) {
+        height: 45rem;
+    }
+
+    @media (width < $tablet) {
+        height: 35rem;
+    }
+
+    @media (width < $phablet) {
+        height: 25rem;
+    }
+}
+
+.video-player__video {
+    outline-offset: -0.1rem;
+    border-radius: inherit;
+    @extend %fill-media;
+
+    @media (width >= $desktop) {
+        &[controls] {
+            object-fit: cover;
+        }
+    }
+
+    @media (width < $desktop) {
+        object-fit: cover;
+    }
+
+    &:fullscreen {
+        border-radius: 0;
+        object-fit: contain;
+    }
+}
+
+.yt-player__video {
+    @extend %cover-media;
+}
+
+.video-player__button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.2s;
+    width: 16.5rem;
+    height: 16.5rem;
+    @include background("../media/icons/play.svg");
+
+    @media (width < $desktop) {
+        width: 13rem;
+        height: 13rem;
+    }
+
+    @media (width < $tablet) {
+        width: 8rem;
+        height: 8rem;
+    }
+
+    &:disabled {
+        display: none;
+    }
+}
+
+.video-player:active .video-player__button {
+    width: 13rem;
+    height: 13rem;
+
+    @media (width < $desktop) {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    @media (width < $tablet) {
+        width: 6rem;
+        height: 6rem;
+    }
+}

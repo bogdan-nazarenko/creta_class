@@ -1,0 +1,33 @@
+<div class="{% if className %}{{ className }} {% endif %}accordion">
+    {%- for prop in props %}
+        <div class="accordion__item">
+            <h3 class="accordion__title">
+                <button
+                    class="accordion__button"
+                    id="{{ prop.buttonId }}"
+                    aria-controls="{{ prop.contentId }}"
+                    aria-expanded="false"
+                >
+                    {{ prop.title }}
+                </button>
+            </h3>
+            <div
+                class="accordion__content"
+                id="{{ prop.contentId }}"
+                role="region"
+                aria-labelledby="{{ prop.buttonId }}"
+            >
+                <div class="accordion__content-inner">
+                    <p class="accordion__text">{{ prop.text }}</p>
+                    {%- if prop.list %}
+                        <ol class="accordion__list">
+                            {%- for value in prop.list %}
+                                <li class="accordion__list-item">{{ value }}</li>
+                            {%- endfor %}
+                        </ol>
+                    {%- endif %}
+                </div>
+            </div>
+        </div>
+    {%- endfor %}
+</div>

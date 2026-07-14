@@ -1,0 +1,41 @@
+<section class="hero section" id="trial-class">
+    <div class="hero__container container">
+        <div class="hero__info">
+            <h1 class="hero__title">Making Kids Fall in Love with Math!</h1>
+            <form class="hero__form" action="#">
+                <fieldset class="hero__option-set">
+                    <legend class="hero__legend">Book your free class with age group</legend>
+                    {%- for number in (3..8) %}
+                        <label class="hero__label" for="age-{{ number }}">
+                            <input
+                                class="hero__radio-button"
+                                id="age-{{ number }}"
+                                type="radio"
+                                name="age"
+                                value="{{ number }}"
+                                required
+                            >
+                            age - {{ number }}
+                        </label>
+                    {%- endfor %}
+                </fieldset>
+                <button class="hero__button" type="submit">book a free live class</button>
+            </form>
+            <p class="hero__discount">
+                <strong>₹0</strong> <span>for first class</span>
+                <span>100% Off</span>
+            </p>
+            <p class="hero__description">
+                <span>booked a demo already?</span>
+                <a class="link hero__link" href="#">join now</a>
+            </p>
+        </div>
+        <div class="hero__image-wrapper">
+            <img
+                class="hero__image"
+                src="media/images/super-kid1.png"
+                alt=""
+            >
+        </div>
+    </div>
+</section>

@@ -1,0 +1,52 @@
+@use "../abstracts" as *;
+
+.booking-link {
+    box-shadow:
+        0 0 0 0.2rem var(--lime-color),
+        0 0.2rem 0 0 #9cffb1 inset,
+        0 0.3rem 0.8rem 0 #9cffb180,
+        0 0.2rem 0.2rem 0 #00000024;
+    border-radius: 0.6rem;
+    background-color: var(--lime-color);
+    padding: 1.3rem 2rem;
+    color: var(--white-color);
+    font-weight: 500;
+    font-size: 2.2rem;
+
+    @media (width < $desktop) {
+        font-size: 1.5rem;
+    }
+
+    @media (width >= $tablet) {
+        display: flex;
+        column-gap: 1.5rem;
+        align-items: center;
+    }
+
+    @media (width < $tablet) {
+        padding: 0.8rem;
+    }
+
+    &:hover {
+        background-color: transparent;
+        color: var(--green-color);
+    }
+
+    &::before {
+        display: block;
+        width: 1.8rem;
+        height: 1.8rem;
+        content: "";
+        @include mask("../media/icons/star.svg");
+    }
+}
+
+.booking-link__text {
+    @media (width < $tablet) {
+        display: none;
+    }
+
+    span {
+        text-transform: uppercase;
+    }
+}

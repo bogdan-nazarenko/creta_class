@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+
+.base-header {
+    margin-bottom: 6rem;
+    text-align: center;
+
+    @media (width < $tablet) {
+        margin-bottom: 4rem;
+    }
+}
+
+.superscription:where(:has(+ .title)),
+.title:where(:has(+ .text)) {
+    margin-bottom: 2.5rem;
+}
+
+.superscription {
+    display: block;
+    color: #fe9611;
+    font-weight: 700;
+    line-height: 1.2;
+
+    @media (width >= $desktop) {
+        font-size: 2.5rem;
+    }
+}
+
+.title {
+    --title-font-size: 4.8rem;
+
+    font-size: var(--title-font-size);
+    line-height: 1.25;
+    font-family: var(--manrope-font);
+
+    @media (width < $desktop) {
+        font-size: 3.6rem;
+    }
+
+    @media (width < $tablet) {
+        font-size: 2.4rem;
+    }
+}
+
+.text {
+    word-spacing: 0.1rem;
+}

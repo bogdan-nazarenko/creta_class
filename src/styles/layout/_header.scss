@@ -1,0 +1,129 @@
+@use "../abstracts" as *;
+
+.header {
+    --subtrahend-header-padding: 0rem;
+    --header-container-height: 5.4rem;
+
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: var(--duration);
+    box-shadow: 0 1rem 5rem 0 #0000000d;
+    background-color: var(--white-color);
+    padding-block: calc(
+        (
+                (var(--wrapper-padding-top) - var(--header-container-height)) /
+                    2
+            ) - var(--subtrahend-header-padding)
+    );
+    width: 100%;
+    overflow: hidden;
+
+    @media (width < $desktop) {
+        ----header-container-height: 4.5rem;
+    }
+
+    @media (width < $tablet) {
+        --header-container-height: 3.6rem;
+    }
+}
+
+.header_padding_reduced {
+    --subtrahend-header-padding: 2rem;
+
+    @media (width < $desktop) {
+        --subtrahend-header-padding: 1rem;
+    }
+}
+
+.header__container {
+    display: flex;
+    column-gap: 5.1rem;
+    align-items: center;
+    max-width: 156rem;
+
+    @media (width < $desktop) {
+        column-gap: 2.5rem;
+    }
+
+    @media (width < $tablet) {
+        column-gap: 1rem;
+        justify-content: space-between;
+    }
+}
+
+.header__nav {
+    display: flex;
+    column-gap: 2rem;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (width >= $tablet) {
+        flex-grow: 1;
+    }
+
+    @media (width < $tablet) {
+        column-gap: 1rem;
+    }
+}
+
+.header__link-group {
+    display: flex;
+    column-gap: 2.7rem;
+
+    @media (width < $desktop) {
+        column-gap: 1.5rem;
+    }
+
+    @media (width < $tablet) {
+        column-gap: 1rem;
+    }
+}
+
+.header__nav-link {
+    border: 0.2rem solid var(--lime-color);
+    border-radius: 1.5rem;
+    padding: 1.6rem 3.5rem;
+    color: var(--green-color);
+    font-weight: 700;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+
+    @media (width < $desktop) {
+        border-radius: 1.2rem;
+        padding: 1.3rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    @media (width >= $tablet) {
+        display: flex;
+        column-gap: 1rem;
+        align-items: center;
+    }
+
+    @media (width < $tablet) {
+        border-radius: 1rem;
+        padding: 1rem 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    &:hover {
+        background-color: var(--lime-color);
+        color: var(--white-color);
+    }
+
+    &::after {
+        width: 1.8rem;
+        height: 1.8rem;
+        @include mask("../media/icons/cookie.svg");
+
+        @media (width < $desktop) {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+
+        @media (width >= $tablet) {
+            content: "";
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<section class="guide section">
+    <div class="guide__container container">
+        {% render 'templates/base-header',
+            className: 'guide__header',
+            title: 'Create your own requirement',
+            titleClass: 'guide__title'
+        -%}
+        <div class="guide__content">
+            {% render 'templates/video-player', className: 'guide__video-player', props: props -%}
+            <img
+                loading="lazy"
+                class="guide__image"
+                src="media/images/super-kid3.png"
+                alt=""
+            >
+        </div>
+    </div>
+</section>

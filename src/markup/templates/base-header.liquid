@@ -1,0 +1,13 @@
+<header class="{% if className %}{{ className }} {% endif %}base-header">
+    {%- if superscription %}
+        <span class="{% if superscriptionClass %}{{ superscriptionClass }} {% endif %}superscription">
+            {{ superscription }}
+        </span>
+    {%- endif %}
+    {%- if title %}
+        <h2 class="{% if titleClass %}{{ titleClass }} {% endif %}title">{{ title }}</h2>
+    {%- endif %}
+    {%- if text %}
+        <p class="{% if textClass %}{{ textClass }} {% endif %}text">{{ text }}</p>
+    {%- endif %}
+</header>

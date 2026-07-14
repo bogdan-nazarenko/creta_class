@@ -1,0 +1,99 @@
+@use "../abstracts" as *;
+
+.syllabus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.syllabus_s3 {
+    justify-content: space-evenly;
+    gap: 2rem;
+
+    @media (width < $desktop) {
+        flex-direction: column;
+    }
+}
+
+.syllabus__image-wrapper {
+    max-width: 50.5rem;
+
+    @media (width < $desktop) {
+        max-width: 45rem;
+    }
+}
+
+.syllabus__image {
+    @extend %contain-media;
+}
+
+.syllabus__list {
+    max-width: 47.2rem;
+}
+
+.syllabus__list-item {
+    display: flex;
+    gap: 3rem;
+
+    &:not(:last-child) {
+        margin-bottom: 3.4rem;
+
+        @media (width < $desktop) {
+            margin-bottom: 2.2rem;
+        }
+    }
+}
+
+.syllabus__icon-wrapper {
+    flex-shrink: 0;
+    max-width: 10.5rem;
+    height: fit-content;
+
+    @media (width < $desktop) {
+        max-width: 8rem;
+    }
+
+    @media (width < $tablet) {
+        max-width: 5rem;
+    }
+}
+
+.syllabus__icon {
+    @extend %contain-media;
+}
+
+.syllabus__title {
+    margin-bottom: 0.9rem;
+
+    @media ($desktop > width >= $tablet) {
+        font-size: 1.7rem;
+    }
+}
+
+.syllabus__text,
+.syllabus__skill-list {
+    color: var(--translucent-black-color);
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.7;
+
+    @media (width < $tablet) {
+        font-size: 1.2rem;
+    }
+}
+
+.syllabus_s2,
+.syllabus_s4 {
+    .syllabus__inner {
+        max-width: 111rem;
+    }
+
+    .syllabus__title {
+        margin-bottom: 2rem;
+    }
+
+    .syllabus__text {
+        text-align: justify;
+    }
+}

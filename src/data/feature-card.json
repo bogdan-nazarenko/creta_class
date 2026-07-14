@@ -1,0 +1,81 @@
+{
+    "learning": [
+        {
+            "className": "feature-card_bg_pink swiper-slide",
+            "icon": "book.png",
+            "title": "Professional Curriculum Helps Parents Rest Easy",
+            "list": [
+                "Systematic curriculum for kids<br />ages 3-8",
+                "Interactive AI content fosters<br />and maintains kids' interest in learning",
+                "Immersive classes with<br />interactive learning<br />experiences"
+            ]
+        },
+        {
+            "className": "feature-card_bg_beige swiper-slide",
+            "icon": "reward.png",
+            "title": "Personal<br />Mentoring Service",
+            "list": [
+                "Your Mentor provides 1-on-1 mentoring at any time",
+                "Daily reports keep you up to date on your child's learning",
+                "Instant feedback keeps kids encouraged and motivated"
+            ]
+        },
+        {
+            "className": "feature-card_bg_blue swiper-slide",
+            "icon": "math.png",
+            "title": "A Math Learning App Kids Crave",
+            "list": [
+                "Developed by early education specialists from Ivy League and other top universities",
+                "Progressive learning pathways thoughtfully developed for each child"
+            ]
+        },
+        {
+            "className": "swiper-slide",
+            "title": "Lorem 4",
+            "list": [
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "Dolorum reiciendis ut tenetur tempore delectus expedita officia soluta incidunt voluptate"
+            ]
+        },
+        {
+            "className": "swiper-slide",
+            "title": "Lorem 5",
+            "list": [
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "Dolorum reiciendis ut tenetur tempore delectus expedita officia soluta incidunt voluptate"
+            ]
+        },
+        {
+            "className": "swiper-slide",
+            "title": "Lorem 6",
+            "list": [
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "Dolorum reiciendis ut tenetur tempore delectus expedita officia soluta incidunt voluptate"
+            ]
+        },
+        {
+            "className": "swiper-slide",
+            "title": "Lorem 7",
+            "list": [
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "Dolorum reiciendis ut tenetur tempore delectus expedita officia soluta incidunt voluptate"
+            ]
+        },
+        {
+            "className": "swiper-slide",
+            "title": "Lorem 8",
+            "list": [
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "Dolorum reiciendis ut tenetur tempore delectus expedita officia soluta incidunt voluptate"
+            ]
+        },
+        {
+            "className": "swiper-slide",
+            "title": "Lorem 9",
+            "list": [
+                "Lorem ipsum dolor, sit amet consectetur adipisicing elit",
+                "Dolorum reiciendis ut tenetur tempore delectus expedita officia soluta incidunt voluptate"
+            ]
+        }
+    ]
+}

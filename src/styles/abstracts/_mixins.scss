@@ -1,0 +1,27 @@
+@mixin mask(
+    $url,
+    $position: center,
+    $size: contain,
+    $repeat: no-repeat,
+    $color: currentColor
+) {
+    mask-image: url($url);
+    mask-position: $position;
+    mask-size: $size;
+    mask-repeat: $repeat;
+    background-color: $color;
+}
+
+@mixin background(
+    $url,
+    $position: center,
+    $size: contain,
+    $repeat: no-repeat,
+    $color: null
+) {
+    background-image: url($url);
+    background-position: center;
+    background-size: $size;
+    background-repeat: no-repeat;
+    background-color: $color;
+}

@@ -1,0 +1,191 @@
+@use "../abstracts" as *;
+
+.hero {
+    --grid-padding: 4.6rem 0 9.6rem;
+}
+
+.hero__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    max-width: 156rem;
+
+    @media (width <$desktop) {
+        align-items: center;
+    }
+
+    @media (width < $tablet) {
+        flex-direction: column;
+    }
+}
+
+.hero__title {
+    position: relative;
+    margin-bottom: 11.1rem;
+    max-width: 67.9rem;
+    font-size: 6.4rem;
+    line-height: 1.14;
+    word-spacing: 0.3rem;
+
+    @media (width >= $desktop) {
+        padding-top: 11rem;
+
+        &::before {
+            position: absolute;
+            top: 4.1rem;
+            left: -19.6rem;
+            z-index: -1;
+            background-image: url(../media/images/paper-plane.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 34rem;
+            height: 23rem;
+            content: "";
+        }
+    }
+
+    @media (width < $desktop) {
+        margin-bottom: 5.6rem;
+        font-size: 4rem;
+    }
+
+    @media (width < $tablet) {
+        margin-bottom: 2rem;
+        font-size: 3rem;
+    }
+}
+
+.hero__form {
+    margin-bottom: 2.3rem;
+    max-width: 60rem;
+}
+
+.hero__option-set {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-bottom: 2.9rem;
+
+    @media (width < $tablet) {
+        gap: 2rem;
+    }
+}
+
+.hero__legend {
+    margin-bottom: 3.3rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    word-spacing: 0.1rem;
+}
+
+.hero__label {
+    position: relative;
+    transition: var(--duration);
+    border: 0.2rem solid #00000026;
+    border-bottom-width: 0.5rem;
+    border-radius: 0.8rem;
+    padding: 1.7rem 3rem;
+    font-weight: 700;
+    user-select: none;
+    @extend %cursor-pointer;
+
+    @media (width < $desktop) {
+        padding: 0.6rem 1.8rem;
+    }
+
+    &:has(.hero__radio-button:focus-visible) {
+        border-color: var(--lime-color);
+    }
+
+    &:has(.hero__radio-button:checked) {
+        background-color: var(--lime-color);
+        color: var(--white-color);
+    }
+}
+
+.hero__radio-button {
+    position: absolute;
+    opacity: 0;
+}
+
+.hero__button {
+    @extend %submit-button;
+}
+
+.hero__discount,
+.hero__description {
+    width: fit-content;
+
+    @media (width >= $tablet) {
+        font-size: 1.8rem;
+    }
+}
+
+.hero__discount {
+    margin-bottom: 1.1rem;
+
+    strong {
+        vertical-align: middle;
+        margin-right: 0.1rem;
+        font-weight: 500;
+        font-size: 3.4rem;
+        letter-spacing: 0.1rem;
+        text-decoration: line-through;
+
+        @media (width < $desktop) {
+            font-size: 2.8rem;
+        }
+
+        @media (width < $tablet) {
+            font-size: 2.2rem;
+        }
+    }
+
+    span:nth-of-type(1) {
+        margin-right: 0.5rem;
+        color: var(--translucent-black-color);
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+
+    span:nth-of-type(2) {
+        color: var(--lime-color);
+        font-weight: 700;
+    }
+}
+
+.hero__description {
+    color: #00000080;
+    font-weight: 500;
+    text-transform: capitalize;
+    word-spacing: 0.2rem;
+}
+
+.hero__link {
+    color: var(--orange-color);
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &:hover {
+        color: var(--lime-color);
+    }
+}
+
+.hero__image-wrapper {
+    width: 100%;
+    max-width: 74rem;
+
+    @media (width >= $desktop) {
+        height: 68.4rem;
+    }
+
+    @media (width < $desktop) {
+        height: fit-content;
+    }
+}
+
+.hero__image {
+    @extend %contain-media;
+}

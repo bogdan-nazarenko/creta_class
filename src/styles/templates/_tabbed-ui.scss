@@ -1,0 +1,146 @@
+@use "../abstracts" as *;
+
+.tabbed-ui__tab-bar {
+    display: flex;
+    margin: 0 auto 1rem;
+    padding-bottom: 1.6rem;
+    max-width: 57.2rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    @media (width < $tablet) {
+        margin-bottom: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+}
+
+.tabbed-ui__tab {
+    --tab-radius: 2.6rem;
+    --tab-border-inline-width: 0.1rem;
+
+    position: relative;
+    border: 0.2rem solid var(--orange-color);
+    padding: 1.9rem;
+    width: 100%;
+    font-weight: 700;
+    white-space: nowrap;
+    @extend %cursor-pointer;
+
+    @media (width < $desktop) {
+        --tab-radius: 2rem;
+
+        padding: 1.2rem;
+    }
+
+    @media (width < $tablet) {
+        --tab-radius: 1.4rem;
+
+        padding: 0.6rem;
+    }
+
+    &::after {
+        position: absolute;
+        bottom: -0.8rem;
+        left: 25%;
+        transform: scale(1, 1.4) translate(-50%) rotateZ(45deg);
+        visibility: hidden;
+        z-index: -1;
+        transition: left var(--duration);
+        background-color: inherit;
+        width: 2rem;
+        height: 2rem;
+        content: "";
+
+        @media (width < $tablet) {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &[aria-selected="true"] {
+        background-color: var(--orange-color);
+
+        &::after {
+            left: 50%;
+            visibility: visible;
+        }
+    }
+
+    &:first-child {
+        border-right-width: var(--tab-border-inline-width);
+        border-radius: var(--tab-radius) 0 0 var(--tab-radius);
+    }
+
+    &:not(:first-child, :last-child) {
+        border-inline-width: var(--tab-border-inline-width);
+    }
+
+    &:last-child {
+        border-left-width: var(--tab-border-inline-width);
+        border-radius: 0 var(--tab-radius) var(--tab-radius) 0;
+    }
+
+    & > span {
+        display: block;
+    }
+}
+
+.tabbed-ui__title {
+    margin-bottom: 0.2rem;
+    color: var(--orange-color);
+    font-size: 1.7rem;
+
+    @media (width < $desktop) {
+        font-size: 1.4rem;
+    }
+}
+
+.tabbed-ui__description {
+    color: #ff6d25cc;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+
+    @media (width < $desktop) {
+        font-size: 1.2rem;
+    }
+}
+
+.tabbed-ui__tab[aria-selected="true"] {
+    .tabbed-ui__title {
+        color: var(--white-color);
+    }
+
+    .tabbed-ui__description {
+        color: #fff6f2cc;
+    }
+}
+
+.tabbed-ui__content {
+    display: grid;
+    border-radius: 17.6rem 2.6rem 2.6rem;
+    min-height: 68.3rem;
+    overflow: hidden;
+
+    @media (width < $desktop) {
+        border-radius: 2rem;
+    }
+}
+
+.tabbed-ui__panel {
+    grid-row: 1;
+    grid-column: 1;
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: 0.5s;
+    outline-color: var(--lime-color);
+    outline-offset: -0.1rem;
+    border-radius: inherit;
+    background: linear-gradient(-45deg, #ffdfdf, #fef5db);
+    padding: 1.5rem;
+}
+
+.tabbed-ui__panel_active {
+    transform: translateY(0);
+    visibility: visible;
+    z-index: 1;
+}
