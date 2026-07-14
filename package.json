@@ -9,11 +9,13 @@
     "scripts": {
         "start": "npx @11ty/eleventy --serve",
         "format": "prettier . --write",
-        "build": "npx @11ty/eleventy"
+        "build": "npx @11ty/eleventy",
+        "deploy": "npx @11ty/eleventy && gh-pages -d dist"
     },
     "devDependencies": {
         "@11ty/eleventy": "^3.1.5",
         "@shopify/prettier-plugin-liquid": "^1.10.2",
+        "gh-pages": "^6.3.0",
         "html-minifier-terser": "^7.2.0",
         "prettier": "^3.8.3",
         "prettier-plugin-css-order": "^2.2.0",
