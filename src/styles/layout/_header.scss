@@ -2,7 +2,6 @@
 
 .header {
     --subtrahend-header-padding: 0rem;
-    --header-container-height: 5.4rem;
 
     position: fixed;
     top: 0;
@@ -18,14 +17,6 @@
     );
     width: 100%;
     overflow: hidden;
-
-    @media (width < $desktop) {
-        ----header-container-height: 4.5rem;
-    }
-
-    @media (width < $tablet) {
-        --header-container-height: 3.6rem;
-    }
 }
 
 .header_padding_reduced {
