@@ -12,7 +12,7 @@ html {
     }
 
     @media (width < 1920px) {
-        font-size: calc(100vw / 1920 * 10);
+        font-size: calc(100dvw / 1920 * 10);
     }
 
     @media (width < $desktop) {
