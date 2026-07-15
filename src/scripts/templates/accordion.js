@@ -21,7 +21,7 @@ const accordionImpl = {
         let button = null;
 
         while (target && target !== accordion) {
-            if (target.classList.contains("accordion__content")) break;
+            if (target.classList.contains("accordion__content")) return;
 
             if (target.classList.contains("accordion__button")) {
                 button = target;
