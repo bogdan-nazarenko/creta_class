@@ -25,17 +25,28 @@ window.addEventListener("scroll", headerPaddingChanger);
 
 const mqls = [mqlDesktop, mqlMobile];
 
-function getHeaderContainerHeight() {
-    const containerHeight = header.children[0].scrollHeight;
-    const htmlFontSize = parseFloat(
-        getComputedStyle(document.documentElement).fontSize
-    );
+const containerHeightGetter = {
+    alreadyCalled: false,
+    handleEvent() {
+        if (this.alreadyCalled) return;
 
-    header.style.setProperty(
-        "--header-container-height",
-        `${containerHeight / htmlFontSize}rem`
-    );
-}
+        this.alreadyCalled = true;
 
-getHeaderContainerHeight();
-mqls.forEach((mql) => mql.addEventListener("change", getHeaderContainerHeight));
+        const containerHeight = header.children[0].scrollHeight;
+        const htmlFontSize = parseFloat(
+            getComputedStyle(document.documentElement).fontSize
+        );
+
+        header.style.setProperty(
+            "--header-container-height",
+            `${containerHeight / htmlFontSize}rem`
+        );
+
+        setTimeout(() => {
+            this.alreadyCalled = false;
+        }, 100);
+    },
+};
+
+containerHeightGetter.handleEvent();
+mqls.forEach((mql) => mql.addEventListener("change", containerHeightGetter));
