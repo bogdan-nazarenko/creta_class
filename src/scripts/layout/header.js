@@ -1,4 +1,4 @@
-import { mqlDesktop, mqlMobile } from "../utils/responsive.js";
+import { desktopMql, mobileMql } from "../utils/responsive.js";
 
 const header = document.querySelector(".header");
 
@@ -23,7 +23,7 @@ const headerPaddingChanger = {
 headerPaddingChanger.handleEvent();
 window.addEventListener("scroll", headerPaddingChanger);
 
-const mqls = [mqlDesktop, mqlMobile];
+const mqls = [desktopMql, mobileMql];
 
 const containerHeightGetter = {
     alreadyCalled: false,

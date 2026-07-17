@@ -1,2 +1,2 @@
-export const mqlDesktop = window.matchMedia("(width >= 1024px)");
-export const mqlMobile = window.matchMedia("(width < 768px)");
+export const desktopMql = window.matchMedia("(width >= 1024px)");
+export const mobileMql = window.matchMedia("(width < 768px)");
