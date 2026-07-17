@@ -1,7 +1,7 @@
 <div
     class="feature-card{% if prop.className %} {{ prop.className }}{% endif %}"
 >
-    <header class="feature-card__header">
+    <div class="feature-card__header">
         {%- if prop.icon %}
             <div class="feature-card__icon-wrapper">
                 <img
@@ -13,7 +13,7 @@
             </div>
         {%- endif %}
         <h3 class="feature-card__title">{{ prop.title }}</h3>
-    </header>
+    </div>
     <ul class="feature-card__list">
         {%- for value in prop.list %}
             <li class="feature-card__list-item">{{ value }}</li>
