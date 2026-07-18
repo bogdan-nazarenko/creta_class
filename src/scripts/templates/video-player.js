@@ -1,9 +1,8 @@
 const videoData = {
-    players: document.querySelectorAll(".video-player"),
-    handlers: [],
+    handlers: new WeakMap(),
 };
 
-const videoImpl = {
+export const videoImpl = {
     startVideo(event) {
         const player = event.currentTarget;
         const video = player.children[0];
@@ -28,25 +27,20 @@ const videoImpl = {
         );
     },
 
-    init() {
-        videoData.players.forEach((player) => {
-            const handler = {
-                isStarted: false,
-                handleEvent: this.startVideo,
-            };
+    init(player) {
+        const handler = {
+            isStarted: false,
+            handleEvent: this.startVideo,
+        };
 
-            player.addEventListener("click", handler);
-            videoData.handlers.push(handler);
-        });
+        player.addEventListener("click", handler);
+        videoData.handlers.set(player, handler);
     },
 
-    disable() {
-        videoData.players.forEach((player, index) => {
-            player.removeEventListener("click", videoData.handlers[index]);
-        });
+    disable(player) {
+        const handler = videoData.handlers.get(player);
 
-        videoData.handlers.length = 0;
+        player.removeEventListener("click", handler);
+        videoData.handlers.delete(player);
     },
 };
-
-videoImpl.init();

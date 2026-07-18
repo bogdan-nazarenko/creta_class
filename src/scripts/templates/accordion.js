@@ -1,10 +1,9 @@
 const accordionData = {
-    accordions: document.querySelectorAll(".accordion"),
-    accordionHandlers: [],
+    handlers: new WeakMap(),
     contentOpenClass: "accordion__content_open",
 };
 
-const accordionImpl = {
+export const accordionImpl = {
     toggleAttribute(element) {
         if (element.ariaExpanded === "false") {
             element.ariaExpanded = "true";
@@ -51,29 +50,21 @@ const accordionImpl = {
         this.openedContent = isOpen ? content : null;
     },
 
-    init() {
-        accordionData.accordions.forEach((accordion) => {
-            const handler = {
-                activeButton: null,
-                openedContent: null,
-                handleEvent: this.accordionHandler,
-            };
+    init(accordion) {
+        const handler = {
+            activeButton: null,
+            openedContent: null,
+            handleEvent: this.accordionHandler,
+        };
 
-            accordion.addEventListener("click", handler);
-            accordionData.accordionHandlers.push(handler);
-        });
+        accordion.addEventListener("click", handler);
+        accordionData.handlers.set(accordion, handler);
     },
 
-    disable() {
-        accordionData.accordions.forEach((accordion, index) => {
-            accordion.removeEventListener(
-                "click",
-                accordionData.accordionHandlers[index]
-            );
-        });
+    disable(accordion) {
+        const handler = accordionData.handlers.get(accordion);
 
-        accordionData.accordionHandlers.length = 0;
+        accordion.removeEventListener("click", handler);
+        accordionData.handlers.delete(accordion);
     },
 };
-
-accordionImpl.init();

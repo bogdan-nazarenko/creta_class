@@ -1,10 +1,9 @@
 const tabbedUiData = {
-    tabBars: document.querySelectorAll(".tabbed-ui__tab-bar"),
-    tabHandlers: [],
+    handlers: new WeakMap(),
     panelActiveClass: "tabbed-ui__panel_active",
 };
 
-const tabbedUiImpl = {
+export const tabbedUiImpl = {
     switchWithKeys(event) {
         const currentTab = event.target;
         let newTab = null;
@@ -63,34 +62,27 @@ const tabbedUiImpl = {
         this.activePanel = panel;
     },
 
-    init() {
-        tabbedUiData.tabBars.forEach((tabBar) => {
-            const handler = {
-                activeTab: null,
-                activePanel: null,
-                handleEvent: this.tabHandler,
-            };
+    init(tabBar, tab = 1) {
+        const handler = {
+            activeTab: null,
+            activePanel: null,
+            handleEvent: this.tabHandler,
+        };
 
-            tabBar.addEventListener("click", handler);
-            tabBar.addEventListener("keydown", this.switchWithKeys);
+        tabBar.addEventListener("click", handler);
+        tabBar.addEventListener("keydown", this.switchWithKeys);
+        tabbedUiData.handlers.set(tabBar, handler);
 
-            tabbedUiData.tabHandlers.push(handler);
-
-            if (tabBar.children.length >= 2) tabBar.children[1].click();
-        });
+        if (tab > 0 && tab <= tabBar.children.length) {
+            tabBar.children[tab - 1].click();
+        }
     },
 
-    disable() {
-        tabbedUiData.tabBars.forEach((tabBar, index) => {
-            tabBar.removeEventListener(
-                "click",
-                tabbedUiData.tabHandlers[index]
-            );
-            tabBar.removeEventListener("keydown", this.switchWithKeys);
-        });
+    disable(tabBar) {
+        const handler = tabbedUiData.handlers.get(tabBar);
 
-        tabbedUiData.tabHandlers.length = 0;
+        tabBar.removeEventListener("click", handler);
+        tabBar.removeEventListener("keydown", this.switchWithKeys);
+        tabbedUiData.handlers.delete(tabBar);
     },
 };
-
-tabbedUiImpl.init();
