@@ -17,8 +17,12 @@
     }
 }
 
-.footer,
-.section {
+.main {
+    flex-grow: 1;
+}
+
+.section,
+.footer {
     --grid-padding-block: 8rem;
     --grid-padding: var(--grid-padding-block) 0;
 
@@ -28,10 +32,6 @@
     @media (width < $desktop) {
         padding: 4rem 0;
     }
-}
-
-.main {
-    flex-grow: 1;
 }
 
 .section:where(:last-child) {
