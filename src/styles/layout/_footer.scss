@@ -1,12 +1,9 @@
 @use "../abstracts" as *;
 
 .footer {
-    background-color: var(--beige-color);
-    padding: 4.5rem 0 3.2rem;
+    --grid-padding: 4.5rem 0 3.2rem;
 
-    @media (width < $desktop) {
-        padding-block: 4rem;
-    }
+    background-color: var(--beige-color);
 }
 
 .footer__container {
