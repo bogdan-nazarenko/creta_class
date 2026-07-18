@@ -16,8 +16,8 @@
 @use "templates/accordion";
 
 @use "layout/grid";
+
 @use "layout/header";
-@use "layout/footer";
 
 @use "sections/hero";
 @use "sections/learning";
@@ -25,3 +25,5 @@
 @use "sections/guide";
 @use "sections/reviews";
 @use "sections/location";
+
+@use "layout/footer";
