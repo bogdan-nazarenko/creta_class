@@ -21,14 +21,14 @@
 
 .hero__title {
     position: relative;
-    margin-bottom: 11.1rem;
+    margin-bottom: 11.2rem;
     max-width: 67.9rem;
     font-size: 6.4rem;
-    line-height: 1.14;
+    line-height: 1.1;
     word-spacing: 0.3rem;
 
     @media (width >= $desktop) {
-        padding-top: 11rem;
+        padding-top: 11.4rem;
 
         &::before {
             position: absolute;
@@ -128,10 +128,9 @@
 
     strong {
         vertical-align: middle;
-        margin-right: 0.1rem;
+        margin-right: 0.2rem;
         font-weight: 500;
         font-size: 3.4rem;
-        letter-spacing: 0.1rem;
         text-decoration: line-through;
 
         @media (width < $desktop) {
