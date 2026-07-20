@@ -34,7 +34,7 @@ function initCarousel() {
         const nextEl = learningCarousel.config.navigation.nextEl;
         const pagination = learningCarousel.config.pagination.el;
 
-        learningCarousel.config.destroy(this);
+        learningCarousel.config.destroy();
         learningCarousel.config = null;
 
         removeNavigationAttributes(prevEl, nextEl);
