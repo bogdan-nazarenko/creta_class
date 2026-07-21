@@ -98,9 +98,18 @@
         font-size: 1.2rem;
     }
 
-    &:hover {
-        background-color: var(--lime-color);
-        color: var(--white-color);
+    @media (hover: hover) {
+        &:hover {
+            background-color: var(--lime-color);
+            color: var(--white-color);
+        }
+    }
+
+    @media (pointer: coarse) {
+        &:active {
+            background-color: var(--lime-color);
+            color: var(--white-color);
+        }
     }
 
     &::after {

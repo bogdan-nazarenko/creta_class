@@ -51,6 +51,16 @@
     }
 }
 
-.footer__link:hover {
-    color: var(--orange-color);
+.footer__link {
+    @media (hover: hover) {
+        &:hover {
+            color: var(--orange-color);
+        }
+    }
+
+    @media (pointer: coarse) {
+        &:active {
+            color: var(--orange-color);
+        }
+    }
 }

@@ -167,8 +167,16 @@
     font-weight: 700;
     text-transform: uppercase;
 
-    &:hover {
-        color: var(--lime-color);
+    @media (hover: hover) {
+        &:hover {
+            color: var(--lime-color);
+        }
+    }
+
+    @media (pointer: coarse) {
+        &:active {
+            color: var(--lime-color);
+        }
     }
 }
 

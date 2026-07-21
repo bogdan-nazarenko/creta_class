@@ -27,6 +27,13 @@
 }
 
 %submit-button {
+    --changed-background: linear-gradient(
+        110deg,
+        var(--lime-color) 70%,
+        #dfdfdf 80%,
+        var(--lime-color) 95%
+    );
+
     display: block;
     border-radius: 0.9rem;
     background: linear-gradient(
@@ -53,12 +60,15 @@
         font-size: 1.3rem;
     }
 
-    &:hover {
-        background: linear-gradient(
-            110deg,
-            var(--lime-color) 70%,
-            #dfdfdf 80%,
-            var(--lime-color) 95%
-        );
+    @media (hover: hover) {
+        &:hover {
+            background: var(--changed-background);
+        }
+    }
+
+    @media (pointer: coarse) {
+        &:active {
+            background: var(--changed-background);
+        }
     }
 }
