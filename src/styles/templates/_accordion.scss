@@ -119,7 +119,7 @@
     word-spacing: 0.1rem;
 
     &:has(+ .accordion__list) {
-        margin-bottom: 1rem;
+        margin-bottom: 1.1rem;
         color: var(--translucent-black-color);
     }
 }
