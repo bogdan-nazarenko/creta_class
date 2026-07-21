@@ -35,7 +35,7 @@
 
 .reviews__header::before {
     display: block;
-    margin: 0 auto 0.5rem;
+    margin: 0 auto 0.4rem;
     max-width: 8.4rem;
     height: 8.4rem;
     content: "";
@@ -203,7 +203,7 @@
     }
 
     &::after {
-        bottom: -4.2rem;
+        bottom: -4.3rem;
         left: -2.8rem;
         width: 4.9rem;
         height: 2.8rem;
@@ -239,7 +239,7 @@
     height: fit-content;
 
     @media (width >= $desktop) {
-        top: 0.5rem;
+        top: 0.4rem;
         left: 8.5rem;
     }
 
@@ -335,8 +335,8 @@
             }
 
             &::after {
-                bottom: -3.6rem;
-                left: -3.4rem;
+                bottom: -3.7rem;
+                left: -3.5rem;
             }
         }
     }
@@ -351,7 +351,7 @@
             }
 
             &::after {
-                top: -1.1rem;
+                top: -1rem;
                 right: -2.9rem;
             }
         }
