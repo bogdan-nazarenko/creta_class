@@ -10,8 +10,6 @@ export const videoImpl = {
         video.controls = true;
         handler.isStarted = true;
         video.play();
-
-        video.addEventListener("ended", handler, { once: true });
     },
 
     endVideo(handler, video, button) {
@@ -43,6 +41,11 @@ export const videoImpl = {
         };
 
         player.addEventListener("click", handler);
+
+        const video = player.children[0];
+
+        video.addEventListener("ended", handler);
+
         videoData.handlers.set(player, handler);
     },
 
@@ -50,6 +53,11 @@ export const videoImpl = {
         const handler = videoData.handlers.get(player);
 
         player.removeEventListener("click", handler);
+
+        const video = player.children[0];
+
+        video.removeEventListener("ended", handler);
+
         videoData.handlers.delete(player);
     },
 };
