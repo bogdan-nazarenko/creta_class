@@ -3,34 +3,43 @@ const videoData = {
 };
 
 export const videoImpl = {
-    startVideo(event) {
-        const player = event.currentTarget;
-        const video = player.children[0];
-        const button = player.children[1];
-
-        if (this.isStarted) return;
+    startVideo(handler, video, button) {
+        if (handler.isStarted) return;
 
         button.disabled = true;
         video.controls = true;
-        this.isStarted = true;
+        handler.isStarted = true;
         video.play();
 
-        video.addEventListener(
-            "ended",
-            () => {
-                button.disabled = false;
-                video.controls = false;
-                this.isStarted = false;
-                video.load();
-            },
-            { once: true }
-        );
+        video.addEventListener("ended", handler, { once: true });
+    },
+
+    endVideo(handler, video, button) {
+        button.disabled = false;
+        video.controls = false;
+        handler.isStarted = false;
+        video.load();
+    },
+
+    videoHandler(event) {
+        if (event.type === "click") {
+            const player = event.currentTarget;
+            const video = player.children[0];
+            const button = player.children[1];
+
+            videoImpl.startVideo(this, video, button);
+        } else if (event.type === "ended") {
+            const video = event.currentTarget;
+            const button = video.nextElementSibling;
+
+            videoImpl.endVideo(this, video, button);
+        }
     },
 
     init(player) {
         const handler = {
             isStarted: false,
-            handleEvent: this.startVideo,
+            handleEvent: this.videoHandler,
         };
 
         player.addEventListener("click", handler);
