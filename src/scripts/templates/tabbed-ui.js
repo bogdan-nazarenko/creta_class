@@ -10,10 +10,12 @@ export const tabbedUiImpl = {
 
         switch (event.key) {
             case "ArrowLeft":
-                newTab = currentTab.previousElementSibling;
+                newTab =
+                    currentTab.previousElementSibling || this.lastElementChild;
                 break;
             case "ArrowRight":
-                newTab = currentTab.nextElementSibling;
+                newTab =
+                    currentTab.nextElementSibling || this.firstElementChild;
                 break;
             case "Home":
                 newTab = this.firstElementChild;
@@ -26,7 +28,7 @@ export const tabbedUiImpl = {
         }
 
         event.preventDefault();
-        newTab?.focus();
+        newTab.focus();
     },
 
     tabHandler(event) {
