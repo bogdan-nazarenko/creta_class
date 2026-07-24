@@ -12,7 +12,7 @@ export const videoImpl = {
         video.play();
     },
 
-    endVideo(handler, video, button) {
+    resetVideo(handler, video, button) {
         button.disabled = false;
         video.controls = false;
         handler.isStarted = false;
@@ -30,7 +30,7 @@ export const videoImpl = {
             const video = event.currentTarget;
             const button = video.nextElementSibling;
 
-            videoImpl.endVideo(this, video, button);
+            videoImpl.resetVideo(this, video, button);
         }
     },
 
