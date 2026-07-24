@@ -4,33 +4,6 @@ const tabbedUiData = {
 };
 
 export const tabbedUiImpl = {
-    switchWithKeys(event) {
-        const currentTab = event.target;
-        let newTab = null;
-
-        switch (event.key) {
-            case "ArrowLeft":
-                newTab =
-                    currentTab.previousElementSibling || this.lastElementChild;
-                break;
-            case "ArrowRight":
-                newTab =
-                    currentTab.nextElementSibling || this.firstElementChild;
-                break;
-            case "Home":
-                newTab = this.firstElementChild;
-                break;
-            case "End":
-                newTab = this.lastElementChild;
-                break;
-            default:
-                return;
-        }
-
-        event.preventDefault();
-        newTab.focus();
-    },
-
     tabHandler(event) {
         const tabBar = event.currentTarget;
         let target = event.target;
@@ -62,6 +35,33 @@ export const tabbedUiImpl = {
 
         this.activeTab = tab;
         this.activePanel = panel;
+    },
+
+    switchWithKeys(event) {
+        const currentTab = event.target;
+        let newTab = null;
+
+        switch (event.key) {
+            case "ArrowLeft":
+                newTab =
+                    currentTab.previousElementSibling || this.lastElementChild;
+                break;
+            case "ArrowRight":
+                newTab =
+                    currentTab.nextElementSibling || this.firstElementChild;
+                break;
+            case "Home":
+                newTab = this.firstElementChild;
+                break;
+            case "End":
+                newTab = this.lastElementChild;
+                break;
+            default:
+                return;
+        }
+
+        event.preventDefault();
+        newTab.focus();
     },
 
     init(tabBar, tab = 1) {
