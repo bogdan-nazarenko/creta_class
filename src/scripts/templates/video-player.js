@@ -6,17 +6,17 @@ export const videoImpl = {
     startVideo(handler, video, button) {
         if (handler.isStarted) return;
 
+        handler.isStarted = true;
         button.disabled = true;
         video.controls = true;
-        handler.isStarted = true;
         video.play();
     },
 
     resetVideo(handler, video, button) {
-        button.disabled = false;
         video.controls = false;
-        handler.isStarted = false;
         video.load();
+        button.disabled = false;
+        handler.isStarted = false;
     },
 
     videoHandler(event) {
