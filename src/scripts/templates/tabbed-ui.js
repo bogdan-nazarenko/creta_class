@@ -38,23 +38,25 @@ export const tabbedUiImpl = {
     },
 
     switchWithKeys(event) {
+        const tabBar = event.currentTarget;
         const currentTab = event.target;
         let newTab = null;
 
         switch (event.key) {
             case "ArrowLeft":
                 newTab =
-                    currentTab.previousElementSibling || this.lastElementChild;
+                    currentTab.previousElementSibling ||
+                    tabBar.lastElementChild;
                 break;
             case "ArrowRight":
                 newTab =
-                    currentTab.nextElementSibling || this.firstElementChild;
+                    currentTab.nextElementSibling || tabBar.firstElementChild;
                 break;
             case "Home":
-                newTab = this.firstElementChild;
+                newTab = tabBar.firstElementChild;
                 break;
             case "End":
-                newTab = this.lastElementChild;
+                newTab = tabBar.lastElementChild;
                 break;
             default:
                 return;
