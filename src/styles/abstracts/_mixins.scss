@@ -1,3 +1,17 @@
+@mixin hover-active {
+    @media (hover: hover) {
+        &:hover {
+            @content;
+        }
+    }
+
+    @media (pointer: coarse) {
+        &:active {
+            @content;
+        }
+    }
+}
+
 @mixin mask(
     $url,
     $position: center,
@@ -24,18 +38,4 @@
     background-size: $size;
     background-repeat: no-repeat;
     background-color: $color;
-}
-
-@mixin hover-active {
-    @media (hover: hover) {
-        &:hover {
-            @content;
-        }
-    }
-
-    @media (pointer: coarse) {
-        &:active {
-            @content;
-        }
-    }
 }
