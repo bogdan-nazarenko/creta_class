@@ -52,15 +52,7 @@
 }
 
 .footer__link {
-    @media (hover: hover) {
-        &:hover {
-            color: var(--orange-color);
-        }
-    }
-
-    @media (pointer: coarse) {
-        &:active {
-            color: var(--orange-color);
-        }
+    @include hover-active {
+        color: var(--orange-color);
     }
 }

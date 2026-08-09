@@ -42,14 +42,8 @@
         @include mask("../media/icons/arrow.svg", $color: var(--brown-color));
     }
 
-    @media (hover: hover) {
-        &:hover::before {
-            background-color: var(--lime-color);
-        }
-    }
-
-    @media (pointer: coarse) {
-        &:active::before {
+    @include hover-active {
+        &::before {
             background-color: var(--lime-color);
         }
     }

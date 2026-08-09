@@ -27,18 +27,9 @@
         padding: 0.8rem;
     }
 
-    @media (hover: hover) {
-        &:hover {
-            background-color: transparent;
-            color: var(--green-color);
-        }
-    }
-
-    @media (pointer: coarse) {
-        &:active {
-            background-color: transparent;
-            color: var(--green-color);
-        }
+    @include hover-active {
+        background-color: transparent;
+        color: var(--green-color);
     }
 
     &::before {
