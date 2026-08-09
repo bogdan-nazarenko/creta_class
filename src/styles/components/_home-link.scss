@@ -1,6 +1,6 @@
 @use "../abstracts" as *;
 
-.creta-link {
+.home-link {
     display: block;
     width: 100%;
     max-width: 25.6rem;
@@ -20,6 +20,6 @@
     }
 }
 
-.creta-logo {
+.logo {
     @extend %contain-media;
 }
