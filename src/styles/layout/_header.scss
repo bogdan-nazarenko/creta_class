@@ -29,45 +29,45 @@
 
 .header__container {
     display: flex;
-    column-gap: 5.1rem;
     align-items: center;
+    gap: 5.1rem;
     max-width: 156rem;
 
     @media (width < $desktop) {
-        column-gap: 2.5rem;
+        gap: 2.5rem;
     }
 
     @media (width < $tablet) {
-        column-gap: 1rem;
         justify-content: space-between;
+        gap: 1rem;
     }
 }
 
 .header__nav {
     display: flex;
-    column-gap: 2rem;
     justify-content: space-between;
     align-items: center;
+    gap: 2rem;
 
     @media (width >= $tablet) {
         flex-grow: 1;
     }
 
     @media (width < $tablet) {
-        column-gap: 1rem;
+        gap: 1rem;
     }
 }
 
 .header__link-group {
     display: flex;
-    column-gap: 2.7rem;
+    gap: 2.7rem;
 
     @media (width < $desktop) {
-        column-gap: 1.5rem;
+        gap: 1.5rem;
     }
 
     @media (width < $tablet) {
-        column-gap: 1rem;
+        gap: 1rem;
     }
 }
 
@@ -88,8 +88,8 @@
 
     @media (width >= $tablet) {
         display: flex;
-        column-gap: 1rem;
         align-items: center;
+        gap: 1rem;
     }
 
     @media (width < $tablet) {

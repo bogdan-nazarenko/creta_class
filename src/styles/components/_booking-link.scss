@@ -19,8 +19,8 @@
 
     @media (width >= $tablet) {
         display: flex;
-        column-gap: 1.5rem;
         align-items: center;
+        gap: 1.5rem;
     }
 
     @media (width < $tablet) {
