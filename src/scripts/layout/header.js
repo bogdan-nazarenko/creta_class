@@ -42,9 +42,9 @@ const containerHeightGetter = {
             `${containerHeight / htmlFontSize}rem`
         );
 
-        setTimeout(() => {
+        requestAnimationFrame(() => {
             this.alreadyCalled = false;
-        }, 100);
+        });
     },
 };
 
