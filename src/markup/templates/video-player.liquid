@@ -7,7 +7,7 @@
             src="{{ props.video }}"
             poster="{{ props.poster | default: 'media/images/poster.png' }}"
         ></video>
-        <button class="video-player__button" aria-label="play video"></button>
+        <button class="video-player__button" aria-label="Play video"></button>
     {%- elsif props.ytVideo %}
         <!-- prettier-ignore-attribute allow -->
         <iframe
