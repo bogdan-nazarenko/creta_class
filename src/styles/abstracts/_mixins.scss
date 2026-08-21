@@ -34,8 +34,8 @@
     $color: null
 ) {
     background-image: url($url);
-    background-position: center;
+    background-position: $position;
     background-size: $size;
-    background-repeat: no-repeat;
+    background-repeat: $repeat;
     background-color: $color;
 }
