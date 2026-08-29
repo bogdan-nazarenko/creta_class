@@ -8,8 +8,8 @@ html {
     line-height: 1;
     font-family: var(--inter-font);
 
-    @media (1920px > width >= $desktop) {
-        font-size: calc(100dvw / 1920 * 10);
+    @media (1440px > width >= $desktop) {
+        font-size: calc(100dvw / 1440 * 10);
     }
 }
 
