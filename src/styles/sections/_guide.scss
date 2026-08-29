@@ -102,7 +102,7 @@
     position: relative;
     z-index: 1;
 
-    @media (width >= $desktop) {
+    @media (width >= 1920px) {
         right: 29rem;
     }
 }
