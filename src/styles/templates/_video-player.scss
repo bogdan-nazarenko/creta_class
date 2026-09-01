@@ -73,19 +73,19 @@
     &:disabled {
         display: none;
     }
-}
 
-.video-player:active .video-player__button {
-    width: 13rem;
-    height: 13rem;
+    .video-player:active & {
+        width: 13rem;
+        height: 13rem;
 
-    @media (width < $desktop) {
-        width: 10rem;
-        height: 10rem;
-    }
+        @media (width < $desktop) {
+            width: 10rem;
+            height: 10rem;
+        }
 
-    @media (width < $tablet) {
-        width: 6rem;
-        height: 6rem;
+        @media (width < $tablet) {
+            width: 6rem;
+            height: 6rem;
+        }
     }
 }
