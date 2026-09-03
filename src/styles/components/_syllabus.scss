@@ -17,6 +17,8 @@
 }
 
 .syllabus__image-wrapper {
+    aspect-ratio: 505 / 475;
+    width: 100%;
     max-width: 50.5rem;
 
     @media (width < $desktop) {
@@ -46,9 +48,8 @@
 }
 
 .syllabus__icon-wrapper {
-    flex-shrink: 0;
+    width: 100%;
     max-width: 10.5rem;
-    height: fit-content;
 
     @media (width < $desktop) {
         max-width: 8rem;
@@ -60,6 +61,7 @@
 }
 
 .syllabus__icon {
+    object-position: top;
     @extend %contain-media;
 }
 

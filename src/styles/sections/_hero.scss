@@ -173,15 +173,12 @@
 }
 
 .hero__image-wrapper {
+    aspect-ratio: 740 / 684;
     width: 100%;
     max-width: 74rem;
 
     @media (width >= $desktop) {
         height: 68.4rem;
-    }
-
-    @media (width < $desktop) {
-        height: fit-content;
     }
 }
 
