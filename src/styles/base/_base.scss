@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 html {
+    min-width: 30rem;
     scroll-behavior: smooth;
     color: var(--black-color);
     font-weight: 400;
