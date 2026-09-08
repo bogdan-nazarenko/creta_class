@@ -1,18 +1,19 @@
 @use "../abstracts" as *;
 
 .guide__container {
-    --bottom-padding: 17.4rem;
+    --container-padding-bottom: 17.4rem;
 
     position: relative;
     background-color: #f6f6f6;
-    padding: 11.5rem var(--container-padding-inline) var(--bottom-padding);
+    padding: 11.5rem var(--container-padding-inline)
+        var(--container-padding-bottom);
     max-width: 192rem;
     overflow: hidden;
 
     @media (width >= $desktop) {
         &::before {
             position: absolute;
-            bottom: calc(0rem - var(--bottom-padding) + 11rem);
+            bottom: calc(11rem - var(--container-padding-bottom));
             left: -14.6rem;
             width: 72.7rem;
             height: 105.2rem;
@@ -80,7 +81,7 @@
 
     &::after {
         position: absolute;
-        bottom: calc(0rem - var(--bottom-padding));
+        bottom: calc(0rem - var(--container-padding-bottom));
         left: 73.8rem;
         width: 20.4rem;
         height: 12.6rem;
@@ -109,7 +110,7 @@
 
 .guide__image {
     position: absolute;
-    bottom: calc(0rem - var(--bottom-padding));
+    bottom: calc(0rem - var(--container-padding-bottom));
     left: 5rem;
     width: 66.5rem;
     height: 66.5rem;
