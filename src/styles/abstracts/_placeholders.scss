@@ -25,20 +25,16 @@
 }
 
 %submit-button {
-    --changed-background: linear-gradient(
-        110deg,
-        var(--lime-color) 70%,
-        #dfdfdf 80%,
-        var(--lime-color) 95%
-    );
+    --button-background: var(--orange-color);
+    --button-glare: #ff7b3a96;
 
     display: block;
     border-radius: 0.9rem;
     background: linear-gradient(
         110deg,
-        var(--orange-color) 70%,
-        #ff7b3a96 80%,
-        var(--orange-color) 95%
+        var(--button-background) 70%,
+        var(--button-glare) 80%,
+        var(--button-background) 95%
     );
     padding: 2.4rem 5.2rem;
     color: var(--white-color);
@@ -59,6 +55,7 @@
     }
 
     @include hover-active {
-        background: var(--changed-background);
+        --button-background: var(--lime-color);
+        --button-glare: #dfdfdf;
     }
 }
