@@ -95,7 +95,7 @@
         padding: 0.6rem 1.8rem;
     }
 
-    &:has(.hero__radio-button:focus-visible) {
+    &:focus-within {
         border-color: var(--lime-color);
     }
 
