@@ -170,6 +170,7 @@
     max-width: 30.8rem;
     height: fit-content;
     line-height: 1.57;
+    overflow-wrap: anywhere;
 
     @media (width >= $desktop) {
         top: 6.9rem;
