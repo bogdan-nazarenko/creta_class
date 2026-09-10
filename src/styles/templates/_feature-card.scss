@@ -25,6 +25,8 @@
 }
 
 .feature-card__title {
+    overflow-wrap: anywhere;
+
     @media (width < $desktop) {
         font-size: 1.6rem;
     }
