@@ -19,15 +19,9 @@
     }
 }
 
-.feature-card__icon-wrapper {
-    flex-shrink: 0;
-    width: 100%;
-    max-width: 8.5rem;
-    height: 7.3rem;
-}
-
 .feature-card__icon {
-    @extend %contain-media;
+    width: 8.5rem;
+    height: 7.3rem;
 }
 
 .feature-card__title {

@@ -3,14 +3,12 @@
 >
     <div class="feature-card__header">
         {%- if prop.icon %}
-            <div class="feature-card__icon-wrapper">
-                <img
-                    loading="lazy"
-                    class="feature-card__icon"
-                    src="media/icons/{{ prop.icon }}"
-                    alt=""
-                >
-            </div>
+            <img
+                loading="lazy"
+                class="feature-card__icon"
+                src="media/icons/{{ prop.icon }}"
+                alt=""
+            >
         {%- endif %}
         <h3 class="feature-card__title">{{ prop.title }}</h3>
     </div>
