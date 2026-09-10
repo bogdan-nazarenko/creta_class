@@ -48,21 +48,27 @@
 }
 
 .syllabus__icon-wrapper {
-    width: 100%;
-    max-width: 10.5rem;
+    flex-shrink: 0;
+    width: 10.5rem;
+    height: 10.5rem;
 
     @media (width < $desktop) {
-        max-width: 8rem;
+        width: 8rem;
+        height: 8rem;
     }
 
     @media (width < $tablet) {
-        max-width: 5rem;
+        width: 5rem;
+        height: 5rem;
     }
 }
 
 .syllabus__icon {
-    object-position: top;
     @extend %contain-media;
+}
+
+.syllabus__info {
+    overflow-wrap: anywhere;
 }
 
 .syllabus__title {
