@@ -2,17 +2,16 @@
 
 .home-link {
     display: block;
+    aspect-ratio: 256 / 52;
     width: 100%;
     max-width: 25.6rem;
-    height: 5.2rem;
 
     @media (width < $desktop) {
-        width: fit-content;
-        height: 4rem;
+        max-width: 19rem;
     }
 
     @media (width < $tablet) {
-        height: 3rem;
+        max-width: 14.2rem;
     }
 
     &:active {
