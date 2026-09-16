@@ -42,7 +42,7 @@
         position: absolute;
         bottom: -0.8rem;
         left: 25%;
-        transform: scale(1, 1.4) translate(-50%) rotateZ(45deg);
+        transform: scale(1, 1.4) translateX(-50%) rotate(45deg);
         visibility: hidden;
         z-index: -1;
         transition: left var(--duration);
