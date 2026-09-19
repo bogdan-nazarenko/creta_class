@@ -32,17 +32,17 @@ const containerHeightGetter = {
 
         this.alreadyCalled = true;
 
-        const containerHeight = header.children[0].scrollHeight;
+        const containerHeight = header.children[0].offsetHeight;
         const htmlFontSize = parseFloat(
             getComputedStyle(document.documentElement).fontSize
         );
 
-        header.style.setProperty(
-            "--header-container-height",
-            `${containerHeight / htmlFontSize}rem`
-        );
-
         requestAnimationFrame(() => {
+            header.style.setProperty(
+                "--header-container-height",
+                `${containerHeight / htmlFontSize}rem`
+            );
+
             this.alreadyCalled = false;
         });
     },
