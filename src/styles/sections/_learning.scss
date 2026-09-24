@@ -56,7 +56,7 @@
 
 .learning__next-arrow {
     right: var(--arrow-horizontal-offset);
-    transform: var(--arrow-vertical-alignment) rotate(180deg);
+    transform: var(--arrow-vertical-alignment) scaleX(-1);
 }
 
 .learning__pagination {
