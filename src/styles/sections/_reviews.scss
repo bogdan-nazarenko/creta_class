@@ -173,8 +173,7 @@
     overflow-wrap: anywhere;
 
     @media (width >= $desktop) {
-        top: 6.9rem;
-        left: 8.7rem;
+        transform: translate(8.7rem, 6.8rem);
     }
 
     &::before,
@@ -184,7 +183,7 @@
     }
 
     &::before {
-        top: -5rem;
+        top: -4.9rem;
         left: -2.5rem;
         width: 3.6rem;
         height: 2.8rem;
@@ -204,7 +203,7 @@
     }
 
     &::after {
-        bottom: -4.3rem;
+        bottom: -4.4rem;
         left: -2.8rem;
         width: 4.9rem;
         height: 2.8rem;
@@ -240,8 +239,7 @@
     height: fit-content;
 
     @media (width >= $desktop) {
-        top: 0.4rem;
-        left: 8.5rem;
+        transform: translate(8.5rem, 0.4rem);
     }
 
     @media (width < $tablet) {
@@ -277,7 +275,7 @@
 
     &::after {
         top: -1.7rem;
-        right: -2.5rem;
+        right: -2.6rem;
         width: 3.4rem;
         height: 3.6rem;
         @include background(
@@ -327,25 +325,23 @@
 
     .reviews__blockquote {
         @media (width >= $desktop) {
-            top: 6.6rem;
-            left: 7.4rem;
+            transform: translate(7.3rem, 6.5rem);
 
             &::before {
-                top: -5.6rem;
-                left: -2.1rem;
+                top: -5.5rem;
+                left: -2rem;
             }
 
             &::after {
-                bottom: -3.7rem;
-                left: -3.5rem;
+                bottom: -3.8rem;
+                left: -3.4rem;
             }
         }
     }
 
     .reviews__person {
         @media (width >= $desktop) {
-            top: 0.8rem;
-            left: 7.5rem;
+            transform: translate(7.5rem, 0.8rem);
 
             &::before {
                 left: -1.3rem;
@@ -360,7 +356,7 @@
 
     .reviews__image {
         @media (width >= $desktop) {
-            margin-bottom: 1.4rem;
+            margin-bottom: 1.5rem;
         }
     }
 }
