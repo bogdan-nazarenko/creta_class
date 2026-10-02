@@ -13,7 +13,7 @@
     @media (width >= $desktop) {
         &::before {
             position: absolute;
-            bottom: calc(11rem - var(--container-padding-bottom));
+            bottom: calc(10.8rem - var(--container-padding-bottom));
             left: -14.6rem;
             width: 72.7rem;
             height: 105.2rem;
