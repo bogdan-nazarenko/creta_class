@@ -100,11 +100,10 @@
 }
 
 .guide__video-player {
-    position: relative;
     z-index: 1;
 
     @media (width >= 1920px) {
-        right: 29rem;
+        transform: translateX(-29rem);
     }
 }
 
