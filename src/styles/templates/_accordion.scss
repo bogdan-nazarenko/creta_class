@@ -71,8 +71,7 @@
         );
 
         @media (width >= $desktop) {
-            position: relative;
-            right: -1.2rem;
+            translate: 1.2rem;
         }
 
         @media (width < $desktop) {
