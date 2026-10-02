@@ -25,6 +25,10 @@
     }
 }
 
+.video-player {
+    position: relative;
+}
+
 .video-player__video {
     outline-offset: -0.1rem;
     border-radius: inherit;
