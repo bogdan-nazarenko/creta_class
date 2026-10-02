@@ -41,11 +41,12 @@
     &::after {
         position: absolute;
         bottom: -0.8rem;
-        left: 25%;
+        left: 50%;
         transform: scale(1, 1.4) translateX(-50%) rotate(45deg);
+        translate: -3rem;
         visibility: hidden;
         z-index: -1;
-        transition: left var(--duration);
+        transition: translate var(--duration);
         background-color: inherit;
         width: 2rem;
         height: 2rem;
@@ -61,7 +62,7 @@
         background-color: var(--orange-color);
 
         &::after {
-            left: 50%;
+            translate: 0;
             visibility: visible;
         }
     }
