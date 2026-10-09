@@ -37,7 +37,7 @@ export const tabbedUiImpl = {
         this.activePanel = panel;
     },
 
-    switchWithKeys(event) {
+    moveFocus(event) {
         const tabBar = event.currentTarget;
         const tab = event.target;
         let newTab = null;
@@ -71,7 +71,7 @@ export const tabbedUiImpl = {
         };
 
         tabBar.addEventListener("click", handler);
-        tabBar.addEventListener("keydown", this.switchWithKeys);
+        tabBar.addEventListener("keydown", this.moveFocus);
         tabbedUiData.handlers.set(tabBar, handler);
 
         if (tab > 0 && tab <= tabBar.children.length) {
@@ -83,7 +83,7 @@ export const tabbedUiImpl = {
         const handler = tabbedUiData.handlers.get(tabBar);
 
         tabBar.removeEventListener("click", handler);
-        tabBar.removeEventListener("keydown", this.switchWithKeys);
+        tabBar.removeEventListener("keydown", this.moveFocus);
         tabbedUiData.handlers.delete(tabBar);
     },
 };
