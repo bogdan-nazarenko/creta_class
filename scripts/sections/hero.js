@@ -1,0 +1,1 @@
+const heroForm=document.querySelector(".hero__form");function heroFormHandler(e){e.preventDefault()}heroForm.addEventListener("submit",heroFormHandler);
