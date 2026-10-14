@@ -5,8 +5,7 @@
     margin: 0 auto 1rem;
     padding-bottom: 1.6rem;
     max-width: 57.2rem;
-    overflow-x: auto;
-    overflow-y: hidden;
+    overflow: auto hidden;
 
     @media (width < $tablet) {
         margin-bottom: 1.3rem;
