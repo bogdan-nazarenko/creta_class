@@ -3,8 +3,10 @@ const videoData = {
 };
 
 export const videoImpl = {
-    startVideo(handler, video, button) {
+    startVideo(handler) {
         if (handler.isStarted) return;
+
+        const { video, button } = handler;
 
         handler.isStarted = true;
         button.disabled = true;
@@ -12,7 +14,9 @@ export const videoImpl = {
         video.play();
     },
 
-    resetVideo(handler, video, button) {
+    resetVideo(handler) {
+        const { video, button } = handler;
+
         video.controls = false;
         video.load();
         button.disabled = false;
@@ -21,30 +25,22 @@ export const videoImpl = {
 
     videoHandler(event) {
         if (event.type === "click") {
-            const player = event.currentTarget;
-            const video = player.children[0];
-            const button = player.children[1];
-
-            videoImpl.startVideo(this, video, button);
+            videoImpl.startVideo(this);
         } else if (event.type === "ended") {
-            const video = event.currentTarget;
-            const button = video.nextElementSibling;
-
-            videoImpl.resetVideo(this, video, button);
+            videoImpl.resetVideo(this);
         }
     },
 
     init(player) {
         const handler = {
             isStarted: false,
+            video: player.querySelector(".video-player__video"),
+            button: player.querySelector(".video-player__button"),
             handleEvent: this.videoHandler,
         };
 
         player.addEventListener("click", handler);
-
-        const video = player.children[0];
-
-        video.addEventListener("ended", handler);
+        handler.video.addEventListener("ended", handler);
 
         videoData.handlers.set(player, handler);
     },
@@ -53,10 +49,7 @@ export const videoImpl = {
         const handler = videoData.handlers.get(player);
 
         player.removeEventListener("click", handler);
-
-        const video = player.children[0];
-
-        video.removeEventListener("ended", handler);
+        handler.video.removeEventListener("ended", handler);
 
         videoData.handlers.delete(player);
     },
