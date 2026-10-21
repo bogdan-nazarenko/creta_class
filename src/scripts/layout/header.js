@@ -23,6 +23,7 @@ const headerPaddingChanger = {
 headerPaddingChanger.handleEvent();
 window.addEventListener("scroll", headerPaddingChanger);
 
+const headerContainer = document.querySelector(".header__container");
 const mqls = [desktopMql, mobileMql];
 
 const containerHeightGetter = {
@@ -32,7 +33,7 @@ const containerHeightGetter = {
 
         this.alreadyCalled = true;
 
-        const containerHeight = header.children[0].offsetHeight;
+        const containerHeight = headerContainer.offsetHeight;
         const htmlFontSize = parseFloat(
             getComputedStyle(document.documentElement).fontSize
         );
