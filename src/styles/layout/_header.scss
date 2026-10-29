@@ -2,7 +2,7 @@
 
 .header {
     --container-height: 5.4rem;
-    --subtrahend-header-padding: 0rem;
+    --subtracted-padding: 0rem;
 
     position: fixed;
     top: 0;
@@ -13,7 +13,7 @@
     background-color: var(--white-color);
     padding-block: calc(
         ((var(--wrapper-padding-top) - var(--container-height)) / 2) - var(
-                --subtrahend-header-padding
+                --subtracted-padding
             )
     );
     width: 100%;
@@ -29,10 +29,10 @@
 }
 
 .header_padding_reduced {
-    --subtrahend-header-padding: 2rem;
+    --subtracted-padding: 2rem;
 
     @media (width < $desktop) {
-        --subtrahend-header-padding: 1rem;
+        --subtracted-padding: 1rem;
     }
 }
 
