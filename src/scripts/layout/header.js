@@ -1,5 +1,3 @@
-import { desktopMql, mobileMql } from "../utils/responsive.js";
-
 const header = document.querySelector(".header");
 
 const headerPaddingChanger = {
@@ -22,32 +20,3 @@ const headerPaddingChanger = {
 
 headerPaddingChanger.handleEvent();
 window.addEventListener("scroll", headerPaddingChanger);
-
-const headerContainer = document.querySelector(".header__container");
-const mqls = [desktopMql, mobileMql];
-
-const containerHeightGetter = {
-    alreadyCalled: false,
-    handleEvent() {
-        if (this.alreadyCalled) return;
-
-        this.alreadyCalled = true;
-
-        const containerHeight = headerContainer.offsetHeight;
-        const htmlFontSize = parseFloat(
-            getComputedStyle(document.documentElement).fontSize
-        );
-
-        requestAnimationFrame(() => {
-            header.style.setProperty(
-                "--header-container-height",
-                `${containerHeight / htmlFontSize}rem`
-            );
-
-            this.alreadyCalled = false;
-        });
-    },
-};
-
-containerHeightGetter.handleEvent();
-mqls.forEach((mql) => mql.addEventListener("change", containerHeightGetter));
