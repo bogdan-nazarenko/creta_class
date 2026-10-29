@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .header {
+    --container-height: 5.4rem;
     --subtrahend-header-padding: 0rem;
 
     position: fixed;
@@ -11,13 +12,20 @@
     box-shadow: 0 1rem 5rem 0 #0000000d;
     background-color: var(--white-color);
     padding-block: calc(
-        (
-                (var(--wrapper-padding-top) - var(--header-container-height)) /
-                    2
-            ) - var(--subtrahend-header-padding)
+        ((var(--wrapper-padding-top) - var(--container-height)) / 2) - var(
+                --subtrahend-header-padding
+            )
     );
     width: 100%;
     overflow: hidden;
+
+    @media (width < $desktop) {
+        --container-height: 4.5rem;
+    }
+
+    @media (width < $tablet) {
+        --container-height: 3.6rem;
+    }
 }
 
 .header_padding_reduced {
