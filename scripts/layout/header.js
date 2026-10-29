@@ -1,0 +1,1 @@
+const header=document.querySelector(".header"),headerPaddingChanger={isWaiting:!1,handleEvent(){this.isWaiting||(this.isWaiting=!0,setTimeout(()=>{header.classList.toggle("header_padding_reduced",window.scrollY>50),this.isWaiting=!1},100))}};headerPaddingChanger.handleEvent(),window.addEventListener("scroll",headerPaddingChanger);
