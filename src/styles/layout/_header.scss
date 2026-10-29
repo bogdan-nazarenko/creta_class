@@ -32,6 +32,10 @@
     --subtracted-padding: 2rem;
 
     @media (width < $desktop) {
+        --subtracted-padding: 1.5rem;
+    }
+
+    @media (width < $tablet) {
         --subtracted-padding: 1rem;
     }
 }
