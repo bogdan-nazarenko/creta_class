@@ -2,8 +2,12 @@ class TabbedUI {
     static #registry = new WeakMap();
     static panelActiveClass = "tabbed-ui__panel_active";
 
-    constructor(tabBar, tab) {
-        this.tabBar = document.querySelector(tabBar);
+    constructor(ui, tab) {
+        const tabbedUI = document.querySelector(ui);
+
+        this.tabBar = tabbedUI.querySelector(".tabbed-ui__tab-bar");
+        this.activeTab = null;
+        this.activePanel = null;
 
         this.init(tab);
     }
