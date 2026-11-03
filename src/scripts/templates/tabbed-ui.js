@@ -1,10 +1,14 @@
-const tabbedUiData = {
-    handlers: new WeakMap(),
-    panelActiveClass: "tabbed-ui__panel_active",
-};
+class TabbedUI {
+    static #registry = new WeakMap();
+    static panelActiveClass = "tabbed-ui__panel_active";
 
-export const tabbedUiImpl = {
-    tabHandler(event) {
+    constructor(tabBar, tab) {
+        this.tabBar = document.querySelector(tabBar);
+
+        this.init(tab);
+    }
+
+    handleEvent(event) {
         const tabBar = event.currentTarget;
         let target = event.target;
         let tab = null;
@@ -26,16 +30,16 @@ export const tabbedUiImpl = {
         if (this.activeTab && this.activePanel) {
             this.activeTab.ariaSelected = "false";
             this.activeTab.tabIndex = "-1";
-            this.activePanel.classList.remove(tabbedUiData.panelActiveClass);
+            this.activePanel.classList.remove(TabbedUI.panelActiveClass);
         }
 
         tab.ariaSelected = "true";
         tab.tabIndex = "0";
-        panel?.classList.add(tabbedUiData.panelActiveClass);
+        panel?.classList.add(TabbedUI.panelActiveClass);
 
         this.activeTab = tab;
         this.activePanel = panel;
-    },
+    }
 
     moveFocus(event) {
         const tabBar = event.currentTarget;
@@ -61,29 +65,29 @@ export const tabbedUiImpl = {
 
         event.preventDefault();
         newTab.focus();
-    },
+    }
 
-    init(tabBar, tab = 1) {
-        const handler = {
-            activeTab: null,
-            activePanel: null,
-            handleEvent: this.tabHandler,
-        };
+    init(tab) {
+        tab = !tab ? 1 : tab;
 
-        tabBar.addEventListener("click", handler);
-        tabBar.addEventListener("keydown", this.moveFocus);
-        tabbedUiData.handlers.set(tabBar, handler);
+        this.tabBar.addEventListener("click", this);
+        this.tabBar.addEventListener("keydown", this.moveFocus);
 
-        if (tab > 0 && tab <= tabBar.children.length) {
-            tabBar.children[tab - 1].click();
+        TabbedUI.#registry.set(this.tabBar, this);
+
+        if (tab > 0 && tab <= this.tabBar.children.length) {
+            this.tabBar.children[tab - 1].click();
         }
-    },
+    }
 
-    disable(tabBar) {
-        const handler = tabbedUiData.handlers.get(tabBar);
+    disable() {
+        const handler = TabbedUI.#registry.get(this.tabBar);
 
-        tabBar.removeEventListener("click", handler);
-        tabBar.removeEventListener("keydown", this.moveFocus);
-        tabbedUiData.handlers.delete(tabBar);
-    },
-};
+        this.tabBar.removeEventListener("click", handler);
+        this.tabBar.removeEventListener("keydown", this.moveFocus);
+
+        TabbedUI.#registry.delete(this.tabBar);
+    }
+}
+
+export default TabbedUI;
