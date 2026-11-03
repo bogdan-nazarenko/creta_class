@@ -1,20 +1,16 @@
-const accordionData = {
-    handlers: new WeakMap(),
-    contentOpenClass: "accordion__content_open",
-};
+class Accordion {
+    static #registry = new WeakMap();
+    static contentOpenClass = "accordion__content_open";
 
-export const accordionImpl = {
-    toggleAttribute(element) {
-        if (element.ariaExpanded === "false") {
-            element.ariaExpanded = "true";
-            return true;
-        }
+    constructor(accordion) {
+        this.accordion = document.querySelector(accordion);
+        this.activeButton = null;
+        this.openedContent = null;
 
-        element.ariaExpanded = "false";
-        return false;
-    },
+        this.init();
+    }
 
-    accordionHandler(event) {
+    handleEvent(event) {
         const accordion = event.currentTarget;
         let target = event.target;
         let button = null;
@@ -37,34 +33,42 @@ export const accordionImpl = {
 
         if (this.activeButton && this.activeButton !== button) {
             this.activeButton.ariaExpanded = "false";
-            this.openedContent.classList.remove(accordionData.contentOpenClass);
+            this.openedContent.classList.remove(Accordion.contentOpenClass);
         }
 
-        const isActive = accordionImpl.toggleAttribute(button);
+        const isActive = this.toggleAttribute(button);
         this.activeButton = isActive ? button : null;
 
         const isOpen = content.classList.toggle(
-            accordionData.contentOpenClass,
+            Accordion.contentOpenClass,
             isActive
         );
         this.openedContent = isOpen ? content : null;
-    },
+    }
 
-    init(accordion) {
-        const handler = {
-            activeButton: null,
-            openedContent: null,
-            handleEvent: this.accordionHandler,
-        };
+    toggleAttribute(element) {
+        if (element.ariaExpanded === "false") {
+            element.ariaExpanded = "true";
+            return true;
+        }
 
-        accordion.addEventListener("click", handler);
-        accordionData.handlers.set(accordion, handler);
-    },
+        element.ariaExpanded = "false";
+        return false;
+    }
 
-    disable(accordion) {
-        const handler = accordionData.handlers.get(accordion);
+    init() {
+        this.accordion.addEventListener("click", this);
 
-        accordion.removeEventListener("click", handler);
-        accordionData.handlers.delete(accordion);
-    },
-};
+        Accordion.#registry.set(this.accordion, this);
+    }
+
+    disable() {
+        const handler = Accordion.#registry.get(this.accordion);
+
+        this.accordion.removeEventListener("click", handler);
+
+        Accordion.#registry.delete(this.accordion);
+    }
+}
+
+export default Accordion;
