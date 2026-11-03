@@ -1,56 +1,52 @@
-const videoData = {
-    handlers: new WeakMap(),
-};
+class VideoPlayer {
+    static #registry = new WeakMap();
 
-export const videoImpl = {
-    startVideo(handler) {
-        if (handler.isStarted) return;
+    constructor(player) {
+        this.player = document.querySelector(player);
+        this.isStarted = false;
+        this.video = this.player.querySelector(".video-player__video");
+        this.button = this.player.querySelector(".video-player__button");
 
-        const { video, button } = handler;
+        this.init();
+    }
 
-        handler.isStarted = true;
-        button.disabled = true;
-        video.controls = true;
-        video.play();
-    },
-
-    resetVideo(handler) {
-        const { video, button } = handler;
-
-        video.controls = false;
-        video.load();
-        button.disabled = false;
-        handler.isStarted = false;
-    },
-
-    videoHandler(event) {
+    handleEvent(event) {
         if (event.type === "click") {
-            videoImpl.startVideo(this);
+            this.startVideo();
         } else if (event.type === "ended") {
-            videoImpl.resetVideo(this);
+            this.resetVideo();
         }
-    },
+    }
 
-    init(player) {
-        const handler = {
-            isStarted: false,
-            video: player.querySelector(".video-player__video"),
-            button: player.querySelector(".video-player__button"),
-            handleEvent: this.videoHandler,
-        };
+    startVideo() {
+        this.isStarted = true;
+        this.button.disabled = true;
+        this.video.controls = true;
+        this.video.play();
+    }
 
-        player.addEventListener("click", handler);
-        handler.video.addEventListener("ended", handler);
+    resetVideo() {
+        this.video.controls = false;
+        this.video.load();
+        this.button.disabled = false;
+        this.isStarted = false;
+    }
 
-        videoData.handlers.set(player, handler);
-    },
+    init() {
+        this.player.addEventListener("click", this);
+        this.video.addEventListener("ended", this);
 
-    disable(player) {
-        const handler = videoData.handlers.get(player);
+        VideoPlayer.#registry.set(this.player, this);
+    }
 
-        player.removeEventListener("click", handler);
-        handler.video.removeEventListener("ended", handler);
+    disable() {
+        const handler = VideoPlayer.#registry.get(this.player);
 
-        videoData.handlers.delete(player);
-    },
-};
+        this.player.removeEventListener("click", handler);
+        this.video.removeEventListener("ended", handler);
+
+        VideoPlayer.#registry.delete(this.player);
+    }
+}
+
+export default VideoPlayer;
