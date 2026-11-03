@@ -1,6 +1,3 @@
-import { tabbedUiImpl } from "../templates/tabbed-ui.js";
+import TabbedUI from "../templates/tabbed-ui.js";
 
-const skills = document.querySelector(".skills");
-const tabBar = skills.querySelector(".tabbed-ui__tab-bar");
-
-tabbedUiImpl.init(tabBar, 2);
+new TabbedUI(".skills__tabbed-ui", 2);
