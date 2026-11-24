@@ -1,20 +1,18 @@
 const header = document.querySelector(".header");
 
 const headerPaddingChanger = {
-    isWaiting: false,
+    timeoutID: null,
+
+    togglePadding(handler) {
+        header.classList.toggle("header_padding_reduced", window.scrollY > 50);
+
+        handler.timeoutID = null;
+    },
+
     handleEvent() {
-        if (this.isWaiting) return;
+        if (this.timeoutID) return;
 
-        this.isWaiting = true;
-
-        setTimeout(() => {
-            header.classList.toggle(
-                "header_padding_reduced",
-                window.scrollY > 50
-            );
-
-            this.isWaiting = false;
-        }, 100);
+        this.timeoutID = setTimeout(this.togglePadding, 100, this);
     },
 };
 
