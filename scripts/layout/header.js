@@ -1,0 +1,1 @@
+const header=document.querySelector(".header"),headerPaddingChanger={timeoutID:null,togglePadding(e){header.classList.toggle("header_padding_reduced",window.scrollY>50),e.timeoutID=null},handleEvent(){this.timeoutID||(this.timeoutID=setTimeout(this.togglePadding,100,this))}};headerPaddingChanger.handleEvent(),window.addEventListener("scroll",headerPaddingChanger);

@@ -1,0 +1,1 @@
+import TabbedUI from"../templates/tabbed-ui.js";new TabbedUI(".skills__tabbed-ui",2);
